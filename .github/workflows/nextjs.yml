@@ -31,6 +31,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Switch to NextJS Project Dir.
+        run: cd ./portfolio
       - name: Detect package manager
         id: detect-package-manager
         run: |
