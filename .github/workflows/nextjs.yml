@@ -2,7 +2,7 @@ name: Deploy Next.js site to Pages
 
 on:
   push:
-    branches: ["main"]
+    branches: ["f"]
   workflow_dispatch:
 
 permissions:
@@ -43,6 +43,7 @@ jobs:
         with:
           node-version: "20"
           cache: ${{ steps.detect-package-manager.outputs.manager }}
+          
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
