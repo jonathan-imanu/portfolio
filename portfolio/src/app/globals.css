@@ -33,6 +33,7 @@ body {
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
+    --accent-blue: #5179c9;
   }
   .dark {
     --background: 240 10% 3.9%;
@@ -69,4 +70,33 @@ body {
   body {
     @apply bg-background text-foreground;
   }
+}
+
+.better-gradient {
+  background: #00002a; 
+  background: linear-gradient(to bottom, #194070, #00002a);  
+  background: linear-gradient(to top, #00002a, #194070);  
+}
+
+.animated-underline {
+  position: relative;
+  color: #5179c9;
+  font-weight: 600;
+}
+
+.animated-underline::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #5179c9;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.animated-underline:hover::after {
+  visibility: visible;
+  width: 100%;
 }

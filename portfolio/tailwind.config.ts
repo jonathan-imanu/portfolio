@@ -10,12 +10,12 @@ export default {
   theme: {
   	extend: {
   		colors: {
-			'night-blue': '#052033',
-			'lighter-night-blue': '#0d3b5c',
-			'accent-blue': '#0971a6',
+			'accent-blue': '#5179c9',
+			"faded": "#bbbbbd",
 			'starry-blue': '#bbd5f0',
 			"shooting-star": "#9E00FF",
 			"shooting-trail": "#2EB9DF",
+			"test": "#00002a",
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
   			card: {

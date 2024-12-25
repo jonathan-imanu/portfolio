@@ -17,6 +17,9 @@ export const metadata: Metadata = {
   description: "Welcome to my personal website!",
 };
 
+import { StarsBackground } from "@/components/ui/stars-background";
+import { ShootingStars } from "@/components/ui/shooting-stars";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -24,6 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

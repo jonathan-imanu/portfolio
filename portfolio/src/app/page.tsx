@@ -1,13 +1,23 @@
-import Image from "next/image";
 import Hero from "@/components/hero";
 import About from "@/components/about";
+import Background from "@/components/background";
 import Navbar from "@/components/navbar";
+import Footer from "@/components/footer";
+import Experiences from "@/components/experiences";
+import Contact from "@/components/contact";
+
 
 export default function Home() {
   return (
-    <div>
+    <>
+      <Background />
       <Navbar />
       <Hero />
-    </div>
+      <About />
+      <Experiences />
+      <Contact />
+      <Footer />
+    </>
   );
 }
+
