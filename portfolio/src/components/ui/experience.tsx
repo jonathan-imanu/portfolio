@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import { StaticImport } from "next/dist/shared/lib/get-img-props";
 
 interface ExperienceProps {
     jobTitle: string;
@@ -8,22 +9,33 @@ interface ExperienceProps {
     startDate: string;
     endDate: string;
     description: string;
-    companyImage: string;
+    companyImage: StaticImport;
 }
 
 const Experience: React.FC<ExperienceProps> = ({ jobTitle, company, location, startDate, endDate, description, companyImage }) => {
     return (
-        <div className="flex flex-col bg-slate-700">
-            <div className="flex flex-row space-x-3 w-full pt-10">
-                <Image 
-                    src={companyImage} 
+        <div className="flex flex-col bg-dark-grey px-5 pt-5 rounded-lg shadow-lg max-w-[800px]">
+            <div className="flex flex-row justify justify-between space-x-3 w-full">
+                <div className="flex flex-row space-x-3 items-center">
+                    <Image 
+                    src={companyImage}
                     width={50} 
                     height={50} 
                     alt="Company Logo" 
-                    className="rounded-full border-2 border-white" 
-                />
+                    className="rounded-full border-2 border-white" />
+                    <div className="flex flex-col">
+                        <h4 className="text-white font-semibold text-lg">{jobTitle}</h4>
+                        <h5 className="text-accent font-semibold text-sm">{company}</h5>
+                    </div>
+                </div>
+                <div className="flex flex-col items-end">
+                    <p className="text-white font-semibold text-sm">{location}</p>
+                    <p className="text-faded text-sm">{startDate} - {endDate}</p>
+                </div>
             </div>
-           
+            <div>
+                <p className="text-white text-sm px-10 py-5">{description}</p>
+            </div>
         </div>
     )
 }

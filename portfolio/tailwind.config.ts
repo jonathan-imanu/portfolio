@@ -10,12 +10,13 @@ export default {
   theme: {
   	extend: {
   		colors: {
-			'accent-blue': '#5179c9',
+			'accent': '#c9b4fe',
 			"faded": "#bbbbbd",
 			'starry-blue': '#bbd5f0',
 			"shooting-star": "#9E00FF",
 			"shooting-trail": "#2EB9DF",
-			"test": "#00002a",
+			"purple": "#0C1640",
+			"dark-grey": "#010A2D",
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
   			card: {
@@ -37,10 +38,6 @@ export default {
   			muted: {
   				DEFAULT: 'hsl(var(--muted))',
   				foreground: 'hsl(var(--muted-foreground))'
-  			},
-  			accent: {
-  				DEFAULT: 'hsl(var(--accent))',
-  				foreground: 'hsl(var(--accent-foreground))'
   			},
   			destructive: {
   				DEFAULT: 'hsl(var(--destructive))',
