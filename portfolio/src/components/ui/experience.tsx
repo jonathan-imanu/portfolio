@@ -25,7 +25,7 @@ const Experience: React.FC<ExperienceProps> = ({ jobTitle, company, location, st
                     className="rounded-full border-2 border-white" />
                     <div className="flex flex-col">
                         <h4 className="text-white font-semibold text-lg">{jobTitle}</h4>
-                        <h5 className="text-accent font-semibold text-sm">{company}</h5>
+                        <h5 className="text-accent font-semibold text-sm font-mono">{company}</h5>
                     </div>
                 </div>
                 <div className="flex flex-col items-end">

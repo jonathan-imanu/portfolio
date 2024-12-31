@@ -26,7 +26,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, tech, ima
               translateZ="30"
             >
                 <div className="flex flex-col space-y-1">
-                    <p className="text-sm text-accent">Featured Project</p>
+                    <p className="text-sm text-accent font-mono">Featured Project</p>
                     <p className="text-xl text-white font font-bold">{title}</p>
                 </div>
               {title}

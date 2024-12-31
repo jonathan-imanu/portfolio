@@ -164,7 +164,7 @@ const Projects: React.FC = () => {
         <div className="bg-purple">
             <div className="flex flex-col items-center justify-center h-full space-y-20">
                 <div className="flex flex-row space-x-3 justify-center items-center w-full pt-40">
-                    <p className="font-semibold text-2xl text-accent">03.</p>
+                    <p className="font-semibold text-2xl text-accent font-mono">03.</p>
                     <h3 className="text-white text-3xl md:text-3xl font-semibold whitespace-nowrap">Projects</h3>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

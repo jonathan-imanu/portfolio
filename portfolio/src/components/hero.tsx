@@ -20,7 +20,7 @@ const Hero: React.FC = () => {
                 <p className="text-xs md:text-2xl text-gray-200 text-center mt-2 z-10">
                     Computer Science @ University of Toronto '27
                 </p>
-                <div className="flex flex-row space-x-4 md:space-x-6 text-2xl text-gray-200 z-30 mt-5">
+                <div className="flex flex-row space-x-4 md:space-x-6 text-lg sm:text-xl md:text-2xl text-gray-200 z-30 mt-5">
                     <Link
                         href="https://www.linkedin.com/in/jonathan-imanuel"
                         target="_blank"
@@ -43,8 +43,8 @@ const Hero: React.FC = () => {
                         <IoMailOutline />
                     </Link>
                 </div>
-                <button className="text-sm md:text-md text-white font-bold px-3 py-2 md:px-4 md:py-2.5 border-2 rounded border-accent transform transition-transform duration-300 mt-7">
-                    <div className="flex flex-row items-center justify-center space-x-2">
+                <button className="text-xs md:text-base text-white font-bold px-3 py-2 md:px-4 md:py-2.5 border-2 border-white bg-accent mt-6 rounded-full">
+                    <div className="flex flex-row items-center justify-center space-x-2 ">
                         <p>Resume</p>
                         <IoDocumentText />
                     </div>

@@ -8,7 +8,7 @@ const About: React.FC = () => {
         <div id="about" className="flex flex-col md:flex-row bg-purple p-6 justify-center items-center z-10">
             <div className="flex flex-col items-start h-full md:w-1/3 max-w-[480px] space-y-6 mt-10">
                 <div className="flex flex-row space-x-3 justify-center items-center w-full">
-                    <p className="font-semibold text-2xl text-accent z-10">01.</p>
+                    <p className="font-semibold text-2xl text-accent z-10 font-mono">01.</p>
                     <h3 className="text-white text-3xl md:text-3xl font-semibold whitespace-nowrap z-10">About Me</h3>
                 </div>
                 <p className="text-faded text-sm md:text-md leading-relaxed z-10">

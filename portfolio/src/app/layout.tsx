@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Roboto_Mono} from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -7,8 +7,8 @@ const geistSans = Geist({
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const robotoMono = Roboto_Mono({
+  variable: "--font-roboto-mono",
   subsets: ["latin"],
 });
 
@@ -16,9 +16,6 @@ export const metadata: Metadata = {
   title: "Jonathan Manuel",
   description: "Welcome to my personal website!",
 };
-
-import { StarsBackground } from "@/components/ui/stars-background";
-import { ShootingStars } from "@/components/ui/shooting-stars";
 
 export default function RootLayout({
   children,
@@ -29,7 +26,7 @@ export default function RootLayout({
     <html lang="en">
       
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${robotoMono.variable} antialiased`}
       >
         {children}
       </body>
