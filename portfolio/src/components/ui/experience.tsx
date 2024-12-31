@@ -15,26 +15,27 @@ interface ExperienceProps {
 const Experience: React.FC<ExperienceProps> = ({ jobTitle, company, location, startDate, endDate, description, companyImage }) => {
     return (
         <div className="flex flex-col bg-dark-grey px-5 pt-5 rounded-lg shadow-lg max-w-[800px]">
-            <div className="flex flex-row justify justify-between space-x-3 w-full">
-                <div className="flex flex-row space-x-3 items-center">
+            <div className="flex flex-col justify-center items-center space-y-2 md:flex-row md:justify-between md:space-x-3 md:w-full">
+                <div className="flex flex-col justify-center space-y-2 md:flex-row md:space-x-3 items-center">
                     <Image 
                     src={companyImage}
                     width={50} 
                     height={50} 
                     alt="Company Logo" 
                     className="rounded-full border-2 border-white" />
-                    <div className="flex flex-col">
+                    <div className="flex flex-col text-center space-y-1 md:text-left">
                         <h4 className="text-white font-semibold text-lg">{jobTitle}</h4>
                         <h5 className="text-accent font-semibold text-sm font-mono">{company}</h5>
                     </div>
                 </div>
-                <div className="flex flex-col items-end">
-                    <p className="text-white font-semibold text-sm">{location}</p>
-                    <p className="text-faded text-sm">{startDate} - {endDate}</p>
+                <div className="flex flex-col items-center md:items-end">
+                    <p className="text-white text-sm font-semibold">{startDate} - {endDate}</p>
+                    <p className="text-faded font-semibold text-sm">{location}</p>
+                    
                 </div>
             </div>
             <div>
-                <p className="text-white text-sm px-10 py-5">{description}</p>
+                <p className="text-white text-xs md:text-sm px-10 py-5">{description}</p>
             </div>
         </div>
     )
