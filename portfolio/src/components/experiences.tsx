@@ -22,28 +22,28 @@ const Experiences: React.FC = () => {
         {
             jobTitle: "Cloud Developer",
             company: "aUToronto",
-            location: "Remote",
-            startDate: "January 2025",
-            endDate: "April 2025",
-            description: "Contributing to the development and maintainence full-stack SaaS solutions as apart of the Storm team using Vue.js, JavaScript, Python, Flask, AWS and MySQL.",
+            location: "Toronto, ON",
+            startDate: "September 2024",
+            endDate: "Present",
+            description: "Working to improve the cloud infrastrucutre and streamline CI workflows for the 5x winner of the GM/SAE AutoDrive Challenge using Docker and GitLab CI.",
             companyImage: aUToronto
         },
         {
             jobTitle: "Software Developer Intern",
             company: "Okare",
-            location: "Remote",
-            startDate: "January 2025",
-            endDate: "April 2025",
-            description: "Contributing to the development and maintainence of full-stack SaaS solutions as apart of the Storm team. using Vue.js, JavaScript, Python, Flask, AWS and MySQL.",
+            location: "Toronto, ON",
+            startDate: "June 2024",
+            endDate: "September 2024",
+            description: "Integrated third-party PMS into the Okare platform, accelerating customer onboarding through solutions built with Flask, Python, Postgres, and Selenium.",
             companyImage: Okare
         },
         {
             jobTitle: "Firmware Developer",
             company: "University of Toronto Aerospace Team",
-            location: "Remote",
-            startDate: "January 2025",
-            endDate: "April 2025",
-            description: "Developed Housekeeping and Parameter services of the FINCH satellite using C as part of a team of 3. Followed TDD and used Unity and ZTest for unit testing.",
+            location: "Toronto, ON",
+            startDate: "May 2024",
+            endDate: "August 2024",
+            description: "Developed Housekeeping and Parameter services for the FINCH satellite in C as part of a three-person team, following Test-Driven Development (TDD) by using Unity and ZTest for unit testing.",
             companyImage: UTAT
         }
     ]
