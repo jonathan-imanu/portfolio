@@ -4,9 +4,6 @@ import React from "react";
 import Link from "next/link";
 
 import { FaGithub } from "react-icons/fa6";
-import { IoMailOutline } from "react-icons/io5";
-import { FiGithub } from "react-icons/fi";
-import { FiLinkedin } from "react-icons/fi";
 
 const Footer: React.FC = () => {
     return (

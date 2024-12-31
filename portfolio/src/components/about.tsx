@@ -13,14 +13,14 @@ const About: React.FC = () => {
                 </div>
                 <p className="text-faded text-sm md:text-md leading-relaxed z-10">
                     <span className="text-accent font-extrabold">Hello!</span> My name is Jonathan and I enjoy building cool things with software. 
-                    I'm a CS co-op student at the University of Toronto and I will be graduating in 2027.
+                    I&apos;m a CS co-op student at the University of Toronto and I will be graduating in 2027.
                 </p>
                 <p className="text-faded text-sm md:text-md leading-relaxed z-10">
-                    So far I've the privilege of working with some amazing people at  my <Link className="animated-underline" href="https://www.autodrive.utoronto.ca/" target="blank">university's self-driving car team</Link>, 
+                    So far I&apos;ve the privilege of working with some amazing people at  my <Link className="animated-underline" href="https://www.autodrive.utoronto.ca/" target="blank">university&apos;s self-driving car team</Link>, 
                     an <Link className="animated-underline" href="https://okareai.com/" target="blank">AI dental software startup</Link> and the <Link className="animated-underline" href="https://www.utat.ca/space-systems" target="blank">CubeSat division </Link> within a student-led aerospace team.
                 </p>
                 <p className="text-faded text-sm md:text-md leading-relaxed max-w-screen-sm z-10">
-                    Right now, I'm working as a Software Developer Intern at <Link className="animated-underline" href="https://www.dashhudson.com/" target="blank">Dash Hudson</Link> on the Storm team where I work primarily with Python, Vue, MySQL and AWS.
+                    Right now, I&apos;m working as a Software Developer Intern at <Link className="animated-underline" href="https://www.dashhudson.com/" target="blank">Dash Hudson</Link> on the Storm team where I work primarily with Python, Vue, MySQL and AWS.
                 </p>
             </div>
             <div className="flex items-center justify-center md:w-1/4 max-w-[400px] mt-20 ">

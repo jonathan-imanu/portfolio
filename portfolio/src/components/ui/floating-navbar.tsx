@@ -9,6 +9,9 @@ import {
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 
+
+/* eslint-disable */
+
 export const FloatingNav = ({
   navItems,
   className,

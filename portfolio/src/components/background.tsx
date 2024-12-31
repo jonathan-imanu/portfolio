@@ -1,7 +1,5 @@
 import React from "react";
 
-import Link from "next/link";
-
 import { StarsBackground } from "@/components/ui/stars-background";
 import { ShootingStars } from "@/components/ui/shooting-stars";
 

@@ -9,6 +9,9 @@ import {
   useSpring,
 } from "framer-motion";
 
+
+/* eslint-disable */
+
 export const AnimatedTooltip = ({
   items,
 }: {

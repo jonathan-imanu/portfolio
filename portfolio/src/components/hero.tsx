@@ -18,7 +18,7 @@ const Hero: React.FC = () => {
             <div className="flex flex-col items-center justify-center">
                 <TypewriterEffectSmooth words={words} className="z-10"/>
                 <p className="text-xs md:text-2xl text-gray-200 text-center mt-2 z-10">
-                    Computer Science @ University of Toronto '27
+                    Computer Science @ University of Toronto &apos;27
                 </p>
                 <div className="flex flex-row space-x-4 md:space-x-6 text-lg sm:text-xl md:text-2xl text-gray-200 z-30 mt-5">
                     <Link
