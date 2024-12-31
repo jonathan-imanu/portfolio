@@ -22,10 +22,8 @@ interface ProjectCardProps {
 const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, tech, image, githubLink, demoLink }) => {
     return (
         <CardContainer className="inter-var">
-          <CardBody className="bg-dark-grey relative group/card border-white/[0.2]  sm:w-[22rem] h-auto rounded-xl p-6 border">
-            <CardItem
-              translateZ="30"
-            >
+          <CardBody className="bg-dark-grey relative group/card border-white/[0.2]  sm:w-[22rem] h-auto rounded-xl p-6 border ">
+            <CardItem translateZ="30">
                 <div className="flex flex-col space-y-1">
                     <p className="text-sm text-accent font-mono">Featured Project</p>
                     <p className="text-xl text-white font font-bold">{title}</p>
