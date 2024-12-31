@@ -25,7 +25,7 @@ const Experiences: React.FC = () => {
             location: "Toronto, ON",
             startDate: "September 2024",
             endDate: "Present",
-            description: "Working to improve the cloud infrastrucutre and streamline CI workflows for the 5x winner of the GM/SAE AutoDrive Challenge using Docker and GitLab CI.",
+            description: "Working to improve the cloud infrastrucutre and streamline CI workflows for the 4x winner of the GM/SAE AutoDrive Challenge using Docker and GitLab CI.",
             companyImage: aUToronto
         },
         {
