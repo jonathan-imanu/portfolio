@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import Headshot from "./../../public/images/jonathanmanuel.png"
+import Headshot from "@/assets/images/jonathanmanuel.png"
 
 const About: React.FC = () => {
     return (

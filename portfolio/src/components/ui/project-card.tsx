@@ -33,9 +33,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, tech, ima
             <CardItem translateZ="30" className="w-full">
               <Image
                 src={image}
-                height="2000"
+                height="1000"
                 width="2000"
-                className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl hover:bg-accent"
+                className="h-44 w-full  rounded-xl group-hover/card:shadow-xl hover:bg-accent"
                 alt="thumbnail"
               />
             </CardItem>

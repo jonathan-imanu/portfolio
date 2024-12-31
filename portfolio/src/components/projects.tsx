@@ -1,24 +1,25 @@
 import React from "react";
 import ProjectCard from "@/components/ui/project-card";
+import MockPro from "@/assets/projects/mockpro.png";
+import ClubHub from "@/assets/projects/clubhub.jpg";
+import ClimateCompass from "@/assets/projects/climatecompass.png";
+import CuratorsCompanion from "@/assets/projects/curatorscompanion.png";
 
-import MockPro from "./../../public/projects/mockpro.png";
-
-
-import fastapi from "./../../public/tech/fastapi.png"
-import nextjs from "./../../public/tech/nextjs.jpg"
-import ts from "./../../public/tech/ts.png"
-import python from "./../../public/tech/python.png"
-import gcp from "./../../public/tech/gcp.png"
-import docker from "./../../public/tech/docker.png"
-import react from "./../../public/tech/react.png"
-import js from "./../../public/tech/js.png"
-import postgres from "./../../public/tech/postgres.svg"
-import tailwind from "./../../public/tech/tailwind.png"
-import huggingface from "./../../public/tech/huggingface.png"
-import java from "./../../public/tech/java.jpg"
-import django from "./../../public/tech/django.png"
-import androidstudio from "./../../public/tech/androidstudio.png"
-import firebase from "./../../public/tech/firebase.png"
+import fastapi from "@/assets/tech/fastapi.png";
+import nextjs from "@/assets/tech/nextjs.jpg";
+import ts from "@/assets/tech/ts.png";
+import python from "@/assets/tech/python.png";
+import gcp from "@/assets/tech/gcp.png";
+import docker from "@/assets/tech/docker.png";
+import react from "@/assets/tech/react.png";
+import js from "@/assets/tech/js.png";
+import postgres from "@/assets/tech/postgres.svg";
+import tailwind from "@/assets/tech/tailwind.png";
+import huggingface from "@/assets/tech/huggingface.png";
+import java from "@/assets/tech/java.jpg";
+import django from "@/assets/tech/django.png";
+import androidstudio from "@/assets/tech/androidstudio.png";
+import firebase from "@/assets/tech/firebase.png";
 
 
 const Projects: React.FC = () => {
@@ -64,10 +65,10 @@ const Projects: React.FC = () => {
         },
         {
             title: "ClubHub",
-            description: "A centralized platform for students to discover and join clubs a.",
+            description: "A centralized hub for discovering UofT student events, powered by Instagram scraping and Llama.",
             demoLink: "",
             githubLink: "https://github.com/ClubScraper",
-            image: MockPro,
+            image: ClubHub,
             tech: [
                 {
                     id: 1,
@@ -103,10 +104,10 @@ const Projects: React.FC = () => {
         },
         {
             title: "Curator's Companion",
-            description: "A better way to prepare for Leetcode style technical interviews using speech-to-speech AI.",
+            description: "An Android app for the Toronto Asian Art Museum, simplifying collection management and admin tasks.",
             demoLink: "https://www.youtube.com/watch?v=6XS7RYfAn78",
             githubLink: "https://github.com/jonathan-imanu/TAAM-Collection-Management-System",
-            image: MockPro,
+            image: CuratorsCompanion,
             tech: [
                     {
                     id: 1,
@@ -127,10 +128,10 @@ const Projects: React.FC = () => {
         },
         {
             title: "Climate Compass",
-            description: "A better way to prepare for Leetcode style technical interviews using speech-to-speech AI.",
+            description: "Helping users stay safe during natural disasters by providing real-time data on global events and nearby climate shelters. ",
             demoLink: "https://devpost.com/software/climate-compass",
             githubLink: "https://github.com/Phalanyx/ClimateCompass",
-            image: MockPro,
+            image: ClimateCompass,
             tech: [
                 {
                     id: 1,
@@ -167,7 +168,7 @@ const Projects: React.FC = () => {
                     <p className="font-semibold text-2xl text-accent font-mono">03.</p>
                     <h3 className="text-white text-3xl md:text-3xl font-semibold whitespace-nowrap">Projects</h3>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 ">
                     {projects.map((project, index) => (
                         <ProjectCard 
                             key={index}
@@ -186,4 +187,3 @@ const Projects: React.FC = () => {
 }
 
 export default Projects;
-

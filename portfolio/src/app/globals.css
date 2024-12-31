@@ -103,3 +103,7 @@ body {
 mono-font {
   font-family: var(--font-roboto-mono);
 }
+
+html {
+  background-color: #0C1640;
+}

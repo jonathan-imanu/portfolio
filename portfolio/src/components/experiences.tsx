@@ -3,10 +3,10 @@
 import React from "react";
 
 import Experience from "@/components/ui/experience";
-import DashHudson from './../../public/images/dash-hudson.png';
-import aUToronto from './../../public/images/autoronto.png';
-import Okare from './../../public/images/okare.png';
-import UTAT from './../../public/images/utat.png';
+import DashHudson from '@/assets/images/dash-hudson.png';
+import aUToronto from '@/assets/images/autoronto.png';
+import Okare from '@/assets/images/okare.png';
+import UTAT from '@/assets/images/utat.png';
 
 const Experiences: React.FC = () => {
     const experiences = [
