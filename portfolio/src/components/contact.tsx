@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Contact: React.FC = () => {
     return (
-        <div className="bg-purple pb-20">
+        <div className="bg-purple pb-20" id="contact">
             <div className="flex flex-col items-center justify-center h-full">
                 <div className="flex flex-row space-x-3 justify-center items-center w-full mt-40">
                     <p className="font-semibold text-2xl text-accent font-mono">04.</p>

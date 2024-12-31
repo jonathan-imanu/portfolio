@@ -43,7 +43,7 @@ const Hero: React.FC = () => {
                         <IoMailOutline />
                     </Link>
                 </div>
-                <button className="text-xs md:text-base text-white font-bold px-3 py-2 md:px-4 md:py-2.5 border-2 border-white bg-accent mt-6 rounded-full">
+                <button className="text-xs md:text-base text-white font-bold px-3 py-2 md:px-4 md:py-2.5 border-2 border-white bg-accent mt-6 rounded-full z-50">
                     <div className="flex flex-row items-center justify-center space-x-2 ">
                         <p>Resume</p>
                         <IoDocumentText />

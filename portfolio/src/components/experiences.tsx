@@ -49,7 +49,7 @@ const Experiences: React.FC = () => {
     ]
 
     return (
-        <div className="bg-purple">
+        <div className="bg-purple" id="experience">
             <div className="flex flex-col items-center justify-center h-full">
                 <div className="flex flex-row space-x-3 justify-center items-center w-full pt-40">
                     <p className="font-semibold text-2xl text-accent font-mono">02.</p>
