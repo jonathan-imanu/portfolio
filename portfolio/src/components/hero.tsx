@@ -44,7 +44,7 @@ const Hero: React.FC = () => {
                     </Link>
                 </div>
                 <button className="text-xs md:text-base text-white font-bold px-3 py-2 md:px-4 md:py-2.5 border-2 border-white bg-accent mt-6 rounded-full z-50">
-                    <Link href="https://drive.google.com/file/d/1Wy--K2xPNdMEWzQTAWAC3JYAUXqPyync/view?usp=sharing" target="_blank" className="z-50">
+                    <Link href="https://drive.google.com/file/d/169HIDU_fDcct5LfQYeGOV0Yd6oQDz0rk/view?usp=sharing" target="_blank" className="z-50">
                         <div className="flex flex-row items-center justify-center space-x-2 z-50">
                             <p>Resume</p>
                             <IoDocumentText />
