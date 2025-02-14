@@ -3,7 +3,7 @@
 import React from "react";
 
 import Experience from "@/components/ui/experience";
-import DashHudson from '@/assets/images/dash-hudson.png';
+import DashHudson from '@/assets/images/dash-social.png';
 import aUToronto from '@/assets/images/autoronto.png';
 import Okare from '@/assets/images/okare.png';
 import UTAT from '@/assets/images/utat.png';
@@ -12,7 +12,7 @@ const Experiences: React.FC = () => {
     const experiences = [
         {
             jobTitle: "Software Developer Intern",
-            company: "Dash Hudson",
+            company: "Dash Social",
             location: "Remote",
             startDate: "January 2025",
             endDate: "April 2025",
