@@ -2,7 +2,7 @@
 import React from "react";
 
 import { TypewriterEffectSmooth } from "./ui/typewriter-effect";
-import { IoDocumentText, IoMailOutline } from "react-icons/io5";
+import { IoMailOutline } from "react-icons/io5";
 import { FiLinkedin, FiGithub } from "react-icons/fi";
 
 import Link from "next/link";
