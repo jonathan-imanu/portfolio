@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+body {
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.content-container {
+  max-width: 100%;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .content-container {
+    max-width: 45%;
+  }
+}
+
+.body-text {
+  color: rgb(55 65 81);
+  line-height: 1.625;
+  font-size: 0.8rem;
+}
