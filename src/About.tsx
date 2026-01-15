@@ -9,9 +9,9 @@ function About() {
       </p>
 
       <p className="body-text">
-        Over the past few years, I&apos;ve tried to do interesting things with
-        code at interesting places. Along the way, I&apos;ve had the privilege
-        of working with some amazing people at{" "}
+        Over the past few years, I&apos;ve tried to do interesting things at
+        interesting places. Along the way, I&apos;ve had the privilege of
+        working with some amazing people at{" "}
         <CompanyLink href="https://www.indexexchange.com/">
           Index Exchange
         </CompanyLink>

@@ -14,7 +14,7 @@ function App() {
           <p className="text-xs text-gray-500 flex items-center gap-1">
             <CiGlobe /> Toronto
           </p>
-          <div className="flex gap-3">
+          <div className="flex gap-3 mt-1">
             <SocialLink href="https://github.com/jonathan-imanu">
               <FaGithub />
             </SocialLink>

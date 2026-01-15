@@ -90,8 +90,8 @@ function Experiences() {
             <div key={exp.id}>
               <button
                 onClick={() => toggleExpanded(exp.id)}
-                className={`w-full flex items-center gap-2 sm:gap-3 py-2 sm:py-3 text-left`}>
-                <div className="flex-shrink-0 flex items-center gap-1.5 sm:gap-2">
+                className={`w-full flex items-center gap-2 sm:gap-3 py-2 sm:py-3 text-left cursor-pointer rounded-md`}>
+                <div className="flex-shrink-0 flex items-center gap-1 sm:gap-2">
                   <div className="w-6 h-6 sm:w-8 sm:h-8 flex items-center justify-center overflow-hidden rounded">
                     {typeof exp.icon === "string" ? (
                       <span className="text-xs font-semibold text-black">
@@ -111,10 +111,10 @@ function Experiences() {
                     }`}></span>
                 </div>
                 <div className="flex-1 flex flex-col sm:flex-row sm:items-center gap-0.5 sm:gap-2 min-w-0">
-                  <span className="font-bold text-black text-xs sm:text-sm">
+                  <span className="font-bold text-black text-[0.8rem]">
                     {exp.company}
                   </span>
-                  <span className="text-gray-700 font-normal text-xs sm:text-sm">
+                  <span className="text-gray-700 font-normal text-[0.8rem]">
                     {exp.role}
                   </span>
                 </div>
