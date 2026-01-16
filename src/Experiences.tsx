@@ -113,10 +113,11 @@ function Experiences() {
                       />
                     )}
                   </div>
-                  <span
+                  {/* UNCOMMENT WHEN YOU GET THE SUMMER 26 INTERNSHIP */}
+                  {/* <span
                     className={`w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full flex-shrink-0 ${
                       exp.active ? "bg-green-500" : "bg-black"
-                    }`}></span>
+                    }`}></span> */}
                 </div>
                 <div className="flex-1 flex flex-col sm:flex-row sm:items-center gap-0.5 sm:gap-2 min-w-0">
                   <span className="font-bold text-black text-md">

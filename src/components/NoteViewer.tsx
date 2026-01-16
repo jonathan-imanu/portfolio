@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
-import { FaChevronRight } from "react-icons/fa";
+import { FaChevronLeft } from "react-icons/fa";
 import ReactMarkdown from "react-markdown";
 import remarkMath from "remark-math";
 import rehypeKatex from "rehype-katex";
@@ -11,6 +11,7 @@ import type { ProcessedNote } from "../types/notes";
 import { NoteSkeleton } from "./NoteSkeleton";
 import { markdownComponents } from "./MarkdownComponents";
 import { useBreadcrumbs } from "../hooks/useBreadcrumbs";
+import { Breadcrumbs } from "./Breadcrumbs";
 
 export function NoteViewer() {
   const { noteId } = useParams<{ noteId: string }>();
@@ -66,40 +67,18 @@ export function NoteViewer() {
     <article className="mt-6 space-y-4">
       <Link
         to="/"
-        className="text-sm text-gray-500 hover:text-gray-900 mb-4 inline-block">
-        ← Back to Home
+        className="text-sm text-gray-500 hover:text-gray-900 mb-4 inline-flex items-center gap-2">
+        <FaChevronLeft className="w-4 h-4" /> Back to Home
       </Link>
 
-      {/* Breadcrumbs */}
-      <nav className="flex items-center gap-2 text-sm text-gray-500 mb-4">
-        {breadcrumbLinks.map((crumb, index) => (
-          <span key={crumb.path} className="flex items-center gap-2">
-            {index > 0 && <FaChevronRight className="w-4 h-4 text-gray-400" />}
-            {index < breadcrumbLinks.length - 1 ? (
-              crumb.noteId ? (
-                <Link
-                  to={`/notes/${crumb.noteId}`}
-                  className="hover:text-gray-900 transition-colors">
-                  {crumb.name}
-                </Link>
-              ) : (
-                <Link
-                  to={`/?folder=${encodeURIComponent(crumb.path)}`}
-                  className="hover:text-gray-900 transition-colors">
-                  {crumb.name}
-                </Link>
-              )
-            ) : (
-              <span className="text-gray-900 font-medium">{crumb.name}</span>
-            )}
-          </span>
-        ))}
-      </nav>
+      <Breadcrumbs links={breadcrumbLinks} />
 
       <h1 className="text-2xl font-bold text-black">{note.title}</h1>
 
       <div className="flex gap-2 text-xs text-gray-500">
-        <span>{new Date(note.metadata.date).toLocaleDateString()}</span>
+        <span>
+          Last Updated {new Date(note.metadata.updated).toLocaleDateString()}
+        </span>
       </div>
 
       <div className="body-text">
