@@ -1,5 +1,15 @@
 {
   "version": "1.0.0",
-  "lastSync": "2026-01-16T02:18:13.375Z",
-  "notes": {}
+  "lastSync": "2026-01-16T02:22:46.158Z",
+  "notes": {
+    "test": {
+      "id": "test",
+      "path": "test",
+      "title": "test",
+      "metadata": {
+        "date": "2026-01-16",
+        "updated": "2026-01-16"
+      }
+    }
+  }
 }

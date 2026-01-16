@@ -2,11 +2,13 @@
   "id": "test",
   "path": "test",
   "title": "test",
-  "content": "hello!\nhow are you\nfdsf\nfasdf\nmodification\n",
+  "content": "hi\n\ntesting an image:\n\n<img src=\"/images/Figure 1.4 Kubernetes Concepts.png\" alt=\"Figure 1.4 Kubernetes Concepts\" />\n",
   "metadata": {
     "date": "2026-01-16",
     "updated": "2026-01-16"
   },
-  "images": [],
+  "images": [
+    "/images/Figure 1.4 Kubernetes Concepts.png"
+  ],
   "links": []
 }
