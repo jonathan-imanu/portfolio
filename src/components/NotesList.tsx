@@ -185,6 +185,15 @@ export function NotesList() {
 
   return (
     <div className="space-y-4">
+      <p className="experience-text">
+        A selection of my notes on various topics and courses I took at UofT.{" "}
+        <a
+          href="https://github.com/jonathan-imanu/portfolio"
+          className="text-gray-900 underline hover:text-gray-700">
+          These notes are synced with my Obsidian vault.
+        </a>{" "}
+        I hope you find something useful here.
+      </p>
       <div className="flex items-center justify-between">
         <p className="text-sm text-gray-500">
           {filteredNotes.length} {filteredNotes.length === 1 ? "note" : "notes"}
@@ -194,7 +203,7 @@ export function NotesList() {
       <div className="relative">
         <input
           type="text"
-          placeholder="Search notes by title or path..."
+          placeholder="Search notes by title or path"
           value={searchQuery}
           onChange={(e) => {
             const newValue = e.target.value;
