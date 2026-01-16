@@ -41,7 +41,7 @@ export function NotesList() {
       <p className="experience-text">
         A selection of my notes on various topics and courses I took at UofT.{" "}
         <a
-          href="https://github.com/jonathan-imanu/portfolio"
+          href="https://github.com/jonathan-imanu/obsidian-vault"
           className="text-gray-900 underline hover:text-gray-700">
           These notes are synced with my Obsidian vault.
         </a>{" "}
