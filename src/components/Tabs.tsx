@@ -8,30 +8,24 @@ interface TabsProps {
 
 export function Tabs({ tabs, defaultTab }: TabsProps) {
   const [activeTab, setActiveTab] = useState(defaultTab || tabs[0]?.id);
-  const prevDefaultTabRef = useRef(defaultTab);
-  const userHasClickedRef = useRef(false);
+  const userInteractedRef = useRef(false);
 
-  // Update active tab if defaultTab changes from external source (e.g., URL params)
-  // But only if user hasn't manually clicked a tab
+  // Update active tab if defaultTab changes externally, but only if user hasn't interacted
   useEffect(() => {
-    if (
-      defaultTab &&
-      defaultTab !== prevDefaultTabRef.current &&
-      !userHasClickedRef.current
-    ) {
+    if (defaultTab && defaultTab !== activeTab && !userInteractedRef.current) {
       setActiveTab(defaultTab);
     }
-    prevDefaultTabRef.current = defaultTab;
-  }, [defaultTab]);
+  }, [defaultTab, activeTab]);
 
   const handleTabClick = (tabId: string) => {
-    userHasClickedRef.current = true;
+    userInteractedRef.current = true;
     setActiveTab(tabId);
   };
 
+  const activeTabContent = tabs.find((tab) => tab.id === activeTab)?.content;
+
   return (
     <div className="mt-6">
-      {/* Tab buttons */}
       <div className="flex border-b border-gray-200 gap-1">
         {tabs.map((tab) => (
           <button
@@ -46,11 +40,7 @@ export function Tabs({ tabs, defaultTab }: TabsProps) {
           </button>
         ))}
       </div>
-
-      {/* Tab content */}
-      <div className="mt-4">
-        {tabs.find((tab) => tab.id === activeTab)?.content}
-      </div>
+      <div className="mt-4">{activeTabContent}</div>
     </div>
   );
 }
