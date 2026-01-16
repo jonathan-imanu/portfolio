@@ -1,0 +1,12 @@
+{
+  "id": "dev--languages--cpp--a-tour-of-c-stroustrup-2014--1-the-basics",
+  "path": "dev/languages/cpp/a-tour-of-c-stroustrup-2014/1-the-basics",
+  "title": "1. The Basics",
+  "content": "**Object Files**: Just machine code and some other stuff. The key is that it is isn't executable until it has been linked.\n\n**Obvious**: .exe's aren't portable\n\n```cpp\nnamespace::func // means the func following the :: can be found in the namespace namespace\n\nstd::cout // a real ex\n\nusing namespace std\ncout\n```\n\n**Unlike Go,** C++ allows overloading, yields an error if there are ambiguities around which function to call; IE one is not better than the other\n\n**Oddity**: A significant difference from most languages is that we can use `{}` for initialization of variables:\n\n```cpp\nint infoLost = 3.2\nint errors {3.2} // error: floating-point to integer conversion\n```\n\n`=` seems to remain for C++ to C compatibility only and is not recommended\n\nThe `auto` keyword is a lot like `:=` in Go: let the initializer figure out what type this is. Like Go `:=` in Go use auto unless:\n\n1. Precision (int32 vs int64) matters\n2. We want the type to be obvious for readability\n\n### constexpr\n\n**“If the arguments are known at compile time, please evaluate at compile time. Otherwise, run it at runtime**\"\n\nA big performance win.\n### References\n\nLike a pointer but we can't refer to a different object after initialization and we don't need * to access it's contents.\n\n`const reference` <- don't modify this argument and don't waste time copying\n\n### nullptr\n\nImplemented to fix issues stemming from C due to the fact that `NULL` is simply `#define NULL 0`. This is pointer specific. \n\nA good example is:\n\n```cpp\nvoid f(int);\nvoid f(void*);\n\nf(NULL) // no idea which one this will call\nf(nullptr) // will always call the void* impl.\n```\n\n\n\n\n\n\n\n\n\n\n\n",
+  "metadata": {
+    "date": "2026-01-16",
+    "updated": "2026-01-16"
+  },
+  "images": [],
+  "links": []
+}

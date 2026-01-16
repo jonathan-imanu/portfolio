@@ -1,0 +1,12 @@
+{
+  "id": "leetcode--concepts--graphs--dijkstras-algorithim",
+  "path": "leetcode/concepts/graphs/dijkstras-algorithim",
+  "title": "Dijkstra's Algorithim",
+  "content": "TLDR: Find shortest path from source to all other nodes. Literally just BFS but with a minheap. Use for weighted graphs. TC: O((E + V) log V)\n\n\n\n\n\n\n\n",
+  "metadata": {
+    "date": "2026-01-16",
+    "updated": "2026-01-16"
+  },
+  "images": [],
+  "links": []
+}

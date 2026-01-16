@@ -1,0 +1,14 @@
+{
+  "id": "school--cscc69--ostep--part-1-virtualization--19-translation-lookaside-buffer",
+  "path": "school/cscc69/ostep/part-1-virtualization/19-translation-lookaside-buffer",
+  "title": "19. Translation Lookaside Buffer",
+  "content": "A TLB is part of the chip’s memory-management unit (MMU), and is simply **a hardware cache of popular virtual-to-physical address translations.** TLB's rely on *temporal and spatial locality*. \n\nUpon each virtual memory reference, the hardware first checks the TLB to see if the desired translation is held therein\n\t- If yes: the translation is performed (quickly) without having to consult the page table (which has all translations). \n\t- If no, it could either be handled by the hardware or the software.\n\t\t- Older systems would use hardware. \n\t\t\t- It would have complex instruction sets and it would have to know exactly where page tables are in memory (with a page table register). \n\t\t- Newer architectures would use software-managed TLB.\n\t\t\t- On TLB-miss, hardware raises an exception which sets privilege level to kernel mode and jumps to a trap handler.\n\t\t\t- This trap handler will run privileged instructions to update the TLB.\n\t\t- **Software based TLBs are more flexible and simple.** \n##### TLBs are only valid for the current process!\n### Context Switching\n\nWhen context switching, the OS must be careful about the TLB to ensure that the new process does not use translations that were applicable to previous process. \n\nTo rectify, we can:\n\n1. Flush the TLB by setting the valid bit of each entry to 0. Of course, there will then be TLB misses when a process first starts up.\n2. Hardware provides a **address space identifier (ASID)** (like a PID but with less bits) in the TLB. Now there's no need to flush and since some pages could be shared among processes, we can take advantage of this.\n\nReplacement Policy can be LRU based or random.\n#### TLB Contents\n\nTLB might be **fully associative** which means that OS will have to search all page table entries. A TLB entry might contain `VPN | PFN | protection bits | other bits`. Protection bits will determine how the page can be accessed. \n\n<img src=\"/images/OSTEP Figure 19.4 - MIPS TLB Entry.png\" alt=\"OSTEP Figure 19.4   MIPS TLB Entry\" />",
+  "metadata": {
+    "date": "2026-01-16",
+    "updated": "2026-01-16"
+  },
+  "images": [
+    "/images/OSTEP Figure 19.4 - MIPS TLB Entry.png"
+  ],
+  "links": []
+}

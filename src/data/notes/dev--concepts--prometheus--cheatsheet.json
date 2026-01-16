@@ -1,0 +1,14 @@
+{
+  "id": "dev--concepts--prometheus--cheatsheet",
+  "path": "dev/concepts/prometheus/cheatsheet",
+  "title": "Cheatsheet",
+  "content": "An OSS systems monitoring and alerting toolkit.\n\n<img src=\"/images/Prometheus Arch..png\" alt=\"Prometheus Arch.\" />\nFor a simplified mental model, just think of it as a scraping engine for metrics from instrumented applications and has a time-series database to store these metrics. It has PromQL (a DSL) so that this data can be exported accessed by data visualization applications (or anything that cares). \n",
+  "metadata": {
+    "date": "2026-01-16",
+    "updated": "2026-01-16"
+  },
+  "images": [
+    "/images/Prometheus Arch..png"
+  ],
+  "links": []
+}

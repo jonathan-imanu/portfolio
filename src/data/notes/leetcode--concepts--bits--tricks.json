@@ -1,0 +1,12 @@
+{
+  "id": "leetcode--concepts--bits--tricks",
+  "path": "leetcode/concepts/bits/tricks",
+  "title": "Tricks",
+  "content": "#### Getting LSB\n\n```python\nlsb = mask & -mask\n```\n\n##### Precomputing based on Bitmasks\n\n```python\nog_array = some array of length n\ndp = [0] * masks\nfor mask in range(masks):\n\tlsb = mask & -mask\n\ti = lsb.bit_length() - 1\n\tdp[mask] = some relation between dp[mask ^ lsb] + og[lsb]\n```\n#### Getting Bit Length (Highest Set Bit)\n\n```python\nbit.bit_length() # in python\n```\n\n```cpp\nunsigned bits, var = (x < 0) ? -x : x; // in cpp or anything else\nfor(bits = 0; var != 0; ++bits) var >>= 1;\n```",
+  "metadata": {
+    "date": "2026-01-16",
+    "updated": "2026-01-16"
+  },
+  "images": [],
+  "links": []
+}

@@ -1,0 +1,12 @@
+{
+  "id": "dev--languages--python--fluent-in-python--2-functions-as-objects--2-decorators-closures",
+  "path": "dev/languages/python/fluent-in-python/2-functions-as-objects/2-decorators-closures",
+  "title": "2. Decorators & Closures",
+  "content": "# Decorators\n\nA decorator is just a callable that takes another function as an argument. This decorator may perform some processing with the decorated function, and returns it or replaces it with another function or callable object.\n\n**They are just syntactic sugar**. Any decorator is equivalent to just doing:\n\n```python \n@alpha\n@beta \ndef factorial(n): \n\treturn 1 if n < 2 else n*factorial(n-1)\n\t\n# Is the same as the below:\n\ndef factorial(n): \n\treturn 1 if n < 2 else n*factorial(n-1) \n\nfactorial = alpha(beta(factorial))\n```\n\n**Run at import time:** A key feature of decorators is that they run right after the decorated function is defined. That is usually at **import time** (i.e., when a module is loaded by Python).\n# Closures\n\nA function that **retains the bindings of the free variables that exist when the function is defined**, so that they can be used later when the function is invoked and the defining scope is no longer available.\n\n```python\ndef make_averager(): \n\t# series is a free variable\n\t# It isn't bound in the local scope\n\tseries = [] \n\t\n\t\n\tdef averager(new_value): \n\t\t# Why don't we need nonlocal here?\n\t\t# ANS: series is a list -> mutable!\n\t\tseries.append(new_value) \n\t\ttotal = sum(series) \n\t\treturn total / len(series)\n\t\t \n\treturn averager\n```\n#### Using `nonlocal`\n\nDeclare a variable as a free variable even when it is assigned within the function. If a new value is assigned to a nonlocal variable, the binding stored in the closure is changed.\n\nFor an example, consider this more efficient impl. of `averager`:\n\n```python\n\ndef make_averager():\n\tcount = total = 0\n\t\n\tdef averager(new_value):\n\t\tnonlocal count, total\n\t\ttotal += new_value\n\t\tcount += 1\n\t\treturn total / count\n\t\n\treturn averager\n```\n\n#### `from functools import singledispatch`\n\nIs the closest thing we have to operator overloading in Python\n\n\n",
+  "metadata": {
+    "date": "2026-01-16",
+    "updated": "2026-01-16"
+  },
+  "images": [],
+  "links": []
+}

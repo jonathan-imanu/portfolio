@@ -1,0 +1,12 @@
+{
+  "id": "dev--languages--cpp--a-tour-of-c-stroustrup-2014--2-user-defined-types",
+  "path": "dev/languages/cpp/a-tour-of-c-stroustrup-2014/2-user-defined-types",
+  "title": "2. User Defined Types",
+  "content": "### Classes\n\nA function / method with the same name as the class is called the constructor.\n\n**A struct is simply a class with members public by default**\n### Union \n\nA struct where all members are allocated at the same address so that the union occupies only as much space as its largest member. A union can only hold a value for one member at a time.\n\n**Advice:** Use a tagged enum with real functionality hidden behind a abstraction since maintaining correspondence with the tag and access will be error prone.\n\n\n\n\n\n\n",
+  "metadata": {
+    "date": "2026-01-16",
+    "updated": "2026-01-16"
+  },
+  "images": [],
+  "links": []
+}

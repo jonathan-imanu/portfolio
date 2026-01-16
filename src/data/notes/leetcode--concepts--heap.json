@@ -1,0 +1,12 @@
+{
+  "id": "leetcode--concepts--heap",
+  "path": "leetcode/concepts/heap",
+  "title": "Heap",
+  "content": "## Lazy Deletions\n\nA nice strategy for cases in which we may want a heap to keep track of extrema but have frequent deletions and additions is combining lazy deletions with a frequency hashmap.\n\nThe below example ([239. Sliding Window Maximum](https://leetcode.com/problems/sliding-window-maximum/)) uses the negative trick to make Python's min-heap a max-heap:\n\n```python\nclass Solution:\n\tdef maxSlidingWindow(self, nums: List[int], k: int) -> List[int]:\n\t\tresult = []\n\t\tn = len(nums)\n\t\t\n\t\tfreq = defaultdict(int)\n\t\t# this will be of size n in worst case \n\t\t# worst case is when elements are in asc order\n\t\theap = [] \n\t\t\n\n\t\t# O(k)\n\t\t# initially populate heap and hashmap\n\t\tfor i in range(k):\n\t\t\theap.append(-nums[i])\n\t\t\tfreq[nums[i]] += 1\n\n\t\theapq.heapify(heap)\n\n\t\tfor i in range(n - k + 1):\n\t\t\twindow_max = -heap[0]\n\t\t\n\t\t\t# ignore and handle invalid maxes\n\t\t\t# this amortizied to O(log n) time \n\t\t\t# n - k total pops at most\n\t\t\twhile heap and freq[window_max] == 0:\n\t\t\t\theapq.heappop(heap)\n\t\t\t\twindow_max = -heap[0]\n\t\t\t\tresult.append(window_max)\n\t\t\n\t\t\t# we lazily delete element at index i \n\t\t\tfreq[nums[i]] -= 1\n\t\t\tif i + k < n:\n\t\t\t\t# add element at index i + k to window\n\t\t\t\t# O(log n)\n\t\t\t\theapq.heappush(heap, -nums[i + k])\n\t\t\t\tfreq[nums[i + k]] += 1\n\n\treturn result\n```",
+  "metadata": {
+    "date": "2026-01-16",
+    "updated": "2026-01-16"
+  },
+  "images": [],
+  "links": []
+}

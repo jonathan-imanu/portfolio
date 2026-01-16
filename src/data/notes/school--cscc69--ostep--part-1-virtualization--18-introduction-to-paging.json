@@ -1,0 +1,14 @@
+{
+  "id": "school--cscc69--ostep--part-1-virtualization--18-introduction-to-paging",
+  "path": "school/cscc69/ostep/part-1-virtualization/18-introduction-to-paging",
+  "title": "18. Introduction to Paging",
+  "content": "Instead of variable sized segments, paging is all about *fixed sized units called pages*. We correspondingly view physical memory as fixed-sized slots called page frames where each frame contains a single virtual-memory page.\n\nThe OS will maintain a *per process* data-structure called a **page table** that will store **address translations** for each of the virtual pages of the address space to let you know where in physical memory each page resides.\n\nTo translate a virtual address:\n1. Split it into the **virtual page number (VPN)** and the **offset**\n\t1. The exact number of bits of the offset and the VPN will depend on the page number per process and the address space\n2. Use the **page table** to get the **physical frame number (PFN) / physical page number (PPN)**\n\n<img src=\"/images/OSTEP Figure 18.3 - The Address Translation Process.png\" alt=\"OSTEP Figure 18.3   The Address Translation Process\" />\n### Page Table Structure\n\nSimplest implementation is a **linear page table** which is just an array that can be indexed by the VPN to get the page table entry and find the PFN. \n\nEach PTE would have:\n- **IMPORTANT** - A valid bit that indicates whether a certain translation is valid. \n\t- If process accesses invalid memory, a trap will be generated that will likely terminate the process\n- Present Bit indicates whether page is in memory or disk (has it been swapped out)\n- Dirty bit that indicates whether page has been modified\n- Reference Bit to track whether a page has been accessed\n### Problems\n- This approach takes up a lot of memory\n\t- 4KB page size means the offset needs to be at least 12 bits and the VPN would be the remaining 20 bits in a 32-bit address space\n\t\t- `VPN = total bits - offset bits`\n\t\t- `offset bits = based on page size`\n\t- THEN if we need 4 bytes per **page table entry** for the PPN + some other useful stuff, memory per process becomes 4MB!\n- This approach is slow\n\t- Address translation is performed entirely using the page table stored in main memory.\n\n\n\n",
+  "metadata": {
+    "date": "2026-01-16",
+    "updated": "2026-01-16"
+  },
+  "images": [
+    "/images/OSTEP Figure 18.3 - The Address Translation Process.png"
+  ],
+  "links": []
+}

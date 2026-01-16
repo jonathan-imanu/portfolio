@@ -1,0 +1,12 @@
+{
+  "id": "school--cscc24--b36-review--readme",
+  "path": "school/cscc24/b36-review/readme",
+  "title": "README",
+  "content": "I took CSC236 instead of CSCB36. In 236, finite state automata, regular expressions, context-free grammars and pushdown automata are not covered. \n\nThis section reviews those and only those topics.\n",
+  "metadata": {
+    "date": "2026-01-16",
+    "updated": "2026-01-16"
+  },
+  "images": [],
+  "links": []
+}

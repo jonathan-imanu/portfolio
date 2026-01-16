@@ -1,0 +1,12 @@
+{
+  "id": "dev--languages--python--fluent-in-python--2-functions-as-objects--1-functions-as-first-class-objects",
+  "path": "dev/languages/python/fluent-in-python/2-functions-as-objects/1-functions-as-first-class-objects",
+  "title": "1. Functions as First-Class Objects",
+  "content": "### First-Class Objects\n\nProgramming language researchers define a “first-class object” as a program entity that can be:\n\n- Created at runtime \n- Assigned to a variable or element in a data structure\n- Passed as an argument to a function \n- Returned as the result of a function\n\n**Go** also has functions as first-class objects\n\n**Higher-Order Functions** take in other functions as an argument or return a function as their result\n\n#### Usage of the special method `__call__` \n\nA class implementing `__call__` is an easy way to create function-like objects that have some internal state that must be kept across invocations\n\n### The Difference between kwargs & args\n\nIn a function ordering is:\n\n1. positional\n2. `*args`\n\t1. Just values within a tuple under the hood\n\t2. The name is irrelevant, anything with * would work\n3. kw only params\n4. `**kwargs`\n\t1. A dictionary of kw: val \n\t2. The name is irrelevant, anything with ** would work\n\n\n#### / allows for positional-only args in funcs\n\n```python \ndef divmod(a, b, /):\n\treturn (a // b, a % b)\n\t\n# can't do divmod(a=10, b=4) only divmod(10, 4)\n```\n\n**It's old but map, filter & reduce are talked about on page 235**\n\n",
+  "metadata": {
+    "date": "2026-01-16",
+    "updated": "2026-01-16"
+  },
+  "images": [],
+  "links": []
+}

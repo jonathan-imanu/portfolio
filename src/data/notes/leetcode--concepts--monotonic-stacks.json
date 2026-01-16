@@ -1,0 +1,12 @@
+{
+  "id": "leetcode--concepts--monotonic-stacks",
+  "path": "leetcode/concepts/monotonic-stacks",
+  "title": "Monotonic Stacks",
+  "content": "[Video Explanation](https://www.youtube.com/watch?v=Dq_ObZwTY_Q)\n\nGiven a stack `S` and an array `A`, we want to maintain the invariant (for a decreasing monotonic stack) that from bottom to top _values are strictly decreasing_.\n\n- I.E. `S[0] > S[1] > ... > S[-1]`\n\nThe code looks something like this for the decreasing monotonic stack above:\n\n```python\nn = len(nums)\nstack = []\n\nfor i in range(n - 1, -1, -1):\n\twhile stack and nums[i] >= stack[-1]:\n\t\tstack.pop()\n\t# stack[-1] represents the next greater element of nums[i]\n\t# the invariant that the stack is in descending order holds at all times\n\tstack.append(nums[i])\n```\n\n## Practice Problems\n\n- [503. Next Greater Element II](https://leetcode.com/problems/next-greater-element-ii/)\n- [739. Daily Temperatures](https://leetcode.com/problems/daily-temperatures/)\n",
+  "metadata": {
+    "date": "2026-01-16",
+    "updated": "2026-01-16"
+  },
+  "images": [],
+  "links": []
+}

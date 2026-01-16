@@ -1,0 +1,12 @@
+{
+  "id": "dev--languages--cpp--a-tour-of-c-stroustrup-2014--5-templates",
+  "path": "dev/languages/cpp/a-tour-of-c-stroustrup-2014/5-templates",
+  "title": "5. Templates",
+  "content": "A more powerful version of Generics\n### Idea\n\nWhen implementing a generic class we often don't to constrict users of that class to only be able to use that class with one type.\n\n**A template is a class or function that we parameterize with a set of types or values.**\n\nTemplates don't exist until we call it! A way for us to get the compiler to write code for us based on our usage.\n\n\n\n\n\n",
+  "metadata": {
+    "date": "2026-01-16",
+    "updated": "2026-01-16"
+  },
+  "images": [],
+  "links": []
+}

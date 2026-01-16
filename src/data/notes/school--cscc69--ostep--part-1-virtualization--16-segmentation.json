@@ -1,0 +1,14 @@
+{
+  "id": "school--cscc69--ostep--part-1-virtualization--16-segmentation",
+  "path": "school/cscc69/ostep/part-1-virtualization/16-segmentation",
+  "title": "16. Segmentation",
+  "content": "> In the simple Base & Bounds solution to [15. Address Translation](/notes/15-address-translation) a key problem was that the chunk of free space between the stack and heap of a process's address space would be wasted.\n### Segmentation: Support for sparse address spaces\n\nDon't just have one base/bounds pair per address space in MMU, have a pair for each *logical segment* of the address space; where a segment is a contiguous portion of the address space of some length.\n\nWe also need an additional bit to state whether the segment grows in the positive or negative direction. \n\nWe need more register pairs and the OS has more work todo on context switches but this sparse address spacing solves the wasted space issue.\n\nSome problems:\n1. Physical memory can become full of little holes of free space. It can be then difficult to service requests to grow existing segments or allocate new segments. This is **external fragmentation.**\n\t1. OS can *compact physical memory* every so often but this is expensive.\n\t2. Algorithms exist to minimize this but it will always be a problem.\n",
+  "metadata": {
+    "date": "2026-01-16",
+    "updated": "2026-01-16"
+  },
+  "images": [],
+  "links": [
+    "15-address-translation"
+  ]
+}

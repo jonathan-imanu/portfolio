@@ -1,0 +1,12 @@
+{
+  "id": "school--cscd21--lectures--week-2",
+  "path": "school/cscd21/lectures/week-2",
+  "title": "Week 2",
+  "content": "### Decentralized Ledger (over a P2P network)\n\n- All node have a copy of the ledger and ensure local correctness\n\n**Pros:**\n- No single point of failure\n- Better reliability since network can handle some nodes going down\n- Better security since some nodes can be malicious but the rest of the network has legitimate ledger\n**Cons:**\n- Harder to authenticate users\n- Consistency is harder because of P2P\n\n",
+  "metadata": {
+    "date": "2026-01-16",
+    "updated": "2026-01-16"
+  },
+  "images": [],
+  "links": []
+}

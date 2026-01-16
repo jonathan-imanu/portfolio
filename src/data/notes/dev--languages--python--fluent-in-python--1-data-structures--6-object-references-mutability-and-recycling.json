@@ -1,0 +1,12 @@
+{
+  "id": "dev--languages--python--fluent-in-python--1-data-structures--6-object-references-mutability-and-recycling",
+  "path": "dev/languages/python/fluent-in-python/1-data-structures/6-object-references-mutability-and-recycling",
+  "title": "6. Object References, Mutability, and Recycling",
+  "content": "\n> **Python variables are names bound to objects.**\n### == & is\n\n- `==` is comparison on values and `is` is based on identities\n\t- `a == b` will follow the following steps:\n\t\t1. Call `a.__eq__(b)`\n\t\t2. If that returns NotImplemented, then call `b.__eq__(a)`\n\t\t3. If that also returns NotImplemented, then `a is b`\n\t- **This is fundamentally different than C or Go!** Equality checks with == work on primitive raw values\n#### Call by Sharing\n\nThe only mode of parameter passing in Python is call by sharing. Call by sharing means that the parameters inside the function become aliases of the actual arguments.\n###### ***Mutable Types as Parameter Defaults***\n\nDO NOT DO.\n\n```python\nclass Dummy:\n\tdef __init__(self, passengers=[]): # \n\t\tself.passengers = passengers\n\t\t\ndummy1 = Dummy()\ndummy2 = Dummy()\n\n# id(dummy1.passengers) == id(dummy2.passengers) is True !!!!!\n```\n\nDefault argument expressions are evaluated **once**, at **function definition time**, and the resulting objects are stored on the function object. They are **not** re-created each time the function is called.\n\n#### An aside on `del`\n\nA statement **NOT** a function that deletes references **NOT** objects\n\n#### Interning\n\nThe sharing of string literals is an optimization technique called interning. \n\nCPython uses a similar technique with small integers to avoid unnecessary duplication of num‐ bers that appear frequently in programs like 0, 1, –1, etc. \n\nNote that CPython does not intern all strings or integers, and the criteria it uses to do so is an undocumented implementation detail.\n\n**Example Code:**\n\n```python\nx = 3\ny = x\nprint(f\"x: {id(x)}, y:{id(y)}\") # x,y have same ids, expected\nx = 4\ny = 4\nprint(f\"x: {id(x)}, y:{id(y)}\") # x,y have same ids although different than before, INTERNING!\nx = 4\ny = 5\nprint(f\"x: {id(x)}, y:{id(y)}\") # x,y have diff ids! BUT id(x) is same as before\n```\n\n",
+  "metadata": {
+    "date": "2026-01-16",
+    "updated": "2026-01-16"
+  },
+  "images": [],
+  "links": []
+}

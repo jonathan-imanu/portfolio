@@ -1,0 +1,12 @@
+{
+  "id": "dev--languages--go--learnings",
+  "path": "dev/languages/go/learnings",
+  "title": "Learnings",
+  "content": "### Escape Analysis\n\nThe placement of stack vs heap is determined by both usage of `make` and **escape analysis**.\n\n**Example:**\n\n```go\nfunc f() *int {\n    x := 3\n    return &x\n}\n```\n\nGo's compiler sees that `x` \"exits\" the function and allocates it on the heap instead. The equivalent code in C will compile and run but leads to a gotcha where the returned value is dead.\n\n**If you take the address of a variable and it would escape the stack, Go automatically moves it to the heap.**\n",
+  "metadata": {
+    "date": "2026-01-16",
+    "updated": "2026-01-16"
+  },
+  "images": [],
+  "links": []
+}

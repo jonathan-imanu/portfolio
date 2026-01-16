@@ -1,0 +1,12 @@
+{
+  "id": "leetcode--reminders",
+  "path": "leetcode/reminders",
+  "title": "Reminders",
+  "content": "## Graphs\n\n- We don't always need to do traversals at every point, we can do a flood fill approach where we work from the edges inward\n- Minimum weights in Djkstras algo\n\n## Binary Search\n\n- [852. Peak Index in a Mountain Array](https://leetcode.com/problems/peak-index-in-a-mountain-array/)\n  - An excellent problem. **Key Learning:** Binary search doesn't always depend the on the entire width of the window! Some times we can draw a conclusion from just m!\n",
+  "metadata": {
+    "date": "2026-01-16",
+    "updated": "2026-01-16"
+  },
+  "images": [],
+  "links": []
+}

@@ -1,0 +1,12 @@
+{
+  "id": "leetcode--concepts--backtracking",
+  "path": "leetcode/concepts/backtracking",
+  "title": "Backtracking",
+  "content": "One of the fastest ways to speed up a backtracking problem is reducing repeated work. This principle can be applied in [2305. Fair Distribution of Cookies](https://leetcode.com/problems/fair-distribution-of-cookies/). \n\nThinking deeply about the recursive path and what work gets repeated can lead you to simple optimizations.\n\n",
+  "metadata": {
+    "date": "2026-01-16",
+    "updated": "2026-01-16"
+  },
+  "images": [],
+  "links": []
+}

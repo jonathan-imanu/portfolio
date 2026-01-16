@@ -1,11 +1,533 @@
 {
   "version": "1.0.0",
-  "lastSync": "2026-01-16T02:22:46.158Z",
+  "lastSync": "2026-01-16T02:25:19.513Z",
   "notes": {
-    "test": {
-      "id": "test",
-      "path": "test",
-      "title": "test",
+    "dev/concepts/floating-point-numbers": {
+      "id": "dev--concepts--floating-point-numbers",
+      "path": "dev/concepts/floating-point-numbers",
+      "title": "Floating Point Numbers",
+      "metadata": {
+        "date": "2026-01-16",
+        "updated": "2026-01-16"
+      }
+    },
+    "dev/concepts/kubernetes/cheatsheet": {
+      "id": "dev--concepts--kubernetes--cheatsheet",
+      "path": "dev/concepts/kubernetes/cheatsheet",
+      "title": "Cheatsheet",
+      "metadata": {
+        "date": "2026-01-16",
+        "updated": "2026-01-16"
+      }
+    },
+    "dev/concepts/prometheus/cheatsheet": {
+      "id": "dev--concepts--prometheus--cheatsheet",
+      "path": "dev/concepts/prometheus/cheatsheet",
+      "title": "Cheatsheet",
+      "metadata": {
+        "date": "2026-01-16",
+        "updated": "2026-01-16"
+      }
+    },
+    "dev/languages/go/learnings": {
+      "id": "dev--languages--go--learnings",
+      "path": "dev/languages/go/learnings",
+      "title": "Learnings",
+      "metadata": {
+        "date": "2026-01-16",
+        "updated": "2026-01-16"
+      }
+    },
+    "dev/languages/python/3-data-model-official-docs": {
+      "id": "dev--languages--python--3-data-model-official-docs",
+      "path": "dev/languages/python/3-data-model-official-docs",
+      "title": "3. Data Model - Official Docs",
+      "metadata": {
+        "date": "2026-01-16",
+        "updated": "2026-01-16"
+      }
+    },
+    "dev/languages/python/314-the-gils-removal-about-pep-703-pep-779": {
+      "id": "dev--languages--python--314-the-gils-removal-about-pep-703-pep-779",
+      "path": "dev/languages/python/314-the-gils-removal-about-pep-703-pep-779",
+      "title": "3.14 - The GIL's Removal; About PEP 703 & PEP 779",
+      "metadata": {
+        "date": "2026-01-16",
+        "updated": "2026-01-16"
+      }
+    },
+    "dev/languages/python/fluent-in-python/1-data-structures/1-python-data-model": {
+      "id": "dev--languages--python--fluent-in-python--1-data-structures--1-python-data-model",
+      "path": "dev/languages/python/fluent-in-python/1-data-structures/1-python-data-model",
+      "title": "1. Python Data Model",
+      "metadata": {
+        "date": "2026-01-16",
+        "updated": "2026-01-16"
+      }
+    },
+    "dev/languages/python/fluent-in-python/1-data-structures/6-object-references-mutability-and-recycling": {
+      "id": "dev--languages--python--fluent-in-python--1-data-structures--6-object-references-mutability-and-recycling",
+      "path": "dev/languages/python/fluent-in-python/1-data-structures/6-object-references-mutability-and-recycling",
+      "title": "6. Object References, Mutability, and Recycling",
+      "metadata": {
+        "date": "2026-01-16",
+        "updated": "2026-01-16"
+      }
+    },
+    "dev/languages/python/fluent-in-python/2-functions-as-objects/1-functions-as-first-class-objects": {
+      "id": "dev--languages--python--fluent-in-python--2-functions-as-objects--1-functions-as-first-class-objects",
+      "path": "dev/languages/python/fluent-in-python/2-functions-as-objects/1-functions-as-first-class-objects",
+      "title": "1. Functions as First-Class Objects",
+      "metadata": {
+        "date": "2026-01-16",
+        "updated": "2026-01-16"
+      }
+    },
+    "dev/languages/python/fluent-in-python/2-functions-as-objects/2-decorators-closures": {
+      "id": "dev--languages--python--fluent-in-python--2-functions-as-objects--2-decorators-closures",
+      "path": "dev/languages/python/fluent-in-python/2-functions-as-objects/2-decorators-closures",
+      "title": "2. Decorators & Closures",
+      "metadata": {
+        "date": "2026-01-16",
+        "updated": "2026-01-16"
+      }
+    },
+    "dev/languages/python/fluent-in-python/3-class-protocols/11-a-pythonic-object": {
+      "id": "dev--languages--python--fluent-in-python--3-class-protocols--11-a-pythonic-object",
+      "path": "dev/languages/python/fluent-in-python/3-class-protocols/11-a-pythonic-object",
+      "title": "11. A Pythonic Object",
+      "metadata": {
+        "date": "2026-01-16",
+        "updated": "2026-01-16"
+      }
+    },
+    "dev/languages/python/fluent-in-python/3-class-protocols/13-interfaces-protocols-and-abcs": {
+      "id": "dev--languages--python--fluent-in-python--3-class-protocols--13-interfaces-protocols-and-abcs",
+      "path": "dev/languages/python/fluent-in-python/3-class-protocols/13-interfaces-protocols-and-abcs",
+      "title": "13. Interfaces, Protocols, and ABCs",
+      "metadata": {
+        "date": "2026-01-16",
+        "updated": "2026-01-16"
+      }
+    },
+    "dev/languages/python/fluent-in-python/3-class-protocols/14-inheritance": {
+      "id": "dev--languages--python--fluent-in-python--3-class-protocols--14-inheritance",
+      "path": "dev/languages/python/fluent-in-python/3-class-protocols/14-inheritance",
+      "title": "14. Inheritance",
+      "metadata": {
+        "date": "2026-01-16",
+        "updated": "2026-01-16"
+      }
+    },
+    "dev/languages/python/fluent-in-python/4-control-flow/17-iterators-generators-and-classic-coroutines": {
+      "id": "dev--languages--python--fluent-in-python--4-control-flow--17-iterators-generators-and-classic-coroutines",
+      "path": "dev/languages/python/fluent-in-python/4-control-flow/17-iterators-generators-and-classic-coroutines",
+      "title": "17. Iterators, Generators, and Classic Coroutines",
+      "metadata": {
+        "date": "2026-01-16",
+        "updated": "2026-01-16"
+      }
+    },
+    "dev/languages/python/fluent-in-python/4-control-flow/18-with-match-and-else": {
+      "id": "dev--languages--python--fluent-in-python--4-control-flow--18-with-match-and-else",
+      "path": "dev/languages/python/fluent-in-python/4-control-flow/18-with-match-and-else",
+      "title": "18. with, match and else",
+      "metadata": {
+        "date": "2026-01-16",
+        "updated": "2026-01-16"
+      }
+    },
+    "dev/languages/python/fluent-in-python/4-control-flow/19-concurrency-models-in-python": {
+      "id": "dev--languages--python--fluent-in-python--4-control-flow--19-concurrency-models-in-python",
+      "path": "dev/languages/python/fluent-in-python/4-control-flow/19-concurrency-models-in-python",
+      "title": "19. Concurrency Models in Python",
+      "metadata": {
+        "date": "2026-01-16",
+        "updated": "2026-01-16"
+      }
+    },
+    "dev/languages/cpp/a-tour-of-c-stroustrup-2014/1-the-basics": {
+      "id": "dev--languages--cpp--a-tour-of-c-stroustrup-2014--1-the-basics",
+      "path": "dev/languages/cpp/a-tour-of-c-stroustrup-2014/1-the-basics",
+      "title": "1. The Basics",
+      "metadata": {
+        "date": "2026-01-16",
+        "updated": "2026-01-16"
+      }
+    },
+    "dev/languages/cpp/a-tour-of-c-stroustrup-2014/2-user-defined-types": {
+      "id": "dev--languages--cpp--a-tour-of-c-stroustrup-2014--2-user-defined-types",
+      "path": "dev/languages/cpp/a-tour-of-c-stroustrup-2014/2-user-defined-types",
+      "title": "2. User Defined Types",
+      "metadata": {
+        "date": "2026-01-16",
+        "updated": "2026-01-16"
+      }
+    },
+    "dev/languages/cpp/a-tour-of-c-stroustrup-2014/4-classes": {
+      "id": "dev--languages--cpp--a-tour-of-c-stroustrup-2014--4-classes",
+      "path": "dev/languages/cpp/a-tour-of-c-stroustrup-2014/4-classes",
+      "title": "4. Classes",
+      "metadata": {
+        "date": "2026-01-16",
+        "updated": "2026-01-16"
+      }
+    },
+    "dev/languages/cpp/a-tour-of-c-stroustrup-2014/5-templates": {
+      "id": "dev--languages--cpp--a-tour-of-c-stroustrup-2014--5-templates",
+      "path": "dev/languages/cpp/a-tour-of-c-stroustrup-2014/5-templates",
+      "title": "5. Templates",
+      "metadata": {
+        "date": "2026-01-16",
+        "updated": "2026-01-16"
+      }
+    },
+    "leetcode/concepts/backtracking": {
+      "id": "leetcode--concepts--backtracking",
+      "path": "leetcode/concepts/backtracking",
+      "title": "Backtracking",
+      "metadata": {
+        "date": "2026-01-16",
+        "updated": "2026-01-16"
+      }
+    },
+    "leetcode/concepts/bits/operators": {
+      "id": "leetcode--concepts--bits--operators",
+      "path": "leetcode/concepts/bits/operators",
+      "title": "Operators",
+      "metadata": {
+        "date": "2026-01-16",
+        "updated": "2026-01-16"
+      }
+    },
+    "leetcode/concepts/bits/tricks": {
+      "id": "leetcode--concepts--bits--tricks",
+      "path": "leetcode/concepts/bits/tricks",
+      "title": "Tricks",
+      "metadata": {
+        "date": "2026-01-16",
+        "updated": "2026-01-16"
+      }
+    },
+    "leetcode/concepts/dp/dp-patterns": {
+      "id": "leetcode--concepts--dp--dp-patterns",
+      "path": "leetcode/concepts/dp/dp-patterns",
+      "title": "DP Patterns",
+      "metadata": {
+        "date": "2026-01-16",
+        "updated": "2026-01-16"
+      }
+    },
+    "leetcode/concepts/graphs/dfs-vs-bfs": {
+      "id": "leetcode--concepts--graphs--dfs-vs-bfs",
+      "path": "leetcode/concepts/graphs/dfs-vs-bfs",
+      "title": "DFS vs BFS",
+      "metadata": {
+        "date": "2026-01-16",
+        "updated": "2026-01-16"
+      }
+    },
+    "leetcode/concepts/graphs/dijkstras-algorithim": {
+      "id": "leetcode--concepts--graphs--dijkstras-algorithim",
+      "path": "leetcode/concepts/graphs/dijkstras-algorithim",
+      "title": "Dijkstra's Algorithim",
+      "metadata": {
+        "date": "2026-01-16",
+        "updated": "2026-01-16"
+      }
+    },
+    "leetcode/concepts/graphs/topological-sort": {
+      "id": "leetcode--concepts--graphs--topological-sort",
+      "path": "leetcode/concepts/graphs/topological-sort",
+      "title": "Topological Sort",
+      "metadata": {
+        "date": "2026-01-16",
+        "updated": "2026-01-16"
+      }
+    },
+    "leetcode/concepts/graphs/union-find-disjoint-set-union": {
+      "id": "leetcode--concepts--graphs--union-find-disjoint-set-union",
+      "path": "leetcode/concepts/graphs/union-find-disjoint-set-union",
+      "title": "Union Find & Disjoint Set Union",
+      "metadata": {
+        "date": "2026-01-16",
+        "updated": "2026-01-16"
+      }
+    },
+    "leetcode/concepts/heap": {
+      "id": "leetcode--concepts--heap",
+      "path": "leetcode/concepts/heap",
+      "title": "Heap",
+      "metadata": {
+        "date": "2026-01-16",
+        "updated": "2026-01-16"
+      }
+    },
+    "leetcode/concepts/monotonic-queue": {
+      "id": "leetcode--concepts--monotonic-queue",
+      "path": "leetcode/concepts/monotonic-queue",
+      "title": "Monotonic Queue",
+      "metadata": {
+        "date": "2026-01-16",
+        "updated": "2026-01-16"
+      }
+    },
+    "leetcode/concepts/monotonic-stacks": {
+      "id": "leetcode--concepts--monotonic-stacks",
+      "path": "leetcode/concepts/monotonic-stacks",
+      "title": "Monotonic Stacks",
+      "metadata": {
+        "date": "2026-01-16",
+        "updated": "2026-01-16"
+      }
+    },
+    "leetcode/notes/daily/2106-maximum-fruits-harvested-after-at-most-k-steps": {
+      "id": "leetcode--notes--daily--2106-maximum-fruits-harvested-after-at-most-k-steps",
+      "path": "leetcode/notes/daily/2106-maximum-fruits-harvested-after-at-most-k-steps",
+      "title": "2106. Maximum Fruits Harvested After at Most K Steps",
+      "metadata": {
+        "date": "2026-01-16",
+        "updated": "2026-01-16"
+      }
+    },
+    "leetcode/notes/daily/231-power-of-two": {
+      "id": "leetcode--notes--daily--231-power-of-two",
+      "path": "leetcode/notes/daily/231-power-of-two",
+      "title": "231. Power of Two",
+      "metadata": {
+        "date": "2026-01-16",
+        "updated": "2026-01-16"
+      }
+    },
+    "leetcode/notes/daily/2561-rearranging-fruits": {
+      "id": "leetcode--notes--daily--2561-rearranging-fruits",
+      "path": "leetcode/notes/daily/2561-rearranging-fruits",
+      "title": "2561. Rearranging Fruits",
+      "metadata": {
+        "date": "2026-01-16",
+        "updated": "2026-01-16"
+      }
+    },
+    "leetcode/notes/daily/3477-fruits-into-baskets-ii": {
+      "id": "leetcode--notes--daily--3477-fruits-into-baskets-ii",
+      "path": "leetcode/notes/daily/3477-fruits-into-baskets-ii",
+      "title": "3477. Fruits Into Baskets II",
+      "metadata": {
+        "date": "2026-01-16",
+        "updated": "2026-01-16"
+      }
+    },
+    "leetcode/notes/daily/minimum-operations-to-make-array-elements-zero": {
+      "id": "leetcode--notes--daily--minimum-operations-to-make-array-elements-zero",
+      "path": "leetcode/notes/daily/minimum-operations-to-make-array-elements-zero",
+      "title": "Minimum Operations to Make Array Elements Zero",
+      "metadata": {
+        "date": "2026-01-16",
+        "updated": "2026-01-16"
+      }
+    },
+    "leetcode/reminders": {
+      "id": "leetcode--reminders",
+      "path": "leetcode/reminders",
+      "title": "Reminders",
+      "metadata": {
+        "date": "2026-01-16",
+        "updated": "2026-01-16"
+      }
+    },
+    "school/cscc01/lectures/week-1": {
+      "id": "school--cscc01--lectures--week-1",
+      "path": "school/cscc01/lectures/week-1",
+      "title": "Week 1",
+      "metadata": {
+        "date": "2026-01-16",
+        "updated": "2026-01-16"
+      }
+    },
+    "school/cscc24/b36-review/chapter-7-finite-state-automata-and-regular-expressions": {
+      "id": "school--cscc24--b36-review--chapter-7-finite-state-automata-and-regular-expressions",
+      "path": "school/cscc24/b36-review/chapter-7-finite-state-automata-and-regular-expressions",
+      "title": "Chapter 7 - Finite State Automata and Regular Expressions",
+      "metadata": {
+        "date": "2026-01-16",
+        "updated": "2026-01-16"
+      }
+    },
+    "school/cscc24/b36-review/readme": {
+      "id": "school--cscc24--b36-review--readme",
+      "path": "school/cscc24/b36-review/readme",
+      "title": "README",
+      "metadata": {
+        "date": "2026-01-16",
+        "updated": "2026-01-16"
+      }
+    },
+    "school/cscc24/lectures/week-1": {
+      "id": "school--cscc24--lectures--week-1",
+      "path": "school/cscc24/lectures/week-1",
+      "title": "Week 1",
+      "metadata": {
+        "date": "2026-01-16",
+        "updated": "2026-01-16"
+      }
+    },
+    "school/cscc69/ostep/introduction-to-operating-systems": {
+      "id": "school--cscc69--ostep--introduction-to-operating-systems",
+      "path": "school/cscc69/ostep/introduction-to-operating-systems",
+      "title": "Introduction to Operating Systems",
+      "metadata": {
+        "date": "2026-01-16",
+        "updated": "2026-01-16"
+      }
+    },
+    "school/cscc69/ostep/part-1-virtualization/10-multiprocessor-scheduling-todo": {
+      "id": "school--cscc69--ostep--part-1-virtualization--10-multiprocessor-scheduling-todo",
+      "path": "school/cscc69/ostep/part-1-virtualization/10-multiprocessor-scheduling-todo",
+      "title": "10. Multiprocessor Scheduling (TODO!)",
+      "metadata": {
+        "date": "2026-01-16",
+        "updated": "2026-01-16"
+      }
+    },
+    "school/cscc69/ostep/part-1-virtualization/13-address-spaces": {
+      "id": "school--cscc69--ostep--part-1-virtualization--13-address-spaces",
+      "path": "school/cscc69/ostep/part-1-virtualization/13-address-spaces",
+      "title": "13. Address Spaces",
+      "metadata": {
+        "date": "2026-01-16",
+        "updated": "2026-01-16"
+      }
+    },
+    "school/cscc69/ostep/part-1-virtualization/15-address-translation": {
+      "id": "school--cscc69--ostep--part-1-virtualization--15-address-translation",
+      "path": "school/cscc69/ostep/part-1-virtualization/15-address-translation",
+      "title": "15. Address Translation",
+      "metadata": {
+        "date": "2026-01-16",
+        "updated": "2026-01-16"
+      }
+    },
+    "school/cscc69/ostep/part-1-virtualization/16-segmentation": {
+      "id": "school--cscc69--ostep--part-1-virtualization--16-segmentation",
+      "path": "school/cscc69/ostep/part-1-virtualization/16-segmentation",
+      "title": "16. Segmentation",
+      "metadata": {
+        "date": "2026-01-16",
+        "updated": "2026-01-16"
+      }
+    },
+    "school/cscc69/ostep/part-1-virtualization/18-introduction-to-paging": {
+      "id": "school--cscc69--ostep--part-1-virtualization--18-introduction-to-paging",
+      "path": "school/cscc69/ostep/part-1-virtualization/18-introduction-to-paging",
+      "title": "18. Introduction to Paging",
+      "metadata": {
+        "date": "2026-01-16",
+        "updated": "2026-01-16"
+      }
+    },
+    "school/cscc69/ostep/part-1-virtualization/19-translation-lookaside-buffer": {
+      "id": "school--cscc69--ostep--part-1-virtualization--19-translation-lookaside-buffer",
+      "path": "school/cscc69/ostep/part-1-virtualization/19-translation-lookaside-buffer",
+      "title": "19. Translation Lookaside Buffer",
+      "metadata": {
+        "date": "2026-01-16",
+        "updated": "2026-01-16"
+      }
+    },
+    "school/cscc69/ostep/part-1-virtualization/20-advanced-page-tables": {
+      "id": "school--cscc69--ostep--part-1-virtualization--20-advanced-page-tables",
+      "path": "school/cscc69/ostep/part-1-virtualization/20-advanced-page-tables",
+      "title": "20. Advanced Page Tables",
+      "metadata": {
+        "date": "2026-01-16",
+        "updated": "2026-01-16"
+      }
+    },
+    "school/cscc69/ostep/part-1-virtualization/4-the-process": {
+      "id": "school--cscc69--ostep--part-1-virtualization--4-the-process",
+      "path": "school/cscc69/ostep/part-1-virtualization/4-the-process",
+      "title": "4. The Process",
+      "metadata": {
+        "date": "2026-01-16",
+        "updated": "2026-01-16"
+      }
+    },
+    "school/cscc69/ostep/part-1-virtualization/6-limited-direct-execution": {
+      "id": "school--cscc69--ostep--part-1-virtualization--6-limited-direct-execution",
+      "path": "school/cscc69/ostep/part-1-virtualization/6-limited-direct-execution",
+      "title": "6. Limited Direct Execution",
+      "metadata": {
+        "date": "2026-01-16",
+        "updated": "2026-01-16"
+      }
+    },
+    "school/cscc69/ostep/part-1-virtualization/7-cpu-scheduling": {
+      "id": "school--cscc69--ostep--part-1-virtualization--7-cpu-scheduling",
+      "path": "school/cscc69/ostep/part-1-virtualization/7-cpu-scheduling",
+      "title": "7. CPU Scheduling",
+      "metadata": {
+        "date": "2026-01-16",
+        "updated": "2026-01-16"
+      }
+    },
+    "school/cscc69/ostep/part-1-virtualization/8-the-multi-level-feedback-queue": {
+      "id": "school--cscc69--ostep--part-1-virtualization--8-the-multi-level-feedback-queue",
+      "path": "school/cscc69/ostep/part-1-virtualization/8-the-multi-level-feedback-queue",
+      "title": "8. The Multi-Level Feedback Queue",
+      "metadata": {
+        "date": "2026-01-16",
+        "updated": "2026-01-16"
+      }
+    },
+    "school/cscc73/lectures/week-2-greedy": {
+      "id": "school--cscc73--lectures--week-2-greedy",
+      "path": "school/cscc73/lectures/week-2-greedy",
+      "title": "Week 2 - Greedy",
+      "metadata": {
+        "date": "2026-01-16",
+        "updated": "2026-01-16"
+      }
+    },
+    "school/cscc73/tutorials/week-2-greedy": {
+      "id": "school--cscc73--tutorials--week-2-greedy",
+      "path": "school/cscc73/tutorials/week-2-greedy",
+      "title": "Week 2 - Greedy",
+      "metadata": {
+        "date": "2026-01-16",
+        "updated": "2026-01-16"
+      }
+    },
+    "school/cscd21/lectures/week-1": {
+      "id": "school--cscd21--lectures--week-1",
+      "path": "school/cscd21/lectures/week-1",
+      "title": "Week 1",
+      "metadata": {
+        "date": "2026-01-16",
+        "updated": "2026-01-16"
+      }
+    },
+    "school/cscd21/lectures/week-2": {
+      "id": "school--cscd21--lectures--week-2",
+      "path": "school/cscd21/lectures/week-2",
+      "title": "Week 2",
+      "metadata": {
+        "date": "2026-01-16",
+        "updated": "2026-01-16"
+      }
+    },
+    "school/cscd84/lectures/week-1-search-problems": {
+      "id": "school--cscd84--lectures--week-1-search-problems",
+      "path": "school/cscd84/lectures/week-1-search-problems",
+      "title": "Week 1 - Search Problems",
+      "metadata": {
+        "date": "2026-01-16",
+        "updated": "2026-01-16"
+      }
+    },
+    "school/cscd84/lectures/week-2-constraint-satisfaction-problems": {
+      "id": "school--cscd84--lectures--week-2-constraint-satisfaction-problems",
+      "path": "school/cscd84/lectures/week-2-constraint-satisfaction-problems",
+      "title": "Week 2 - Constraint Satisfaction Problems",
       "metadata": {
         "date": "2026-01-16",
         "updated": "2026-01-16"

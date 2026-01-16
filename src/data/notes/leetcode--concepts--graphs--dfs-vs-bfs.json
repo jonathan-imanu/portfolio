@@ -1,0 +1,12 @@
+{
+  "id": "leetcode--concepts--graphs--dfs-vs-bfs",
+  "path": "leetcode/concepts/graphs/dfs-vs-bfs",
+  "title": "DFS vs BFS",
+  "content": "If you think that the optimal solution may involve DP and the pruning of states, we should always prefer BFS over DFS. Consider the problem presented by [847. Shortest Path Visiting All Nodes](https://leetcode.com/problems/shortest-path-visiting-all-nodes/).\n\nDFS tends to visit longer path trees so early state pruning with an example such as:\n\n```python\ndef shortestPathLength(self, graph: List[List[int]]) -> int:\n\tn = len(graph)\n\tif len(graph) == 1:\n\t\treturn 0\n\n\tmin_length = float('inf')\n\tcache = {}\n\t\n\tdef dfs(node, mask, length):\n\t\tnonlocal min_length\n\t\t\n\t\tif mask == (1 << len(graph)) - 1:\n\t\t\tmin_length = min(min_length, length)\n\t\t\treturn\n\t\telif length >= min_length: # pruning\n\t\t\treturn\n\t\tfor neighbour in graph[node]:\n\t\t\tnmask = mask | (1 << neighbour)\n\t\t\tnlength = length + 1\n\t\t\tkey = (neighbour, nmask)\n\t\t\tif key in cache and cache[key] <= nlength: # pruning\n\t\t\t\tcontinue\n\t\t\tcache[key] = nlength\n\t\t\tdfs(neighbour, nmask, nlength)\n\t\n\tfor start in range(len(graph)):\n\t\tdfs(start, 1 << start, 0)\n\t\n\treturn min_length\n```\n\nWill be less effective than the analogous state tracking approach with BFS.\n\n```python\ndef shortestPathLength(self, graph: List[List[int]]) -> int:\n\tn = len(graph)\n\tif n == 1:\n\t\treturn 0\n\ttotal_masks = 1 << n\n\tall_mask = (1 << n) - 1\n\tq = deque()\n\tvisited = [[False] * total_masks for _ in range(n)]\n\t\n\tfor start in range(n):\n\t\tmask = 1 << start\n\t\tvisited[start][mask] = True\n\t\tq.append((start, mask))\n\t\n\tlength = 0\n\twhile q:\n\t\tlevel_length = len(q)\n\t\tfor _ in range(level_length):\n\t\t\tcur, mask = q.popleft()\n\t\t\tfor node in graph[cur]:\n\t\t\t\tnmask = mask | 1 << node\n\t\t\t\tif nmask == all_mask:\n\t\t\t\t\treturn length + 1\n\t\t\t\telif visited[node][nmask]:\n\t\t\t\t\tcontinue\n\t\t\t\tvisited[node][nmask] = True\n\t\t\t\tq.append((node, nmask))\n\t\tlength += 1\n\treturn length\n```\n\n- DFS TLEs\n- BFS beats 99.49%\n\nI think that this principle goes beyond DP can also be thought of `shortest path = bfs or Dijkstra`\n\n",
+  "metadata": {
+    "date": "2026-01-16",
+    "updated": "2026-01-16"
+  },
+  "images": [],
+  "links": []
+}

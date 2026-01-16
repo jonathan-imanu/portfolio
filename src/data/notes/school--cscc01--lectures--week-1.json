@@ -1,0 +1,12 @@
+{
+  "id": "school--cscc01--lectures--week-1",
+  "path": "school/cscc01/lectures/week-1",
+  "title": "Week 1",
+  "content": "Software engineering is the application of scientific principles to the design and\ncreation of software\n### SDLC Phases\n\n1. Planning - requirement gathering and development of the SRS.\n2. Design - The architecture is developed during the design phase and the design document is created.\n3. Development - Coding takes place\n4. Testing - Issues with the code are found and fixed if possible.\n5. Deployment - Releasing the code to the production environment.\n6. Maintenance - Feedback is collected from stakeholders, other UI issues may be identified, and code enhancements suggested.\n\n### Agile Software Development \n\n- A set of software engineering best practices ( allowing for rapid delivery of high quality\nsoftware)\nA business approach (alignment of business / client needs with goals)\n",
+  "metadata": {
+    "date": "2026-01-16",
+    "updated": "2026-01-16"
+  },
+  "images": [],
+  "links": []
+}

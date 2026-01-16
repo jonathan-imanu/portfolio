@@ -1,0 +1,12 @@
+{
+  "id": "school--cscc69--ostep--part-1-virtualization--20-advanced-page-tables",
+  "path": "school/cscc69/ostep/part-1-virtualization/20-advanced-page-tables",
+  "title": "20. Advanced Page Tables",
+  "content": "## Using Segmentation\n\n*Combining segmentation with page tables* by having three base/bounds pairs for the code, heap and stack in the hardware.\n- **Problems**\n\t- Can waste a lot of the page table. Suppose we barely use the heap.\n\t- *External fragmentation* where physical memory gets filled with holes of little space can also arise.\n## Multi-Level Page Tables\n\nTurning the page-table into a tree \n\n\n\n",
+  "metadata": {
+    "date": "2026-01-16",
+    "updated": "2026-01-16"
+  },
+  "images": [],
+  "links": []
+}

@@ -1,0 +1,12 @@
+{
+  "id": "leetcode--notes--daily--2561-rearranging-fruits",
+  "path": "leetcode/notes/daily/2561-rearranging-fruits",
+  "title": "2561. Rearranging Fruits",
+  "content": "**Status:** Came close to correct idea but was still pretty far\n\n**Original Implementation**: \n\n```python\ndef minCost(self, basket1, basket2):\n\tcost1 = sum(basket1)\n\tcost2 = sum(basket2)\n\n\t# diff based on c1 -> c2\n\tdiff = cost2 - cost1\n\t\n\tif abs(diff) % 2 == 1:\n\t\treturn -1\n\t\n\tdiff_dict = self.build_diff(basket1, basket2) # where diff_dict looks like {'+': [fruit, excess indices where fruit appears in b2], '-': symmetrical}\n\t\n```\n\n**Mistakes**\n\n1. Major: The exit condition for determining whether two equal baskets can be made is incorrect\n\t1. Didn't read the question properly: 'Two baskets are considered equal if sorting them according to the fruit cost makes them exactly the same baskets.'\n\t2. Correct way would have been: Ensuring that for each fruit, its total in both baskets is even\n2. Diffs are the right approach but this data structure doesn't 'tell' us anything. It doesn't led naturally into the solution and doesn't explain how to determine which swaps should happen\n\t1. **Solution**: Using a list of excess' makes more sense here:\n\t\t1. Why?\n\t\t\t1. The problem says the cost of swapping fruits f1 & f2 is: `min(f1, f2)` this means we should swap the cheapest excess fruit with the most expensive excess fruit!\n\t\t2. Lesson:\n\t\t\t1. The chosen DS should be more informed by the problem\n\n**The 'Trick'**\n\nWe could swap with the cheapest fruit and then swap back! Since the cost of doing this will be 2 x minFruit. THEN it's only ever cheaper to swap normally if one of the fruits we are swapping is the cheapest fruit!\n\n**Revised Implementation**\n\n```python\ndef sortFruits(b1, b2):\n\tb1_counter = Counter(b1)\n\tb2_counter = Counter(b2)\n\n\t# check for early exit and build excess lists\n\t\n\n```\n\n**Learnings**\n\n1. We can add Counter objects in Python\n\n\n\n\n",
+  "metadata": {
+    "date": "2026-01-16",
+    "updated": "2026-01-16"
+  },
+  "images": [],
+  "links": []
+}

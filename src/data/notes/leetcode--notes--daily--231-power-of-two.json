@@ -1,0 +1,12 @@
+{
+  "id": "leetcode--notes--daily--231-power-of-two",
+  "path": "leetcode/notes/daily/231-power-of-two",
+  "title": "231. Power of Two",
+  "content": "**Difficulty:** Easy\n\nSolved in under a minute w/ loops:\n\n```python\n# O(log n)\ndef isPowerOfTwo(n: int) -> bool:\t\n\tif n < 1 or n % 2 == 1:\n\t\treturn False\n\ti = 1\n\twhile i < n:\n\t\ti *= 2\n\treturn i == n\n```\n\nThe follow up was:\n\n\"Solve it w/o loops or recursion\"\n\nI had no idea how to do this. The answer is bit manipulation and bit related activities.\n\n### Solution 1\n\n**Intution**\n\nRecall in binary notation, that a power of two would always have exactly 1 bit w/ the rest being 0's. For ex:\n\n`16 -> 10000`\n\nSubtracting one would have it be flipped:\n\n`15 -> 01111`\n\nNow notice if we do\n\n`n & (n - 1)` we get 0!\n\nThis is only if n is a power of two because subtraction wouldn't flip the bits of `n - 1` unless it was power!\n\nBut why does this work for 0? The answer is [Two's Complement Representation](obsidian://open?vault=vault&file=dev%2Fleetcode%2FConcepts%2FBits%2FConcepts)\n\n\n\n\n\n\n\n\n\n\n",
+  "metadata": {
+    "date": "2026-01-16",
+    "updated": "2026-01-16"
+  },
+  "images": [],
+  "links": []
+}

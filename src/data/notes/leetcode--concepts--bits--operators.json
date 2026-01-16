@@ -1,0 +1,12 @@
+{
+  "id": "leetcode--concepts--bits--operators",
+  "path": "leetcode/concepts/bits/operators",
+  "title": "Operators",
+  "content": "## Bitwise AND (&)\n\nCompares each bit of two numbers and for each bit returns 1 iff. the corresponding bits are 1 on BOTH numbers.\n\nFor example:\n\n`8 -> 1000`\n`7 -> 0111`\n`8 & 7 -> 0000`\n\n**Common uses:**\n\n- Masking (extracting specific bits).\n- Checking if a number is even (n & 1 == 0).\n## Bitwise OR (|)\n\nCompares each bit of two numbers and for each bit returns 1 iff. at least one of the corresponding bits is 1.\n\n`8 -> 1000`\n`7 -> 0111`\n`8 | 7 -> 1111 (9)`\n\n**Common uses:**\n\n- Setting specific bits to 1.\n## Bitwise XOR (^)\n\nCompares each bit of two numbers and for each bit returns 1 iff. ONLY one of the corresponding bits is 1.\n\nEX 1:\n\n`8 -> 1000`\n`7 -> 0111`\n`8 ^ 7 -> 1111 (9)`\n\nEX 2:\n\n`5  ->  0101`\n`3  ->  0011`\n`5 ^ 3  ->  0110 (6)`\n\n**Common uses:**\n\n- Flipping specific bits.\n- Swapping values without a temp variable.\n\n## Bitwise NOT (-)\n\nFlips bits\n\n## Left Shift (<<)\n\n## Right Shift (>>)\n\n## Unsigned Right Shift (>>>)\n\n",
+  "metadata": {
+    "date": "2026-01-16",
+    "updated": "2026-01-16"
+  },
+  "images": [],
+  "links": []
+}

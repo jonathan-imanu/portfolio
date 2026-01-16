@@ -1,0 +1,12 @@
+{
+  "id": "school--cscc69--ostep--part-1-virtualization--8-the-multi-level-feedback-queue",
+  "path": "school/cscc69/ostep/part-1-virtualization/8-the-multi-level-feedback-queue",
+  "title": "8. The Multi-Level Feedback Queue",
+  "content": "**Goal**: Optimize both turn-around and response time given that the OS cannot know how long a given job will take.\n\nThe MLFQ has a number of distinct queues each with a distinct priority level (priority <-> queue). MLFQ uses priorities to decide what job should run at a given time based on the following rules:\n\n1. If `Priority(A) > Priority(B), A runs`\n2. If `Priority(A) == Priority(B), A & B run in Round Robin`\n\n**MLFQ varies the priority of a job based on it's observed behavior.** It tries to learn about processes as they run and use the history of a job to predict its future behavior.\n\n*MLFQ can change the priority of a job as the job runs.* \n\nAdd the following rules:\n\n3. When a job enters the system, it is placed at the highest priority (the topmost queue)\n4. Once a job uses up its time allotment at a given level (regardless of how many times it has given up the CPU), its priority is reduced (i.e., it moves down one queue).\n5. After some time period S, move all the jobs in the system to the topmost queue.\n\t1. So long running jobs aren't starved of CPU\n\n##### Definitions\n\n**Job Allotment:** The amount of time a job can spend at a given priority level before the scheduler reduces its priority. ",
+  "metadata": {
+    "date": "2026-01-16",
+    "updated": "2026-01-16"
+  },
+  "images": [],
+  "links": []
+}

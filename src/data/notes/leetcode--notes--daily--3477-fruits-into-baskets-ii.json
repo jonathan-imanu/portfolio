@@ -1,0 +1,12 @@
+{
+  "id": "leetcode--notes--daily--3477-fruits-into-baskets-ii",
+  "path": "leetcode/notes/daily/3477-fruits-into-baskets-ii",
+  "title": "3477. Fruits Into Baskets II",
+  "content": "Status: Solved\nDifficulty: Easy\n## Initial Implementation\n\n```python\ndef numOfUnplacedFruits(self, fruits: List[int], baskets: List[int]) -> int:\n\tremaining = 0\n\tfor fruit in fruits:\n\t\tplaced = False\n\t\tfor i in range(len(baskets)):\n\t\tif fruit <= baskets[i]:\n\t\t\tbaskets[i] = 0\n\t\t\tplaced = True\n\t\t\tbreak\n\t\tif not placed:\n\t\t\tremaining += 1\n\t\n\treturn remaining\n```\n\n",
+  "metadata": {
+    "date": "2026-01-16",
+    "updated": "2026-01-16"
+  },
+  "images": [],
+  "links": []
+}

@@ -1,0 +1,12 @@
+{
+  "id": "school--cscc69--ostep--part-1-virtualization--7-cpu-scheduling",
+  "path": "school/cscc69/ostep/part-1-virtualization/7-cpu-scheduling",
+  "title": "7. CPU Scheduling",
+  "content": "**Theory around different kinds of scheduling algorithms that optimize either turnaround time OR response time.**\n\nConsider the performance metric of turnaround time:\n\n`Turnaround Time = Time job was completed - Time job arrived`\n\nand suppose we can make the assumptions:\n1. That we know we long a given job will take. Our scheduler is an oracle.\n\nFIFO is a basic algorithm the OS scheduler would implement but it performs quite poorly wrt. to average turnaround time if we enqueue an expensive job first. \n\nTo reduce this metric consider the approach of **shortest job first (SJF)**\n\n> What happens if the most expensive job arrives first then. second-most expensive and so on? Won't this be as bad as FIFO wrt to turnaround time?\n\nModern OS schedulers are **preemptive**, meaning that they can perform context switching to stop the currently running process and resume another. \n\nThe algorithms that add this preemption to SJF are called **Shortest Time-to-Completion First (STCF)** or **Preemptive Shortest Job First (PSJF)**. These work great given that we know the cost of a job. \n\n> What about IO? \n\nTreat a job that performs IO somewhere as multiple jobs with the division being when the job does the IO. We can then implement the STCF algorithm as we had before. \n\nHowever, modern systems that implement time-sharing care more about **response time.**\n\n`Response time = Time the job was first run - Time the job arrived`\n### Round Robin\n\nInstead of running jobs to completion, RR will run a job for a time slice / scheduling quantum and then switches to the next job in the run queue. It will repeatedly do this until all the jobs are finished. \n\n> Context switching is not free, won't too short of a time slice mean that the period meant for job execution is dominated by context switching? \n> \n> Despite this, won't short time slices still be the best approach wrt to optimizing response time?\n\nYes, this is a trade-off that the system designer must consider. Longer time slices will amortize the cost of context switching at the cost of response time. \n\n",
+  "metadata": {
+    "date": "2026-01-16",
+    "updated": "2026-01-16"
+  },
+  "images": [],
+  "links": []
+}

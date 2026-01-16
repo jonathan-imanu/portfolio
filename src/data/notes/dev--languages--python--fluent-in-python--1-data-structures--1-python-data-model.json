@@ -1,0 +1,12 @@
+{
+  "id": "dev--languages--python--fluent-in-python--1-data-structures--1-python-data-model",
+  "path": "dev/languages/python/fluent-in-python/1-data-structures/1-python-data-model",
+  "title": "1. Python Data Model",
+  "content": "### Special Methods\n\n- When creating Container classes or frequently used objects, implementing special methods for these classes will allow comparison, hashing and some other cool features\n\t- For example, we can do `if obj` given `obj` implements `__bool__`\n###### Difference between `__repr__` and `__str__`\n\n- TLDR: __repr__ is for dev's, __str__ is for user's\n- A great Stack Overflow post \n\n",
+  "metadata": {
+    "date": "2026-01-16",
+    "updated": "2026-01-16"
+  },
+  "images": [],
+  "links": []
+}

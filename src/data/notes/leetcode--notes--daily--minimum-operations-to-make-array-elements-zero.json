@@ -1,0 +1,12 @@
+{
+  "id": "leetcode--notes--daily--minimum-operations-to-make-array-elements-zero",
+  "path": "leetcode/notes/daily/minimum-operations-to-make-array-elements-zero",
+  "title": "Minimum Operations to Make Array Elements Zero",
+  "content": "**Status:** No idea where to even start :(\n**Solution:** Only after reading editorial\n\n**Hindsights**\n\n- The choice of numbers here should always lead to an analysis if binary can help here. This is because `4 = 2^2`\n\n**Problem Solving Steps**\n\n1. Dividing by two <=> shifting to the right by two in binary\n2. So if `x` is the binary length of a number, then `ceil(x / 2)` is the number of operations needed to take that number to zero\n3. For a specific query `q = [l, r]` the total number of operations is `ops([r, 1]) - ops([l - 1, 1])`. Where we use math to find the `ops[x, 1]`\n\nLet's start with `ops([x, 1])`\n\n```python\n\n# Number of operations needed to reduce range [x, 1] to 0\ndef get_ops(self, x: int) -> int:\n\tcount = 0\n\tbase = 1\n\tbinary_length = 1\n\twhile base <= x:\n\t\tops_for_binary_length = (binary_length + 1) // 2\n\t\t# the (...) is the # of #'s in the interval [base, base * 2 - 1]\n\t\tcount += ops_for_binary_length * (min(base * 2 - 1, x) - base + 1)\n\t\tbase *= 2\n\t\tbinary_length += 1\n\treturn count\n\n```\n\nNow putting it all together:\n\n```python\ndef minOperations(self, queries: List[List[int]]) -> int:\n\tops = 0\n\tfor q in queries:\n\t\tops += (self.get_ops(q[1]) - self.get_ops(q[0] - 1) + 1) // 2\n\t\treturn ops\n```\n",
+  "metadata": {
+    "date": "2026-01-16",
+    "updated": "2026-01-16"
+  },
+  "images": [],
+  "links": []
+}
