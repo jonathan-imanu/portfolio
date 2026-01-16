@@ -91,28 +91,6 @@ export function buildNotesTree(notes: NoteMetadata[]): TreeNode {
   return root;
 }
 
-// Convert tree to sorted array for rendering
-export function treeToArray(node: TreeNode): TreeNode[] {
-  const result: TreeNode[] = [];
-  const sorted = Array.from(node.children.values()).sort((a, b) => {
-    // Folders before files
-    if (a.isLeaf !== b.isLeaf) {
-      return a.isLeaf ? 1 : -1;
-    }
-    // A custom natural sort comparator to handle the sorting of "2. TITLE" and "11. TITLE" correctly
-    return naturalCompare(a.name, b.name);
-  });
-
-  for (const child of sorted) {
-    result.push(child);
-    if (!child.isLeaf && child.children.size > 0) {
-      result.push(...treeToArray(child));
-    }
-  }
-
-  return result;
-}
-
 // Get breadcrumbs from a note path
 export function getBreadcrumbs(
   path: string
@@ -132,10 +110,11 @@ export function getBreadcrumbs(
 }
 
 // Natural sort comparator that handles numeric prefixes correctly
-// e.g., "2. TITLE" comes before "11. TITLE"
-function naturalCompare(a: string, b: string): number {
-  const numMatchA = a.match(/^(\d+)\.\s/);
-  const numMatchB = b.match(/^(\d+)\.\s/);
+// e.g., "2. TITLE" should be sorted before "11. TITLE", or "2-text" before "11-text"
+export function naturalCompare(a: string, b: string): number {
+  // Match numeric prefix followed by period, space, or hyphen
+  const numMatchA = a.match(/^(\d+)(\.\s|-)/);
+  const numMatchB = b.match(/^(\d+)(\.\s|-)/);
 
   // If both have numeric prefixes, compare numerically
   if (numMatchA && numMatchB) {

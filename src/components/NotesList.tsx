@@ -1,6 +1,10 @@
 import { useState, useMemo, useEffect, useRef } from "react";
 import { useSearchParams } from "react-router-dom";
-import { getAllNotesMetadata, buildNotesTree } from "../utils/notes";
+import {
+  getAllNotesMetadata,
+  buildNotesTree,
+  naturalCompare,
+} from "../utils/notes";
 import { FileTreeItem } from "./FileTree";
 import type { NoteMetadata } from "../types/notes";
 
@@ -264,7 +268,7 @@ export function NotesList() {
                 if (a.isLeaf !== b.isLeaf) {
                   return a.isLeaf ? 1 : -1;
                 }
-                return a.name.localeCompare(b.name);
+                return naturalCompare(a.name, b.name);
               })
               .map((child) => (
                 <FileTreeItem

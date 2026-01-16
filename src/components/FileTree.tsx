@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import type { TreeNode } from "../utils/notes";
+import { naturalCompare } from "../utils/notes";
 
 interface FileTreeProps {
   node: TreeNode;
@@ -27,12 +28,12 @@ export function FileTreeItem({
       )
     : Array.from(node.children.values());
 
-  // Sort: folders first, then alphabetically
+  // Sort: folders first, then using natural sort
   const sortedChildren = filteredChildren.sort((a, b) => {
     if (a.isLeaf !== b.isLeaf) {
       return a.isLeaf ? 1 : -1;
     }
-    return a.name.localeCompare(b.name);
+    return naturalCompare(a.name, b.name);
   });
 
   const shouldShow = !searchQuery || matchesSearch(node, searchQuery);
