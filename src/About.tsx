@@ -2,7 +2,7 @@ import { type ReactNode } from "react";
 
 function About() {
   return (
-    <section id="about" className="mt-6 space-y-4 text-sm">
+    <section id="about" className="mt-6 space-y-4">
       <p className="body-text">
         I&apos;m a Computer Science student studying at the University of
         Toronto. I will be (hopefully) be graduating in June 2027.

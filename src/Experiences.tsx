@@ -49,7 +49,7 @@ const experiences: Experience[] = [
     company: "aUToronto",
     role: "Software Developer",
     description:
-      "I worked on improving cloud infrastructure and streamlining CI workflows for the 4× GM/SAE AutoDrive Challenge winner, focusing on faster, more visible testing pipelines.",
+      "I worked on improving cloud infrastructure and streamlining CI workflows for the 4× GM/SAE AutoDrive Challenge winner, focusing on faster testing pipelines.",
     icon: { src: aUToronto, alt: "aUToronto" },
     active: false,
   },
@@ -81,8 +81,7 @@ function Experiences() {
   };
 
   return (
-    <section id="experiences" className="mt-6 text-sm space-y-2">
-      <h2 className="text-sm font-semibold text-black">Experiences</h2>
+    <section id="experiences" className="text-sm space-y-2">
       <div className="space-y-0">
         {experiences.map((exp, index) => {
           const isExpanded = expandedId === exp.id;
@@ -101,7 +100,16 @@ function Experiences() {
                       <img
                         src={exp.icon.src}
                         alt={exp.icon.alt}
+                        width={32}
+                        height={32}
+                        loading="lazy"
+                        decoding="async"
                         className="w-full h-full object-contain rounded-full"
+                        style={{ 
+                          imageRendering: "auto",
+                          maxWidth: "100%",
+                          maxHeight: "100%"
+                        }}
                       />
                     )}
                   </div>
@@ -111,10 +119,10 @@ function Experiences() {
                     }`}></span>
                 </div>
                 <div className="flex-1 flex flex-col sm:flex-row sm:items-center gap-0.5 sm:gap-2 min-w-0">
-                  <span className="font-bold text-black text-[0.8rem]">
+                  <span className="font-bold text-black text-md">
                     {exp.company}
                   </span>
-                  <span className="text-gray-700 font-normal text-[0.8rem]">
+                  <span className="text-gray-700 font-normal text-sm">
                     {exp.role}
                   </span>
                 </div>
@@ -128,7 +136,7 @@ function Experiences() {
               </button>
               {isExpanded && exp.description && (
                 <div className="pb-2 sm:pb-3 ml-9 sm:ml-14">
-                  <p className="body-text text-xs sm:text-sm">
+                  <p className="experience-text">
                     {exp.description.replace(exp.company, "").trim()}
                   </p>
                 </div>
