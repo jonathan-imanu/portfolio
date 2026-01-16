@@ -105,10 +105,10 @@ function Experiences() {
                         loading="lazy"
                         decoding="async"
                         className="w-full h-full object-contain rounded-full"
-                        style={{ 
+                        style={{
                           imageRendering: "auto",
                           maxWidth: "100%",
-                          maxHeight: "100%"
+                          maxHeight: "100%",
                         }}
                       />
                     )}

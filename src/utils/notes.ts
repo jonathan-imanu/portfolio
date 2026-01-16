@@ -42,7 +42,7 @@ export async function getNotesIndex(): Promise<NotesIndex> {
 // Use this only if you need synchronous access and index is already loaded
 export function getAllNotesMetadataSync(): NoteMetadata[] {
   if (!indexCache) {
-    throw new Error("Notes index not loaded. Use getAllNotesMetadata() instead.");
+    throw new Error("Notes index not loaded. Use getNotesIndex() instead.");
   }
   return Object.values(indexCache.notes);
 }
