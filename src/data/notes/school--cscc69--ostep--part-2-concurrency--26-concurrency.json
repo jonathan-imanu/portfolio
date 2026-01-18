@@ -1,0 +1,14 @@
+{
+  "id": "school--cscc69--ostep--part-2-concurrency--26-concurrency",
+  "path": "school/cscc69/ostep/part-2-concurrency/26-concurrency",
+  "title": "26. Concurrency",
+  "content": "**A thread is an abstraction of a single execution context within a process.** Each thread is a lot like a separate process but:\n1. They are share the same address space and memory. Within this address space, each thread will have it's own stack.\n2. Instead of Process Control Blocks, we save state to *Thread Control Blocks* when doing context switching\n\n<img src=\"/images/Figure 26.1 - Single-Threaded And Multi-Threaded Address Spaces.png\" alt=\"Figure 26.1   Single Threaded And Multi Threaded Address Spaces\" />\n\n## Definitions\n\nA *critical section* is a piece of code that accesses a shared variable / resource.\n\nA *race condition* arises if multiple threads of execution enter the critical section at roughly the same time; both attempt to update the shared data structure, leading to a surprising (and perhaps undesirable) outcome\n\nAn *indeterminate program* consists of one or more race conditions\n\n",
+  "metadata": {
+    "date": "2026-01-18",
+    "updated": "2026-01-18"
+  },
+  "images": [
+    "/images/Figure 26.1 - Single-Threaded And Multi-Threaded Address Spaces.png"
+  ],
+  "links": []
+}

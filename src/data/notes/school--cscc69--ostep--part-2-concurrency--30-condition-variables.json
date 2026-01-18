@@ -1,0 +1,12 @@
+{
+  "id": "school--cscc69--ostep--part-2-concurrency--30-condition-variables",
+  "path": "school/cscc69/ostep/part-2-concurrency/30-condition-variables",
+  "title": "30. Condition Variables",
+  "content": "A **condition variable** is an explicit queue that threads can put themselves on when some condition is not as desired. When some other thread changes said state, it can then wake 1+ of those waiting threads and thus allow them to continue by signalling on the condition.\n\n",
+  "metadata": {
+    "date": "2026-01-18",
+    "updated": "2026-01-18"
+  },
+  "images": [],
+  "links": []
+}
