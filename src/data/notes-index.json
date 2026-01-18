@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "lastSync": "2026-01-16T02:25:19.513Z",
+  "lastSync": "2026-01-18T19:11:15.060Z",
   "notes": {
     "dev/concepts/floating-point-numbers": {
       "id": "dev--concepts--floating-point-numbers",
@@ -349,8 +349,8 @@
       "path": "school/cscc24/b36-review/chapter-7-finite-state-automata-and-regular-expressions",
       "title": "Chapter 7 - Finite State Automata and Regular Expressions",
       "metadata": {
-        "date": "2026-01-16",
-        "updated": "2026-01-16"
+        "date": "2026-01-18",
+        "updated": "2026-01-18"
       }
     },
     "school/cscc24/b36-review/readme": {
@@ -531,6 +531,15 @@
       "metadata": {
         "date": "2026-01-16",
         "updated": "2026-01-16"
+      }
+    },
+    "school/cscc24/b36-review/chapter-8-context-free-grammars-and-pushdown-automata": {
+      "id": "school--cscc24--b36-review--chapter-8-context-free-grammars-and-pushdown-automata",
+      "path": "school/cscc24/b36-review/chapter-8-context-free-grammars-and-pushdown-automata",
+      "title": "Chapter 8 - Context-Free Grammars And Pushdown Automata",
+      "metadata": {
+        "date": "2026-01-18",
+        "updated": "2026-01-18"
       }
     }
   }
