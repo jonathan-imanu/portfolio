@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "lastSync": "2026-01-18T23:44:10.932Z",
+  "lastSync": "2026-01-19T17:36:34.400Z",
   "notes": {
     "dev/concepts/floating-point-numbers": {
       "id": "dev--concepts--floating-point-numbers",
@@ -511,8 +511,8 @@
       "path": "school/cscd21/lectures/week-2",
       "title": "Week 2",
       "metadata": {
-        "date": "2026-01-16",
-        "updated": "2026-01-16"
+        "date": "2026-01-19",
+        "updated": "2026-01-19"
       }
     },
     "school/cscd84/lectures/week-1-search-problems": {
@@ -567,6 +567,15 @@
       "metadata": {
         "date": "2026-01-18",
         "updated": "2026-01-18"
+      }
+    },
+    "leetcode/concepts/2d-prefix-sums": {
+      "id": "leetcode--concepts--2d-prefix-sums",
+      "path": "leetcode/concepts/2d-prefix-sums",
+      "title": "2D Prefix Sums",
+      "metadata": {
+        "date": "2026-01-19",
+        "updated": "2026-01-19"
       }
     }
   }
