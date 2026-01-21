@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "lastSync": "2026-01-19T17:36:34.400Z",
+  "lastSync": "2026-01-21T01:52:36.386Z",
   "notes": {
     "dev/concepts/floating-point-numbers": {
       "id": "dev--concepts--floating-point-numbers",
@@ -367,8 +367,8 @@
       "path": "school/cscc24/lectures/week-1",
       "title": "Week 1",
       "metadata": {
-        "date": "2026-01-16",
-        "updated": "2026-01-16"
+        "date": "2026-01-21",
+        "updated": "2026-01-21"
       }
     },
     "school/cscc69/ostep/introduction-to-operating-systems": {
@@ -576,6 +576,24 @@
       "metadata": {
         "date": "2026-01-19",
         "updated": "2026-01-19"
+      }
+    },
+    "school/cscc24/lectures/week-2": {
+      "id": "school--cscc24--lectures--week-2",
+      "path": "school/cscc24/lectures/week-2",
+      "title": "Week 2",
+      "metadata": {
+        "date": "2026-01-21",
+        "updated": "2026-01-21"
+      }
+    },
+    "school/cscd21/lectures/week-3-consensus": {
+      "id": "school--cscd21--lectures--week-3-consensus",
+      "path": "school/cscd21/lectures/week-3-consensus",
+      "title": "Week 3 - Consensus",
+      "metadata": {
+        "date": "2026-01-21",
+        "updated": "2026-01-21"
       }
     }
   }
