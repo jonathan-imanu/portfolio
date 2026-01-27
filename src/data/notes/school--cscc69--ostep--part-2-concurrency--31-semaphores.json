@@ -1,0 +1,12 @@
+{
+  "id": "school--cscc69--ostep--part-2-concurrency--31-semaphores",
+  "path": "school/cscc69/ostep/part-2-concurrency/31-semaphores",
+  "title": "31. Semaphores",
+  "content": "*Objects with an integer value that can be manipulated with two routines.* We be used to synchronize between threads within the same process (and even synchronize access across different processes)\n\nOnce initialized we can interact with it in two ways:\n\n```\nint sem_wait(sem_t *s) { \n\tdecrement the value of semaphore s by one \n\twait if value of semaphore s is negative \n} \n\nint sem_post(sem_t *s) { \n\tincrement the value of semaphore s by one\n\tif there are one or more threads waiting, wake one\n}\n```\n\n### Binary Semaphores\n\n> Behave just like locks\n\nIf a Semaphore has an initial value of 1, and when a thread \"acquires\" the semaphore it calls `sem_wait` and `sem_post` when it is done. If a thread calls `sem_wait` when the value is 0 (someone else got decremented first), it will wait. \n- The value of the semaphore, when negative, is equal to the number of waiting threads",
+  "metadata": {
+    "date": "2026-01-27",
+    "updated": "2026-01-27"
+  },
+  "images": [],
+  "links": []
+}

@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "lastSync": "2026-01-21T01:52:36.386Z",
+  "lastSync": "2026-01-27T23:49:13.217Z",
   "notes": {
     "dev/concepts/floating-point-numbers": {
       "id": "dev--concepts--floating-point-numbers",
@@ -160,8 +160,8 @@
       "path": "dev/languages/cpp/a-tour-of-c-stroustrup-2014/2-user-defined-types",
       "title": "2. User Defined Types",
       "metadata": {
-        "date": "2026-01-16",
-        "updated": "2026-01-16"
+        "date": "2026-01-27",
+        "updated": "2026-01-27"
       }
     },
     "dev/languages/cpp/a-tour-of-c-stroustrup-2014/4-classes": {
@@ -241,8 +241,8 @@
       "path": "leetcode/concepts/graphs/topological-sort",
       "title": "Topological Sort",
       "metadata": {
-        "date": "2026-01-16",
-        "updated": "2026-01-16"
+        "date": "2026-01-27",
+        "updated": "2026-01-27"
       }
     },
     "leetcode/concepts/graphs/union-find-disjoint-set-union": {
@@ -250,8 +250,8 @@
       "path": "leetcode/concepts/graphs/union-find-disjoint-set-union",
       "title": "Union Find & Disjoint Set Union",
       "metadata": {
-        "date": "2026-01-16",
-        "updated": "2026-01-16"
+        "date": "2026-01-27",
+        "updated": "2026-01-27"
       }
     },
     "leetcode/concepts/heap": {
@@ -484,8 +484,8 @@
       "path": "school/cscc73/lectures/week-2-greedy",
       "title": "Week 2 - Greedy",
       "metadata": {
-        "date": "2026-01-16",
-        "updated": "2026-01-16"
+        "date": "2026-01-27",
+        "updated": "2026-01-27"
       }
     },
     "school/cscc73/tutorials/week-2-greedy": {
@@ -594,6 +594,78 @@
       "metadata": {
         "date": "2026-01-21",
         "updated": "2026-01-21"
+      }
+    },
+    "dev/languages/python/lexical-analysis": {
+      "id": "dev--languages--python--lexical-analysis",
+      "path": "dev/languages/python/lexical-analysis",
+      "title": "Lexical Analysis",
+      "metadata": {
+        "date": "2026-01-27",
+        "updated": "2026-01-27"
+      }
+    },
+    "leetcode/concepts/floyds-cycle-detection-algorithm": {
+      "id": "leetcode--concepts--floyds-cycle-detection-algorithm",
+      "path": "leetcode/concepts/floyds-cycle-detection-algorithm",
+      "title": "Floyd's Cycle Detection Algorithm",
+      "metadata": {
+        "date": "2026-01-27",
+        "updated": "2026-01-27"
+      }
+    },
+    "leetcode/notes/1851-minimum-interval-to-include-each-query": {
+      "id": "leetcode--notes--1851-minimum-interval-to-include-each-query",
+      "path": "leetcode/notes/1851-minimum-interval-to-include-each-query",
+      "title": "1851. Minimum Interval to Include Each Query",
+      "metadata": {
+        "date": "2026-01-27",
+        "updated": "2026-01-27"
+      }
+    },
+    "leetcode/notes/3186-maximum-total-damage-with-spell-casting": {
+      "id": "leetcode--notes--3186-maximum-total-damage-with-spell-casting",
+      "path": "leetcode/notes/3186-maximum-total-damage-with-spell-casting",
+      "title": "3186. Maximum Total Damage With Spell Casting",
+      "metadata": {
+        "date": "2026-01-27",
+        "updated": "2026-01-27"
+      }
+    },
+    "school/cscc24/lectures/week-3": {
+      "id": "school--cscc24--lectures--week-3",
+      "path": "school/cscc24/lectures/week-3",
+      "title": "Week 3",
+      "metadata": {
+        "date": "2026-01-27",
+        "updated": "2026-01-27"
+      }
+    },
+    "school/cscc69/ostep/part-2-concurrency/31-semaphores": {
+      "id": "school--cscc69--ostep--part-2-concurrency--31-semaphores",
+      "path": "school/cscc69/ostep/part-2-concurrency/31-semaphores",
+      "title": "31. Semaphores",
+      "metadata": {
+        "date": "2026-01-27",
+        "updated": "2026-01-27"
+      }
+    },
+    "school/cscc73/lectures/week-1-b63-review": {
+      "id": "school--cscc73--lectures--week-1-b63-review",
+      "path": "school/cscc73/lectures/week-1-b63-review",
+      "title": "Week 1 - B63 Review",
+      "metadata": {
+        "date": "2026-01-27",
+        "updated": "2026-01-27"
+      }
+    },
+    "school/cscc73/lectures/week-3-divide-conquer": {
+      "id": "school--cscc73--lectures--week-3-divide-conquer",
+      "path": "school/cscc73/lectures/week-3-divide-conquer",
+      "title": "Week 3 - Divide & Conquer",
+      "metadata": {
+        "date": "2026-01-27",
+        "updated": "2026-01-27"
       }
     }
   }

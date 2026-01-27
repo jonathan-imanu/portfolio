@@ -1,0 +1,12 @@
+{
+  "id": "school--cscc24--lectures--week-3",
+  "path": "school/cscc24/lectures/week-3",
+  "title": "Week 3",
+  "content": "# Lisp & Racket\n\n[Ref](https://lips.js.org/docs/scheme-intro/data-types)\n\nIn Lisp, everything is written as S-Expression, which is a list wrapped in parentheses with space between elements.\n\n```\n(+ 1 2 3)\n```\n\nwhere `+` is the procedure applied. \n\nIn Scheme, a **procedure** is a _first-class value_ that can be **applied** to zero or more arguments.\n\n`+` & `*` on an empty S-expression will default to a the additive and multiplicative identity. ",
+  "metadata": {
+    "date": "2026-01-27",
+    "updated": "2026-01-27"
+  },
+  "images": [],
+  "links": []
+}

@@ -1,0 +1,12 @@
+{
+  "id": "school--cscc73--lectures--week-1-b63-review",
+  "path": "school/cscc73/lectures/week-1-b63-review",
+  "title": "Week 1 - B63 Review",
+  "content": "# Reviewing Asymptotic Notation\n\nFor the below, $D$ is some common domain; either $\\mathbb{N}$ or $\\mathbb{R}^+$ \n### Big O\n\nThe most common. An upper bound.\n\n$f \\in O(g) \\iff \\exists c_0 > 0, \\exists n_0 \\in \\mathbb{D}, \\forall n \\in \\mathbb{D}, n \\geq n_0 \\rightarrow |f(n)| \\leq c|g(n)|$\n### Big Omega\n\nA lower bound.\n\n$f \\in \\Omega(g) \\iff \\exists c > 0,\\ \\exists n_0 \\in D \\ \\text{s.t.}\\ \\forall n \\in D,\\ n \\ge n_0 \\Rightarrow |f(n)| \\ge c|g(n)|$\n### Big Theta\n\nTight bound. Think of this as the combination of Big O and Big Omega.\n\n$f \\in \\Theta(g) \\iff f \\in O(g) \\ \\text{and}\\ f \\in \\Omega(g)$\n### Little O\n\nBig O but a strict upper bound.\n\n$f \\in o(g) \\;\\;\\Longleftrightarrow\\;\\; \\forall c > 0,\\ \\exists n_0 \\in D \\ \\text{s.t.}\\ \\forall n \\in D,\\ n \\ge n_0 \\Rightarrow |f(n)| < c|g(n)|$\n### Little Omega\n\n$f \\in \\omega(g) \\;\\;\\Longleftrightarrow\\;\\; \\forall c > 0,\\ \\exists n_0 \\in D \\ \\text{s.t.}\\ \\forall n \\in D,\\ n \\ge n_0 \\Rightarrow |f(n)| > c|g(n)|$",
+  "metadata": {
+    "date": "2026-01-27",
+    "updated": "2026-01-27"
+  },
+  "images": [],
+  "links": []
+}

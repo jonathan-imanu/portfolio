@@ -2,10 +2,10 @@
   "id": "leetcode--concepts--graphs--union-find-disjoint-set-union",
   "path": "leetcode/concepts/graphs/union-find-disjoint-set-union",
   "title": "Union Find & Disjoint Set Union",
-  "content": "TLDR: Given objects that relate to each other in some way and we want to repeatedly group them together based on some heuristic. Best example is finding a redundant connection in a graph.\n\n```python\nparent = list(range(len(edges) + 1))\nrank = [0] * (len(edges) + 1)\n\ndef find(i):\n\tif parent[i] != i:\n\t\tparent[i] = find(parent[i])\n\treturn parent[i]\n\ndef unionByRank(i, j):\n\tirep = find(i)\n\tjrep = find(j)\n\tif irep == jrep:\n\t\treturn False\n\tif rank[irep] < rank[jrep]:\n\t\tparent[irep] = jrep\n\telif rank[irep] > rank[jrep]:\n\t\tparent[jrep] = irep\n\telse:\n\t\tparent[jrep] = irep\n\t\trank[irep] += 1\n\treturn True\n```",
+  "content": "TLDR: Given objects that relate to each other in some way and we want to repeatedly group them together based on some heuristic. Best example is finding a redundant connection in a graph.\n\n```python\nparent = list(range(len(edges) + 1))\nrank = [0] * (len(edges) + 1)\n\ndef find(i):\n\tif parent[i] != i:\n\t\tparent[i] = find(parent[i])\n\treturn parent[i]\n\ndef unionByRank(i, j):\n\tirep = find(i)\n\tjrep = find(j)\n\tif irep == jrep:\n\t\treturn False\n\tif rank[irep] < rank[jrep]:\n\t\tparent[irep] = jrep\n\telif rank[irep] > rank[jrep]:\n\t\tparent[jrep] = irep\n\telse:\n\t\tparent[jrep] = irep\n\t\trank[irep] += 1\n\treturn True\n```\n\n$O(\\alpha(n))$ amortized time per operation, where $\\alpha(n)$ is the inverse Ackermann function and can be thought of to be a constant.",
   "metadata": {
-    "date": "2026-01-16",
-    "updated": "2026-01-16"
+    "date": "2026-01-27",
+    "updated": "2026-01-27"
   },
   "images": [],
   "links": []
