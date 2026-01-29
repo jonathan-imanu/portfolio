@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "lastSync": "2026-01-27T23:49:13.217Z",
+  "lastSync": "2026-01-29T19:19:57.080Z",
   "notes": {
     "dev/concepts/floating-point-numbers": {
       "id": "dev--concepts--floating-point-numbers",
@@ -583,8 +583,8 @@
       "path": "school/cscc24/lectures/week-2",
       "title": "Week 2",
       "metadata": {
-        "date": "2026-01-21",
-        "updated": "2026-01-21"
+        "date": "2026-01-29",
+        "updated": "2026-01-29"
       }
     },
     "school/cscd21/lectures/week-3-consensus": {
@@ -664,8 +664,8 @@
       "path": "school/cscc73/lectures/week-3-divide-conquer",
       "title": "Week 3 - Divide & Conquer",
       "metadata": {
-        "date": "2026-01-27",
-        "updated": "2026-01-27"
+        "date": "2026-01-29",
+        "updated": "2026-01-29"
       }
     }
   }
