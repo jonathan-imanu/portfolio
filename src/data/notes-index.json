@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "lastSync": "2026-01-29T19:19:57.080Z",
+  "lastSync": "2026-02-05T22:50:42.434Z",
   "notes": {
     "dev/concepts/floating-point-numbers": {
       "id": "dev--concepts--floating-point-numbers",
@@ -214,8 +214,8 @@
       "path": "leetcode/concepts/dp/dp-patterns",
       "title": "DP Patterns",
       "metadata": {
-        "date": "2026-01-16",
-        "updated": "2026-01-16"
+        "date": "2026-02-05",
+        "updated": "2026-02-05"
       }
     },
     "leetcode/concepts/graphs/dfs-vs-bfs": {
@@ -241,8 +241,8 @@
       "path": "leetcode/concepts/graphs/topological-sort",
       "title": "Topological Sort",
       "metadata": {
-        "date": "2026-01-27",
-        "updated": "2026-01-27"
+        "date": "2026-02-05",
+        "updated": "2026-02-05"
       }
     },
     "leetcode/concepts/graphs/union-find-disjoint-set-union": {
@@ -484,8 +484,8 @@
       "path": "school/cscc73/lectures/week-2-greedy",
       "title": "Week 2 - Greedy",
       "metadata": {
-        "date": "2026-01-27",
-        "updated": "2026-01-27"
+        "date": "2026-02-05",
+        "updated": "2026-02-05"
       }
     },
     "school/cscc73/tutorials/week-2-greedy": {
@@ -637,8 +637,8 @@
       "path": "school/cscc24/lectures/week-3",
       "title": "Week 3",
       "metadata": {
-        "date": "2026-01-27",
-        "updated": "2026-01-27"
+        "date": "2026-02-05",
+        "updated": "2026-02-05"
       }
     },
     "school/cscc69/ostep/part-2-concurrency/31-semaphores": {
@@ -664,8 +664,35 @@
       "path": "school/cscc73/lectures/week-3-divide-conquer",
       "title": "Week 3 - Divide & Conquer",
       "metadata": {
-        "date": "2026-01-29",
-        "updated": "2026-01-29"
+        "date": "2026-02-05",
+        "updated": "2026-02-05"
+      }
+    },
+    "leetcode/concepts/graphs/eulerian-path": {
+      "id": "leetcode--concepts--graphs--eulerian-path",
+      "path": "leetcode/concepts/graphs/eulerian-path",
+      "title": "Eulerian Path",
+      "metadata": {
+        "date": "2026-02-05",
+        "updated": "2026-02-05"
+      }
+    },
+    "school/cscc73/lectures/week-4-dynamic-programming": {
+      "id": "school--cscc73--lectures--week-4-dynamic-programming",
+      "path": "school/cscc73/lectures/week-4-dynamic-programming",
+      "title": "Week 4 - Dynamic Programming",
+      "metadata": {
+        "date": "2026-02-05",
+        "updated": "2026-02-05"
+      }
+    },
+    "school/cscc73/tutorials/week-4-ffts-and-multiplying-polynomials": {
+      "id": "school--cscc73--tutorials--week-4-ffts-and-multiplying-polynomials",
+      "path": "school/cscc73/tutorials/week-4-ffts-and-multiplying-polynomials",
+      "title": "Week 4 - FFTs and Multiplying Polynomials",
+      "metadata": {
+        "date": "2026-02-05",
+        "updated": "2026-02-05"
       }
     }
   }

@@ -1,0 +1,12 @@
+{
+  "id": "school--cscc73--lectures--week-4-dynamic-programming",
+  "path": "school/cscc73/lectures/week-4-dynamic-programming",
+  "title": "Week 4 - Dynamic Programming",
+  "content": "## Weighted Interval Scheduling\n\n#### Lemma 1\n\n##### Claim\n\nWIS(i) returns $w^*(i)$ & writes it at `opt[i]`\n##### Proof \n\nBy strong induction.\n###### Base Case\n\nWhen $i = 0$, follows from L3.\n###### IS\n\nAssume that our claim holds $\\forall j < i$ (I.H)\n\nBy recursive formula:\n- $w^*(i) = max(w(I_i) + w^*(p(i)), w^*(i - 1))$\n\t- We proved this before. \n\t- The key is\n\nBy I.H, `opt[p(i)]` = $w^*(p(i))$ and `opt[i - 1]` = $w^*(i - 1)$ after L5 concludes. Hence L6 writes $w^*(i)$ in `opt[i]` and L7 returns it.\n\n#### Lemma 2\n##### Claim\n\n$\\forall i \\in [n]$, WIS(i) is called at most once.\n##### Proof\n\nObserve that when WIS(i) is called, the algorithm, including all of the recursive calls only calls WIS with inputs smaller than i. For $i = n$, WIS(n) is only called in L8 and never again. For $i < n$, WIS(i) can only be called in L5. This only happens when `opt[i]` is undefined. But after calling WIS(i) once, `opt[i]` is defined by (by previous lemma). Hence WIS(i) is called at most once.\n\n## Knapsack\n\nGet recursive formula. Prove the recursive formula holds via an exchange argument. THEN correctness of the iterative case it obvious.\n### Pseudopolynomial Time\n\nPolynomial in $n$ and the number $W$ which can be thought of as a parameter. $W$ is represented as a binary string of length $\\lceil \\log_2(W) \\rceil$. THEN a real polynomial time algorithm would run in time $poly(n \\log W)$.  Thus our proposed algorithm is called pseudo-polynomial time. \n\n## Shortest Paths\n\n### Setup \n\n- We have a directed graph $G = (V = [n], E)$\n- Edges are weighted $w: E \\rightarrow R$ \n\t- We have negative edges\n\t- Cost of non-edges\n#### Representation of Inputs\n\n",
+  "metadata": {
+    "date": "2026-02-05",
+    "updated": "2026-02-05"
+  },
+  "images": [],
+  "links": []
+}

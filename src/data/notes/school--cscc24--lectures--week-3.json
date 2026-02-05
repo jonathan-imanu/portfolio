@@ -2,10 +2,10 @@
   "id": "school--cscc24--lectures--week-3",
   "path": "school/cscc24/lectures/week-3",
   "title": "Week 3",
-  "content": "# Lisp & Racket\n\n[Ref](https://lips.js.org/docs/scheme-intro/data-types)\n\nIn Lisp, everything is written as S-Expression, which is a list wrapped in parentheses with space between elements.\n\n```\n(+ 1 2 3)\n```\n\nwhere `+` is the procedure applied. \n\nIn Scheme, a **procedure** is a _first-class value_ that can be **applied** to zero or more arguments.\n\n`+` & `*` on an empty S-expression will default to a the additive and multiplicative identity. ",
+  "content": "# Lisp & Racket\n\n[Ref](https://lips.js.org/docs/scheme-intro/data-types)\n\nIn Lisp, everything is written as S-Expression, which is a list wrapped in parentheses with space between elements.\n\n```\n(+ 1 2 3)\n```\n\nwhere `+` is the procedure applied. \n\nIn Scheme, a **procedure** is a _first-class value_ that can be **applied** to zero or more arguments.\n\n`+` & `*` on an empty S-expression will default to a the additive and multiplicative identity. \n\n### Higher-Order Procedures\n\n#### Map\n\n```\n(map proc l1 .. ln)\n```\n\nwhere `l1 ... ln` are all lists of the same size.\n\nJust applies proc to each list. Like any other map function.\n- EX: `(map + '(1 2 3) '(2 3 4) '(3 4 5)) -> (6 9 12)`\n\n#### Fold\n\n```\n(foldr op id lst)\n(foldl op id lst)\n```\n\nwhere:\n- `op` is a binary procedure\n\t- This just a function that takes two arguments\n- `id` is the identity element\n- `lst` is a list of arguments\n\n##### Learnings\n\n1. What is the result when the list is empty?\n2. If I already had the answer for (rest xs), what would I do with (first xs)\n3. Does my answer depend only on those two things?\n\n",
   "metadata": {
-    "date": "2026-01-27",
-    "updated": "2026-01-27"
+    "date": "2026-02-05",
+    "updated": "2026-02-05"
   },
   "images": [],
   "links": []

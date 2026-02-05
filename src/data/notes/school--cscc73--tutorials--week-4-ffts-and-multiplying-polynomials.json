@@ -1,0 +1,12 @@
+{
+  "id": "school--cscc73--tutorials--week-4-ffts-and-multiplying-polynomials",
+  "path": "school/cscc73/tutorials/week-4-ffts-and-multiplying-polynomials",
+  "title": "Week 4 - FFTs and Multiplying Polynomials",
+  "content": "# FFT: Fast Fourier Transforms\n\nWe have two ways of representing polynomials:\n\n1. Coefficients\n2. Evaluations\n\t1. We need $n$ distinct points to uniquely represent a polynomial of degree at most $n - 1$\n\t2. Great for addition and multiplication of polynomials (given that all x's are the same)\n## Idea\n\nThe idea is speeding up the multiplication. \n\nGiven $p(x), q(x)$ in coefficient form and we want their product. The steps and TCs of the naive case are below:\n\n1. Calculate $p,q$ for $n$ points to get $p$ & $q$ in evaluation form\n\t1. TC is $O(n^2)$\n2. In evaluation form, multiply $p,q$\n\t1. TC is $O(n)$\n3. We now have $pq$ in evaluation form\n4. We transform $pq$ to coefficient form\n\t1. TC is $O(n^2)$\n\n## $DFT_{n}$\n\n### Input \n\n$p(x) = p_0 + p_1x + \\ldots + p_{n-1}n^{n-1}$\n$W = \\{ \\omega_{n}^{0}, \\ldots, \\omega_{n}^{n-1},\\}$\n- These are the n-th roots of unity\n\t- They are defined as $\\omega_n = e^{2\\pi i / n}, \\qquad W_n = \\{\\omega_n^0, \\omega_n^1, \\ldots, \\omega_n^{n-1}\\}$\n\nWe split this up our polynomial into\n$$p_{even}(x^2) = p_0 + p_2x + p_4x^2 + \\ldots$$\n$$p_{odd}(x^2) = p_1 + p_3x + p_5x^2 + \\ldots$$\n$$p = p_{even} + xp_{odd}$$\nA property of the n roots of unity is that $W_{n}^2 = \\{ \\omega_{n/2}^0 \\ldots \\omega_{n/2}^{n/2 -1}\\}$\n##### Recursive Evaluation (FFT Step)\n\nFor $k = 0, \\ldots, \\frac{n}{2}-1$,\n\n$$p(\\omega_n^k) = p_{\\text{even}}(\\omega_{n/2}^k) + \\omega_n^k\\, p_{\\text{odd}}(\\omega_{n/2}^k),$$\n\n$$p(\\omega_n^{k+n/2}) = p_{\\text{even}}(\\omega_{n/2}^k) - \\omega_n^k\\, p_{\\text{odd}}(\\omega_{n/2}^k).$$\n\n  \n\nThis gives\n\n$$\\mathrm{DFT}_n(p) = \\bigl( \\mathrm{DFT}_{n/2}(p_{\\text{even}}) \\;\\pm\\; \\omega_n^k \\mathrm{DFT}_{n/2}(p_{\\text{odd}}) \\bigr).$$\n\n\n\n\n\n\n\n\n\n",
+  "metadata": {
+    "date": "2026-02-05",
+    "updated": "2026-02-05"
+  },
+  "images": [],
+  "links": []
+}

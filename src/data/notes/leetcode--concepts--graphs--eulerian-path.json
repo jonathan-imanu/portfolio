@@ -1,0 +1,12 @@
+{
+  "id": "leetcode--concepts--graphs--eulerian-path",
+  "path": "leetcode/concepts/graphs/eulerian-path",
+  "title": "Eulerian Path",
+  "content": "A traversal on a graph that uses all available edges.\n\nIf we want to find a path that uses all available edges, we can use Hierhozeler's algorithm:\n\n```python\ngraph = buildGraph\nroute = []\n\n# build route in reverse order\ndef dfs(start):\n\twhile graph[start]:\n\t\tdfs(graph[start].pop())\n\troute.append(start)\n\nreturn route[::-1]\n```\n\nThis will correctly build the route in reverse order.\n\n\n",
+  "metadata": {
+    "date": "2026-02-05",
+    "updated": "2026-02-05"
+  },
+  "images": [],
+  "links": []
+}
