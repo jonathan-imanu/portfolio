@@ -5,7 +5,14 @@ function About() {
     <section id="about" className="mt-6 space-y-4">
       <p className="body-text">
         I&apos;m a Computer Science student studying at the University of
-        Toronto. I will (hopefully) be graduating in June 2027.
+        Toronto. I will (hopefully) be graduating in June 2027. I currently work
+        part-time as a software engineer at{" "}
+        <CompanyLink href="https://www.yscope.com/">YScope</CompanyLink> and
+        will be interning at{" "}
+        <CompanyLink href="https://cloud.google.com/products/alloydb">
+          Google
+        </CompanyLink>{" "}
+        this summer.
       </p>
 
       <p className="body-text">
