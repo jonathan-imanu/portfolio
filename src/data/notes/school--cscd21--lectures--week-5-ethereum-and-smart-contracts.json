@@ -1,0 +1,12 @@
+{
+  "id": "school--cscd21--lectures--week-5-ethereum-and-smart-contracts",
+  "path": "school/cscd21/lectures/week-5-ethereum-and-smart-contracts",
+  "title": "Week 5 - Ethereum and Smart Contracts",
+  "content": "## TLDR\n\n- Uses ECC and ECDSA as signature algorithm \n- Consensus was originally Proof of Work and shifted to Proof of Stake in 2022\n- It's an account-based blockchain with **programable smart contracts**\n\t- ETH is more than just cryptocurrency, it enables decentralized applications\n## ETH Accounts & Transactions\n\nThere are different types of ETH accounts that are all associated with an address:\n- Externally Owned Accounts\n- Contract Accounts\nDifferent types of ETH transactions\n- Transfer ETH from EOA accounts to ETH addresses\n- Deploy smart contracts\n- Call methods of a deployed smarts\n# Smart Contracts\n\nA smart contract is a program (EVM bytecode) that is deployed on the blockchain that defines:\n1. A set of state variables\n2. Methods to read/write those state variables\n3. Events\n\t1. These are just logs that will be written on the blockchain\n\n*This is a lot like a class in Java*\n\nA smart contract can hold ETH as it has an address BUT it doesn't have a private key.\n### Deploy a Smart Contract\n\nSend a transaction that writes the EVM bytecode on the ETH blockchain\n- Once deployed, the code is immutable. The state can change of course depending on the contents of the Smart Contract\n- To call a method, we do it via an EOA account (by sending a transaction) or from another contract\n\n## Who Executes These?\n\nETH Nodes that process transactions. When the transaction is received (unconfirmed mempool), the code is executed (by the node) as a dry-run (not changing state).\n\nNodes charge a fee (called **gas**) for running a smart contract.\n\n\n\n\n\n",
+  "metadata": {
+    "date": "2026-02-11",
+    "updated": "2026-02-11"
+  },
+  "images": [],
+  "links": []
+}

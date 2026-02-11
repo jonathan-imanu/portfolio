@@ -1,0 +1,12 @@
+{
+  "id": "leetcode--concepts--tries",
+  "path": "leetcode/concepts/tries",
+  "title": "Tries",
+  "content": "Also called a **Prefix Tree** is a data structure used efficiently store and retrieve keys in a dataset of strings. \n\n```python\nclass Node:\n\tdef __init__(self):\n\t\tself.children = {}\n\t\tself.is_end_of_word = False\n\nclass Trie:\n\tdef __init__(self):\n\t\tself.root = Node()\n```\n\n\n",
+  "metadata": {
+    "date": "2026-02-11",
+    "updated": "2026-02-11"
+  },
+  "images": [],
+  "links": []
+}

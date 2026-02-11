@@ -1,0 +1,12 @@
+{
+  "id": "leetcode--notes--124-binary-tree-maximum-path-sum",
+  "path": "leetcode/notes/124-binary-tree-maximum-path-sum",
+  "title": "124. Binary Tree Maximum Path Sum",
+  "content": "Thinking about the rules a little bit more would have prevented the first couple wrong submissions. I initially wrote:\n\n```python\nclass Solution:\n\tdef maxPathSum(self, root: Optional[TreeNode]) -> int:\n\t\tdef dfs(node):\n\t\t\tif not node:\n\t\t\t\treturn 0, float('-inf')\n\t\t\t\n\t\t\tleft_through, left_best = dfs(node.left)\n\t\t\tright_through, right_best = dfs(node.right)\n\t\t\t\n\t\t\tthrough = max(left_through, 0) + max(right_through, 0) + node.val\n\t\t\tbest = max(left_best, right_best, through)\n\t\t\t\n\t\t\treturn through, best\n\nreturn max(dfs(root))\n```\n\nThe issue with this is that we'll overcount. The path sum can only split at one place: the top-most node from where the maximum path sum starts. This solution allows it to split multiple times breaking the rules.\n\nThis means that we should change of recursive solution slightly to account for this. Instead of propagating the best sum through that point that could split (`through`), let's just remove the splitting aspect. \n\n```python\nclass Solution:\n\tdef maxPathSum(self, root: Optional[TreeNode]) -> int:\n\t\tdef dfs(node):\n\t\t\tif not node:\n\t\t\t\treturn 0, float('-inf')\n\t\t\t\n\t\t\tleft_gain, left_best = dfs(node.left)\n\t\t\tright_gain, right_best = dfs(node.right)\n\t\t\t\n\t\t\tthrough = max(left_through, 0) + max(right_through, 0) + node.val\n\t\t\tbest = max(left_best, right_best, through)\n\t\t\t\n\t\t\t# doesn't care about splits anymore\n\t\t\tgain = max(0, left_gain, right_gain) + root.val\n\t\t\t\n\t\t\treturn gain, best\n\n\t\treturn max(dfs(root))\n```\n\n\n\n\n\n",
+  "metadata": {
+    "date": "2026-02-11",
+    "updated": "2026-02-11"
+  },
+  "images": [],
+  "links": []
+}

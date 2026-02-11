@@ -1,0 +1,12 @@
+{
+  "id": "school--cscc24--lectures--week-4",
+  "path": "school/cscc24/lectures/week-4",
+  "title": "Week 4",
+  "content": "## Tail Recursion\n\nA recursive function whose last statement is it's recursive call. IE it returns a recursive call to itself so there is nothing left to do in the function.\n\nThese are better than non-tail recursive functions since they can be optimized by a compiler. **BUT** it is up to the compiler/interpreter of the particular language to determine whether or not the recursive calls in a tail recursive function actually use an extra stack frame for each recursive call to the function.\n- Python doesn't do tail call optimization\n# Modern Java Features\n### Streams\n\n`.stream()`\n\n**A pipeline of elements from a source where elements are computed on-demand**\n\nStream operations are either intermediate or terminal:\n- Intermediate streams operations create another stream\n- Once a terminal stream operation runs, the stream is consumed and invalid\n\nThese are kinda like generators in Python. \n\n### Lambda\n\nHas the general syntax: `(parameters) -> { statements; }`\n\n### Method References\n\nPassing existing named functions from instances/classes in the same context that we would use a Lambda. Can be used anywhere a functional interface is wanted.\n\nSyntax: `Class::methodName`",
+  "metadata": {
+    "date": "2026-02-11",
+    "updated": "2026-02-11"
+  },
+  "images": [],
+  "links": []
+}
