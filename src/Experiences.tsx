@@ -8,6 +8,7 @@ import utat from "./assets/images/utat.png";
 import google from "./assets/images/google.png";
 import yScope from "./assets/images/yscope.png";
 import { Experience as ExperienceComponent } from "./components/Experience";
+import { ExperienceStatus } from "./types/experiences";
 
 const experiences: Experience[] = [
   {
@@ -17,7 +18,7 @@ const experiences: Experience[] = [
     description:
       "Designing and productionizing a SQL debugger for AlloyDB to analyze query execution plans and runtime behavior.",
     icon: { src: google, alt: "Google" },
-    status: "incoming",
+    status: ExperienceStatus.Incoming,
     dates: "May 2026 - Aug 2026",
   },
   {
@@ -27,7 +28,7 @@ const experiences: Experience[] = [
     description:
       "Contributing to the development of CLP, an open-source platform for compressed, searchable log analytics without decompression.",
     icon: { src: yScope, alt: "YScope" },
-    status: "active",
+    status: ExperienceStatus.Active,
     dates: "Feb 2026 - Present",
   },
   {
@@ -37,7 +38,7 @@ const experiences: Experience[] = [
     description:
       "I wrote code that gets executed over 550B+ times a day. I shipped data pipelines running on Kubernetes and extended parts of the auction path to support bid shading.",
     icon: { src: indexExchange, alt: "Index Exchange" },
-    status: "inactive",
+    status: ExperienceStatus.Inactive,
     dates: "Sep 2025 - Dec 2025",
   },
   {
@@ -47,7 +48,7 @@ const experiences: Experience[] = [
     description:
       "Built an MCP server that lets LLMs monitor and reason about RDS and Aurora databases. I also improved an internal tool by speeding up a LangGraph-based workflow  and rearchitected the system to eliminate Lambda timeouts.",
     icon: { src: aws, alt: "Amazon Web Services" },
-    status: "inactive",
+    status: ExperienceStatus.Inactive,
     dates: "May 2025 - Aug 2025",
   },
   {
@@ -57,7 +58,7 @@ const experiences: Experience[] = [
     description:
       "I learned a lot here and had a great manager who gave me the freedom to work on what interested me. I did everything from speeding up API endpoints to collaborating with product on features that improved how SMMs found their content.",
     icon: { src: dashSocial, alt: "Dash Social" },
-    status: "inactive",
+    status: ExperienceStatus.Inactive,
     dates: "Jan 2025 - Apr 2025",
   },
   {
@@ -67,7 +68,7 @@ const experiences: Experience[] = [
     description:
       "I worked on improving cloud infrastructure and streamlining CI workflows for the 4× AutoDrive Challenge winner.",
     icon: { src: aUToronto, alt: "aUToronto" },
-    status: "inactive",
+    status: ExperienceStatus.Inactive,
     dates: "Sep 2023 - Apr 2024",
   },
   {
@@ -77,7 +78,7 @@ const experiences: Experience[] = [
     description:
       "I worked on the FINCH satellite, building core housekeeping and parameter services in C as part of a three-person team. ",
     icon: { src: utat, alt: "University of Toronto Aerospace Team" },
-    status: "inactive",
+    status: ExperienceStatus.Inactive,
     dates: "May 2023 - Aug 2033",
   },
 ];

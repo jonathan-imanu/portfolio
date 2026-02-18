@@ -4,6 +4,13 @@ export interface Experience {
   role: string;
   description: string;
   icon: string | { src: string; alt: string };
-  status: "active" | "inactive" | "incoming";
+  status: ExperienceStatus;
   dates: string;
+}
+
+export enum ExperienceStatus {
+  Active = "active",
+  Inactive = "inactive",
+  Incoming = "incoming",
+  Paused = "paused",
 }

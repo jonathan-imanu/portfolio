@@ -26,7 +26,7 @@ export function FileTreeItem({
 
   const filteredChildren = searchQuery
     ? Array.from(node.children.values()).filter((child) =>
-        matchesSearch(child, searchQuery)
+        matchesSearch(child, searchQuery),
       )
     : Array.from(node.children.values());
 

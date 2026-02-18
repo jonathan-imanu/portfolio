@@ -1,5 +1,15 @@
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
-import type { Experience as ExperienceType } from "../types/experiences";
+import {
+  ExperienceStatus,
+  type Experience as ExperienceType,
+} from "../types/experiences";
+
+const statusColors: Record<ExperienceStatus, string> = {
+  [ExperienceStatus.Active]: "bg-green-500",
+  [ExperienceStatus.Inactive]: "bg-black",
+  [ExperienceStatus.Incoming]: "bg-blue-300",
+  [ExperienceStatus.Paused]: "bg-yellow-500",
+};
 
 interface ExperienceProps {
   experience: ExperienceType;
@@ -45,13 +55,8 @@ export function Experience({
             )}
           </div>
           <span
-            className={`w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full flex-shrink-0 ${
-              experience.status === "active"
-                ? "bg-green-500"
-                : experience.status === "inactive"
-                  ? "bg-black"
-                  : "bg-blue-300"
-            }`}></span>
+            className={`w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full flex-shrink-0 ${statusColors[experience.status]}`}
+          />
         </div>
         <div className="flex-1 flex flex-col sm:flex-row sm:items-center gap-0.5 sm:gap-2 min-w-0">
           <span className="font-bold text-black text-md">
