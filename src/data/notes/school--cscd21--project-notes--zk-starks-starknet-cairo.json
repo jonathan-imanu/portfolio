@@ -1,0 +1,14 @@
+{
+  "id": "school--cscd21--project-notes--zk-starks-starknet-cairo",
+  "path": "school/cscd21/project-notes/zk-starks-starknet-cairo",
+  "title": "ZK-STARKS, StarkNet,  & CAIRO",
+  "content": "## ZK-STARKS\n\nAn alternative to ZK-SNARKS that does not rely on a trusted ceremony but has the following drawbacks:\n- larger proof sizes\n- longer to verify\n\nUsers would accept this drawback because it means that they do not have to rely on a trusting that a ZK-SNARK network has correctly and safely (this means discarding the secrets used in the trusted ceremony).\n## What is StarkNet?\n\nFrom the docs:\n\n> A decentralized, permissionless Layer 2 (L2) validity rollup that scales Ethereum by utilizing STARK-based zero-knowledge proofs to bundle thousands of transactions off-chain for verified settlement on the mainnet.\n\n### Architecture\n\n<img src=\"/images/StarkNetArch.png\" alt=\"StarkNetArch\" />\n[Source](https://www.certik.com/blog/an-introduction-to-the-cairo-programming-language)\n\n**Key Observations**\n\n- Accounts are SMART Contracts not just a pair of keys\n- **The sequencer is run by StarkWave!** It's not truly decentralized.\n\t- [Decentralization is being worked towards though](https://www.starknet.io/blog/starknet-grinta-the-architecture-of-a-more-decentralized-future/)\n\n**The fact that accounts are natively built into the platform is a big differentiator from ETH**\n\n> Doesn't ETH already have this?\n\nNot really. ETH has *Externally Owned Accounts (EOAs)* which are controlled by a pair of keys. Everything from the account addr. to the authority to execute txns comes from said keys.\n## Reading List\n\n- [A good overview on StarkNet and Cairo](https://www.certik.com/blog/an-introduction-to-the-cairo-programming-language)\n- [StarkNet's S-two](https://docs.starknet.io/learn/S-two-book/introduction)\n\n\n\n\n\n",
+  "metadata": {
+    "date": "2026-03-27",
+    "updated": "2026-03-27"
+  },
+  "images": [
+    "/images/StarkNetArch.png"
+  ],
+  "links": []
+}
