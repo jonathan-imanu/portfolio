@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "lastSync": "2026-03-27T21:16:19.447Z",
+  "lastSync": "2026-04-15T15:40:16.901Z",
   "notes": {
     "dev/concepts/floating-point-numbers": {
       "id": "dev--concepts--floating-point-numbers",
@@ -713,22 +713,13 @@
         "updated": "2026-02-11"
       }
     },
-    "school/cscc24/lectures/week-3-5-racket-notes": {
-      "id": "school--cscc24--lectures--week-3-5-racket-notes",
-      "path": "school/cscc24/lectures/week-3-5-racket-notes",
-      "title": "Week 3-5 Racket Notes",
-      "metadata": {
-        "date": "2026-02-11",
-        "updated": "2026-02-11"
-      }
-    },
     "school/cscc24/lectures/week-4": {
       "id": "school--cscc24--lectures--week-4",
       "path": "school/cscc24/lectures/week-4",
       "title": "Week 4",
       "metadata": {
-        "date": "2026-02-11",
-        "updated": "2026-02-11"
+        "date": "2026-04-15",
+        "updated": "2026-04-15"
       }
     },
     "school/cscd21/lectures/week-5-ethereum-and-smart-contracts": {
@@ -747,6 +738,51 @@
       "metadata": {
         "date": "2026-03-27",
         "updated": "2026-03-27"
+      }
+    },
+    "school/cscc24/lectures/modern-java-features": {
+      "id": "school--cscc24--lectures--modern-java-features",
+      "path": "school/cscc24/lectures/modern-java-features",
+      "title": "Modern Java Features",
+      "metadata": {
+        "date": "2026-04-15",
+        "updated": "2026-04-15"
+      }
+    },
+    "school/cscc24/lectures/week-10-12-logic-programming": {
+      "id": "school--cscc24--lectures--week-10-12-logic-programming",
+      "path": "school/cscc24/lectures/week-10-12-logic-programming",
+      "title": "Week 10 - 12 Logic Programming",
+      "metadata": {
+        "date": "2026-04-15",
+        "updated": "2026-04-15"
+      }
+    },
+    "school/cscc24/lectures/week-3-6-racket-notes": {
+      "id": "school--cscc24--lectures--week-3-6-racket-notes",
+      "path": "school/cscc24/lectures/week-3-6-racket-notes",
+      "title": "Week 3-6 Racket Notes",
+      "metadata": {
+        "date": "2026-04-15",
+        "updated": "2026-04-15"
+      }
+    },
+    "school/cscc24/lectures/week-7-9-haskell-notes": {
+      "id": "school--cscc24--lectures--week-7-9-haskell-notes",
+      "path": "school/cscc24/lectures/week-7-9-haskell-notes",
+      "title": "Week 7 - 9 Haskell Notes",
+      "metadata": {
+        "date": "2026-04-15",
+        "updated": "2026-04-15"
+      }
+    },
+    "school/cscc24/lectures/week-9": {
+      "id": "school--cscc24--lectures--week-9",
+      "path": "school/cscc24/lectures/week-9",
+      "title": "Week 9",
+      "metadata": {
+        "date": "2026-04-15",
+        "updated": "2026-04-15"
       }
     }
   }
