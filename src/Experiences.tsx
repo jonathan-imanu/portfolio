@@ -14,11 +14,11 @@ const experiences: Experience[] = [
   {
     id: "google",
     company: "Google",
-    role: "Incoming Software Engineer Intern",
+    role: "Software Engineer Intern",
     description:
       "Designing and productionizing a SQL debugger for AlloyDB to analyze query execution plans and runtime behavior.",
     icon: { src: google, alt: "Google" },
-    status: ExperienceStatus.Incoming,
+    status: ExperienceStatus.Active,
     dates: "May 2026 - Aug 2026",
   },
   {
@@ -28,8 +28,8 @@ const experiences: Experience[] = [
     description:
       "Contributing to the development of CLP, an open-source platform for compressed, searchable log analytics without decompression.",
     icon: { src: yScope, alt: "YScope" },
-    status: ExperienceStatus.Active,
-    dates: "Feb 2026 - Present",
+    status: ExperienceStatus.Inactive,
+    dates: "Feb 2026 - May 2026",
   },
   {
     id: "index-exchange",
