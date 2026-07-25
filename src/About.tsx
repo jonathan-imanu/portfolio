@@ -9,8 +9,8 @@ function About() {
         interning as a software engineer at{" "}
         <CompanyLink href="https://cloud.google.com/products/alloydb">
           Google
-        </CompanyLink>{" "}
-        this summer.
+        </CompanyLink>
+        .
       </p>
 
       <p className="body-text">
