@@ -5,19 +5,18 @@ function About() {
     <section id="about" className="mt-6 space-y-4">
       <p className="body-text">
         I&apos;m a Computer Science student studying at the University of
-        Toronto. I will be graduating in June 2027 and I'm currently interning
-        as a software engineer at{" "}
-        <CompanyLink href="https://cloud.google.com/products/alloydb">
-          Google
-        </CompanyLink>
-        .
+        Toronto. I will be graduating in June 2027 and currently exploring
+        full-time software engineering roles.
       </p>
 
       <p className="body-text">
         Over the past few years, I&apos;ve tried to do interesting things at
         interesting places. Along the way, I&apos;ve had the privilege of
         working with some amazing people at{" "}
-        <CompanyLink href="https://www.yscope.com/">YScope</CompanyLink>,{" "}
+        <CompanyLink href="https://www.google.com/products/alloydb">
+          Google
+        </CompanyLink>
+        , <CompanyLink href="https://www.yscope.com/">YScope</CompanyLink>,{" "}
         <CompanyLink href="https://www.indexexchange.com/">
           Index Exchange
         </CompanyLink>

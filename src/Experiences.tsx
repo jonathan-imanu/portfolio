@@ -18,7 +18,7 @@ const experiences: Experience[] = [
     description:
       "Designing and productionizing a SQL debugger for AlloyDB to analyze query execution plans and runtime behavior.",
     icon: { src: google, alt: "Google" },
-    status: ExperienceStatus.Active,
+    status: ExperienceStatus.Inactive,
     dates: "May 2026 - Aug 2026",
   },
   {
