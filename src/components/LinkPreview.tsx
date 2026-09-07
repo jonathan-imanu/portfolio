@@ -7,9 +7,13 @@ import {
   useTransform,
 } from "motion/react";
 import {
+  useCallback,
   useEffect,
+  useId,
+  useMemo,
   useRef,
   useState,
+  useSyncExternalStore,
   type PointerEvent,
   type ReactNode,
 } from "react";
@@ -29,6 +33,46 @@ const VIEWPORT_PAD = 12;
 const ARROW_INSET = 18;
 const GAP = 10;
 const CARD_PAD = 4;
+
+let activePreviewId: string | null = null;
+const previewListeners = new Set<() => void>();
+
+function subscribeActivePreview(onStoreChange: () => void) {
+  previewListeners.add(onStoreChange);
+  return () => {
+    previewListeners.delete(onStoreChange);
+  };
+}
+
+function getActivePreviewSnapshot() {
+  return activePreviewId;
+}
+
+function getActivePreviewServerSnapshot() {
+  return null;
+}
+
+function setActivePreviewId(nextId: string | null) {
+  if (activePreviewId === nextId) {
+    return;
+  }
+  activePreviewId = nextId;
+  previewListeners.forEach((listener) => listener());
+}
+
+function subscribeReducedMotion(onStoreChange: () => void) {
+  const media = window.matchMedia("(prefers-reduced-motion: reduce)");
+  media.addEventListener("change", onStoreChange);
+  return () => media.removeEventListener("change", onStoreChange);
+}
+
+function getReducedMotionSnapshot() {
+  return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+}
+
+function getReducedMotionServerSnapshot() {
+  return false;
+}
 
 function getPreviewSrc(
   url: string,
@@ -70,6 +114,14 @@ function getHoveredLineRect(event: PointerEvent<HTMLAnchorElement>): DOMRect {
   return hit ?? rects[0] ?? event.currentTarget.getBoundingClientRect();
 }
 
+function getHostname(url: string) {
+  try {
+    return new URL(url).hostname.replace(/^www\./, "");
+  } catch {
+    return url;
+  }
+}
+
 export function LinkPreview(props: LinkPreviewProps) {
   const {
     children,
@@ -77,31 +129,54 @@ export function LinkPreview(props: LinkPreviewProps) {
     className = "",
     width = 220,
     height = 138,
+    ...previewSource
   } = props;
-  const src = getPreviewSrc(
-    url,
-    width,
-    height,
-    props.isStatic,
-    props.isStatic ? props.imageSrc : undefined
+  const isStatic = previewSource.isStatic === true;
+  const imageSrc = previewSource.isStatic === true ? previewSource.imageSrc : undefined;
+  const src = useMemo(
+    () => getPreviewSrc(url, width, height, isStatic, imageSrc),
+    [url, width, height, isStatic, imageSrc]
   );
+  const hostname = useMemo(() => getHostname(url), [url]);
 
   const cardWidth = width + CARD_PAD * 2;
   const cardHeight = height + CARD_PAD * 2;
+
+  const previewId = useId();
+  const activeId = useSyncExternalStore(
+    subscribeActivePreview,
+    getActivePreviewSnapshot,
+    getActivePreviewServerSnapshot
+  );
+  const reduceMotion = useSyncExternalStore(
+    subscribeReducedMotion,
+    getReducedMotionSnapshot,
+    getReducedMotionServerSnapshot
+  );
 
   const [isOpen, setOpen] = useState(false);
   const [overContent, setOverContent] = useState(false);
   const [shouldLoad, setShouldLoad] = useState(false);
   const [hasError, setHasError] = useState(false);
-  const [reduceMotion, setReduceMotion] = useState(false);
   const [placement, setPlacement] = useState<"top" | "bottom">("top");
   const [bubbleTop, setBubbleTop] = useState(0);
+  const [lockOwner, setLockOwner] = useState(activeId);
   const contentLeaveTimer = useRef<number>(0);
 
-  const visible = isOpen || overContent;
+  const requested = isOpen || overContent;
+  const swapping = activeId !== null && activeId !== previewId;
+  const visible = requested && !swapping;
+
+  if (lockOwner !== activeId) {
+    setLockOwner(activeId);
+    if (swapping) {
+      setOpen(false);
+      setOverContent(false);
+    }
+  }
 
   const mouseX = useMotionValue(0);
-  const smoothX = useSpring(mouseX, { stiffness: 280, damping: 32 });
+  const smoothX = useSpring(mouseX, { stiffness: 400, damping: 40 });
   const trackingX = reduceMotion ? mouseX : smoothX;
 
   const bubbleLeft = useTransform(trackingX, (x) => {
@@ -116,76 +191,104 @@ export function LinkPreview(props: LinkPreviewProps) {
   });
 
   useEffect(() => {
+    if (!requested) {
+      return;
+    }
+
+    setActivePreviewId(previewId);
+    return () => {
+      if (getActivePreviewSnapshot() === previewId) {
+        setActivePreviewId(null);
+      }
+    };
+  }, [requested, previewId]);
+
+  useEffect(() => {
     if (!shouldLoad) {
       return;
     }
-    const img = new Image();
-    img.src = src;
-    img.onerror = () => setHasError(true);
-  }, [shouldLoad, src]);
 
-  useEffect(() => {
-    const media = window.matchMedia("(prefers-reduced-motion: reduce)");
-    const update = () => setReduceMotion(media.matches);
-    update();
-    media.addEventListener("change", update);
-    return () => media.removeEventListener("change", update);
-  }, []);
+    let cancelled = false;
+    const img = new Image();
+    img.onerror = () => {
+      if (!cancelled) {
+        setHasError(true);
+      }
+    };
+    img.src = src;
+
+    return () => {
+      cancelled = true;
+    };
+  }, [shouldLoad, src]);
 
   useEffect(() => {
     return () => window.clearTimeout(contentLeaveTimer.current);
   }, []);
 
-  const updateAnchor = (event: PointerEvent<HTMLAnchorElement>) => {
-    const line = getHoveredLineRect(event);
-    mouseX.set(event.clientX);
+  const updateAnchor = useCallback(
+    (event: PointerEvent<HTMLAnchorElement>, snap = false) => {
+      const line = getHoveredLineRect(event);
+      mouseX.set(event.clientX);
+      if (snap || !requested) {
+        smoothX.jump(event.clientX);
+      }
 
-    const above = line.top - GAP - cardHeight;
-    if (above >= VIEWPORT_PAD) {
-      setPlacement("top");
-      setBubbleTop(above);
-      return;
-    }
+      const above = line.top - GAP - cardHeight;
+      if (above >= VIEWPORT_PAD) {
+        setPlacement("top");
+        setBubbleTop(above);
+        return;
+      }
 
-    setPlacement("bottom");
-    setBubbleTop(line.bottom + GAP);
-  };
+      setPlacement("bottom");
+      setBubbleTop(line.bottom + GAP);
+    },
+    [cardHeight, mouseX, requested, smoothX]
+  );
 
-  const handleContentEnter = () => {
+  const handleTriggerEnter = useCallback(
+    (event: PointerEvent<HTMLAnchorElement>) => {
+      setShouldLoad(true);
+      updateAnchor(event, true);
+    },
+    [updateAnchor]
+  );
+
+  const handleContentEnter = useCallback(() => {
     window.clearTimeout(contentLeaveTimer.current);
     setOverContent(true);
-  };
+  }, []);
 
-  const handleContentLeave = () => {
+  const handleContentLeave = useCallback(() => {
     window.clearTimeout(contentLeaveTimer.current);
     contentLeaveTimer.current = window.setTimeout(() => {
       setOverContent(false);
     }, 80);
-  };
+  }, []);
 
-  const hostname = (() => {
-    try {
-      return new URL(url).hostname.replace(/^www\./, "");
-    } catch {
-      return url;
-    }
-  })();
+  const handleOpenChange = useCallback(
+    (open: boolean) => {
+      setOpen(open);
+      if (open) {
+        setActivePreviewId(previewId);
+      }
+    },
+    [previewId]
+  );
 
   return (
     <HoverCard.Root
       open={visible}
-      openDelay={100}
-      closeDelay={160}
-      onOpenChange={setOpen}>
+      openDelay={swapping ? 0 : 100}
+      closeDelay={80}
+      onOpenChange={handleOpenChange}>
       <HoverCard.Trigger asChild>
         <a
           href={url}
           target="_blank"
           rel="noopener noreferrer"
-          onPointerEnter={(event) => {
-            setShouldLoad(true);
-            updateAnchor(event);
-          }}
+          onPointerEnter={handleTriggerEnter}
           onPointerMove={updateAnchor}
           className={`inline [box-decoration-break:clone] ${className}`}>
           {children}
@@ -196,30 +299,15 @@ export function LinkPreview(props: LinkPreviewProps) {
         <AnimatePresence>
           {visible && (
             <motion.div
-              initial={
-                reduceMotion
-                  ? { opacity: 0 }
-                  : { opacity: 0, y: placement === "top" ? 10 : -10, scale: 0.92 }
-              }
-              animate={
-                reduceMotion
-                  ? { opacity: 1 }
-                  : {
-                      opacity: 1,
-                      y: 0,
-                      scale: 1,
-                      transition: {
-                        type: "spring",
-                        stiffness: 280,
-                        damping: 24,
-                      },
-                    }
-              }
-              exit={
-                reduceMotion
-                  ? { opacity: 0 }
-                  : { opacity: 0, y: placement === "top" ? 8 : -8, scale: 0.96 }
-              }
+              initial={{ opacity: 0 }}
+              animate={{
+                opacity: 1,
+                transition: {
+                  duration: reduceMotion || swapping ? 0.08 : 0.14,
+                  ease: "easeOut",
+                },
+              }}
+              exit={{ opacity: 0, transition: { duration: 0 } }}
               onPointerEnter={handleContentEnter}
               onPointerLeave={handleContentLeave}
               className="pointer-events-auto fixed z-50"
