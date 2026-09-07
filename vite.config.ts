@@ -21,6 +21,8 @@ export default defineConfig({
           ],
           // Icons
           "icons-vendor": ["react-icons"],
+          motion: ["motion"],
+          radix: ["@radix-ui/react-hover-card"],
         },
       },
     },

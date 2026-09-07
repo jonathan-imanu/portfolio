@@ -1,4 +1,5 @@
 import { type ReactNode } from "react";
+import { LinkPreview } from "./components/LinkPreview";
 
 function About() {
   return (
@@ -13,7 +14,7 @@ function About() {
         Over the past few years, I&apos;ve tried to do interesting things at
         interesting places. Along the way, I&apos;ve had the privilege of
         working with some amazing people at{" "}
-        <CompanyLink href="https://www.google.com/products/alloydb">
+        <CompanyLink href="https://cloud.google.com/products/alloydb">
           Google
         </CompanyLink>
         , <CompanyLink href="https://www.yscope.com/">YScope</CompanyLink>,{" "}
@@ -62,12 +63,10 @@ const CompanyLink = ({
   children: ReactNode;
 }) => {
   return (
-    <a
-      href={href}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="text-gray-900 underline">
+    <LinkPreview
+      url={href}
+      className="text-gray-900 underline underline-offset-2 decoration-gray-400 transition-[text-decoration-color] hover:decoration-gray-900">
       {children}
-    </a>
+    </LinkPreview>
   );
 };
