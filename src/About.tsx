@@ -1,5 +1,4 @@
 import { type ReactNode } from "react";
-import { LinkPreview } from "./components/LinkPreview";
 
 function About() {
   return (
@@ -63,10 +62,12 @@ const CompanyLink = ({
   children: ReactNode;
 }) => {
   return (
-    <LinkPreview
-      url={href}
-      className="text-gray-900 underline underline-offset-2 decoration-gray-400 transition-[text-decoration-color] hover:decoration-gray-900">
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="company-link text-gray-900">
       {children}
-    </LinkPreview>
+    </a>
   );
 };

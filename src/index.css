@@ -24,6 +24,29 @@ body {
     font-size: 14px;
   }
 }
+
+.company-link {
+  background-image: linear-gradient(currentColor, currentColor),
+    linear-gradient(rgb(156 163 175), rgb(156 163 175));
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  background-size: 0 2px, 100% 1px;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  transition: background-size 250ms ease;
+}
+
+.company-link:hover,
+.company-link:focus-visible {
+  background-size: 100% 2px, 100% 1px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .company-link {
+    transition: none;
+  }
+}
+
 .experience-text {
   font-size: 14px;
   color: rgb(55 65 81);

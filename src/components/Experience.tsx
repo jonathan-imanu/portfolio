@@ -58,11 +58,11 @@ export function Experience({
             className={`w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full flex-shrink-0 ${statusColors[experience.status]}`}
           />
         </div>
-        <div className="flex-1 flex flex-col sm:flex-row sm:items-center gap-0.5 sm:gap-2 min-w-0">
+        <div className="flex-1 flex flex-col sm:flex-row sm:flex-wrap sm:items-center gap-0.5 sm:gap-x-2 min-w-0">
           <span className="font-bold text-black text-md">
             {experience.company}
           </span>
-          <span className="text-gray-700 font-normal text-sm">
+          <span className="text-gray-700 font-normal text-sm whitespace-nowrap">
             {experience.role}
           </span>
         </div>
