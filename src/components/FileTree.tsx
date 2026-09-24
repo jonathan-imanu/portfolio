@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import { Link } from "react-router-dom";
 import { FaChevronRight, FaFile, FaFolder } from "react-icons/fa";
 import type { TreeNode } from "../utils/notes";
@@ -13,7 +13,7 @@ interface FileTreeProps {
   searchQuery?: string;
 }
 
-export function FileTreeItem({
+export const FileTreeItem = memo(function FileTreeItem({
   node,
   level = 0,
   expandedPaths = new Set(),
@@ -110,4 +110,4 @@ export function FileTreeItem({
       )}
     </div>
   );
-}
+});

@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useLayoutEffect } from "react";
 import { matchesSearch } from "../utils/tree";
 import type { TreeNode } from "../utils/notes";
 
@@ -18,7 +18,7 @@ export function useAutoExpand({
   reset,
 }: UseAutoExpandProps) {
   // Handle folder filter expansion
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (folderFilter) {
       const parts = folderFilter.split("/");
       const pathsToExpand: string[] = [];
@@ -47,7 +47,7 @@ export function useAutoExpand({
   }, [folderFilter, tree, searchQuery, expandAll, reset]);
 
   // Auto-expand/collapse paths based on search
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (folderFilter && searchQuery === folderFilter) {
       return;
     }

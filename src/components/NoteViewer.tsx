@@ -3,10 +3,12 @@ import { useParams, Link } from "react-router-dom";
 import { FaChevronLeft } from "react-icons/fa";
 import ReactMarkdown from "react-markdown";
 import remarkMath from "remark-math";
+import remarkBreaks from "remark-breaks";
 import rehypeKatex from "rehype-katex";
 import rehypeRaw from "rehype-raw";
 import "katex/dist/katex.min.css";
 import { getNote } from "../utils/notes";
+import { normalizeDisplayMathDelimiters } from "../utils/markdown";
 import type { ProcessedNote } from "../types/notes";
 import { NoteSkeleton } from "./NoteSkeleton";
 import { markdownComponents } from "./MarkdownComponents";
@@ -81,12 +83,12 @@ export function NoteViewer() {
         </span>
       </div>
 
-      <div className="body-text">
+      <div className="body-text note-content">
         <ReactMarkdown
-          remarkPlugins={[remarkMath]}
+          remarkPlugins={[remarkMath, remarkBreaks]}
           rehypePlugins={[rehypeRaw, rehypeKatex]}
           components={markdownComponents}>
-          {note.content}
+          {normalizeDisplayMathDelimiters(note.content)}
         </ReactMarkdown>
       </div>
     </article>

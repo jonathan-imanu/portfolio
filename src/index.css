@@ -25,6 +25,35 @@ body {
   }
 }
 
+.note-content > :first-child {
+  margin-top: 0;
+}
+
+.note-content :is(p, ul, ol, pre, blockquote, .katex-display) {
+  margin-bottom: 1rem;
+}
+
+.note-content :is(h1, h2, h3, h4) {
+  line-height: 1.3;
+}
+
+.note-content :is(ul, ol) {
+  padding-left: 1.5rem;
+  margin-left: 0;
+  list-style-position: outside;
+}
+
+.note-content li > :is(ul, ol) {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.note-content .katex-display {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-block: 0.25rem;
+}
+
 .company-link {
   background-image: linear-gradient(currentColor, currentColor),
     linear-gradient(rgb(156 163 175), rgb(156 163 175));
