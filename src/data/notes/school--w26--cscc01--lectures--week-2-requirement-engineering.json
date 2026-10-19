@@ -1,0 +1,12 @@
+{
+  "id": "school--w26--cscc01--lectures--week-2-requirement-engineering",
+  "path": "school/w26/cscc01/lectures/week-2-requirement-engineering",
+  "title": "Week 2 - Requirement Engineering",
+  "content": "Requirement Engineering is the fist step in building software. It's challenging, costly and potentially risky.\n\nRequirements are essential to ascertain a definition of done for developers and testers as well as to provide clarity to customers so that they know what to expect.\n## User Story\n\nA small unit of work that's told from the perspective of a user. A crucial part of the Agile process that explains desired functionality.\n- *This differs from a traditional requirement written from the perspective*\n- Should have **acceptance criteria** that sets the scope and helps to validate whether the story is complete or not. Ideally this should be automated.\n### User Personas\n\nHelps to visualize the kind of person that might be using the product.\n## React\n\nA JS library for building UI. \n- Mostly JS and JSX (a syntax extension for JS).\n- JSX let's you write HTML code in JS files\n- React follows a component based architecture and has one way data flow. \n### DOM\n\nA JS object that contains all the elements you have in your HTML. This allows JS to find, add and update elements without reloading the page.\n\nReact introduces the concept of a Virtual DOM. React applies changes to the Virtual DOM and computes diffs of the Virtual DOM to the DOM and updates the DOM accordingly.\n### Component State & Lifecycle\n\n- A special JS object that can store data inside of a component\n- **Hooks** a way to hook into the component lifecycle\n\t- `useState` a hook that lets us persist data across re-renders and force a re-render when there is a change in state.\n\t- `useRef` is a React Hook that lets you reference a value that's not needed for rendering\n\n\n",
+  "metadata": {
+    "date": "2026-10-19",
+    "updated": "2026-10-19"
+  },
+  "images": [],
+  "links": []
+}

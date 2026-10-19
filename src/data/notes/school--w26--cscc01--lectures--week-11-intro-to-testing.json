@@ -1,0 +1,14 @@
+{
+  "id": "school--w26--cscc01--lectures--week-11-intro-to-testing",
+  "path": "school/w26/cscc01/lectures/week-11-intro-to-testing",
+  "title": "Week 11 - Intro to Testing",
+  "content": "## Verification vs Validation\n\n### Verification\n\n*\"Are we building the product right?\"*\n### Validation\n\n*\"Are we building the right product?\"*\n# Types of Testing\n\n## Black Box Testing\n\nDesigned solely based on the specifications of the unit without any knowledge of its internal workings.\n### Equivalence Class Testing\n\nA black box test technique in which test scales are designed to exercise one representative member of each partition. \n### Boundary Testing \n\nA technique where we test values of the edges or boundaries of equivalence ranges that are most likely to cause faults.\n## White Box Testing\n\nTakes advantage of knowledge of the internal structure of the unit being tested. Structural coverage can be used to quantify the thoroughness of testing. \n### Structural Coverage Strategies \n\n#### Definition use Coverage\n\nA definition-use is defined with respect to some variables:\n- **Def**: location where $v$ is defined\n- **Use**: location where $v$ is used\n\nCan be used to define different testing criteria such as:\n- Use every def\n- Execute every use\n#### Logic Coverage\n\nPredicate coverage\n- The test set should make each predicate evaluate to true and false\nClause coverage\n- The test set should make each clause evaluate to true and false\nActive clause coverage \n- Similar to clause coverage with the extra requirement that the clause should determine the predicate\n## Functional Testing\n\nTesting this black box testing type is related to the functional requirements of a system\n## Non-Functional Testing \n\nThis is a type of software testing that checks non-functional aspects such as performance, usability, reliability of a software application is a great example of a non-functional test.\n## Regression Testing\n\nWhenever developers change or modify their software even a small change can have unexpected consequences regression testing involves testing existing software applications to ensure that a change or addition hasn't broken any existing functionality.\n\n<img src=\"/images/Smoke vs Sanity vs Regression.png\" alt=\"Smoke vs Sanity vs Regression\" />\n",
+  "metadata": {
+    "date": "2026-10-19",
+    "updated": "2026-10-19"
+  },
+  "images": [
+    "/images/Smoke vs Sanity vs Regression.png"
+  ],
+  "links": []
+}

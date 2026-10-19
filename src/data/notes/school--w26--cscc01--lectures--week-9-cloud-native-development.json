@@ -1,0 +1,12 @@
+{
+  "id": "school--w26--cscc01--lectures--week-9-cloud-native-development",
+  "path": "school/w26/cscc01/lectures/week-9-cloud-native-development",
+  "title": "Week 9 - Cloud Native Development",
+  "content": "## Cloud Types\n\n### Private / On-premises Cloud \n\nOwned and operated by a single organization and deployed within their data centers.\n- Offers increased privacy, security and control\n\nBest choice for strict compliance, security and data privacy requirements.\n### Public Cloud\n\nProvided by third-party service providers where computing resources are shared amongst users.\n- Cost-effective, scalable and flexible\n\nProviders manage infrastructure, maintenance, and updates\n### Hybrid Cloud\n\nA mix of both infrastructures that leverages the benefits of both\n## Cloud Platforms - Hosting Models\n\n### IaaS: Infra as a Service\n\n### CaaS: Container as a Service\n\n### PaaS: Platform as a Service\n\n### FaaS: Functions a a Service\n\n### SaaS: Software as a Service\n\n### Serverless \n\n## Cloud Path of Legacy Applications\n\n### Level 1: Infra-Ready Apps in the Cloud\n\nMigrate or rehost on-premises apps to IaaS\n### Level 2: Cloud-Enhanced Apps\n\nUse modern cloud technologies and leverage cloud-managed services\n### Level 3: Cloud-Native Apps\n\nTransition to PaaS computing platforms. Implement cloud-native applications and microservices architecture. \n## Container Runtimes\n\nWhat executes and manages containers. It provides the necessary environment to run containerized apps.\n### containerd\n\nDocker's container runtime, also operable independently. It's lightweight and\nfocuses on core container execution functionalities.\n### CRI-O\n\nLightweight container runtime designed specifically for Kubernetes. Implements the\nKubernetes Container Runtime Interface (CRI), allowing Kubernetes to use any\nOCI-compliant runtime.\n### runc \n\nLow-level container runtime based on the Open Container Initiative (OCI) runtime\nspecification. It's the default runtime used by containerd and can also be used standalone\nfor running containers\n",
+  "metadata": {
+    "date": "2026-10-19",
+    "updated": "2026-10-19"
+  },
+  "images": [],
+  "links": []
+}

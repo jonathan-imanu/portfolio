@@ -1,0 +1,12 @@
+{
+  "id": "school--w26--cscc01--lectures--week-10-practical-applications-of-llms",
+  "path": "school/w26/cscc01/lectures/week-10-practical-applications-of-llms",
+  "title": "Week 10 - Practical Applications of LLMs",
+  "content": "**Chatbots**: A system that relies on the other LLM understanding inputs. System designers have a low degree of control.\n- The common steering mechanism is the *1 Big Prompt*. The biggest advantage of this approach is it's simplicity BUT control is only available via prompt engineering and the quality of the results is determined by the quality of the LLM. \n## Workflows\n\nA structured deterministic sequence of steps designed for repeatable tasks.\n### Drawbacks\n\n- Fully autonomous\n- May not be an exact match to the intended use case\n- Quality is dependent on LLM\n- **Can only do predefined things**\n\nThe non-bolded drawbacks can be resolved with *function calling workflows* which add deterministic steps to ensure workflow reliability.\n- Another approach is *human-in-the-loop workflows* where we askAI to discover what is missing, and prompt the user for follow-up information.\n## Agents\n\nAn AI-driven process that uses reasoning to dynamically decide on steps to take and the tools to use to solve more open ended problems.\n### Tools\n\nUse tools when an agent needs additional context more deterministically.\n- Similar to function calling - predetermined inputs and outputs used by the LLM. The outputs are used as LLM prompt input.\n\nMCP servers can also be interacted with in the same way as tools.\n\n# Quality Assurance\n\n## LLM Evals\n\n- User inputs are not fixed, intent may come in different forms.\n- Even with the same inputs, the outputs are likely different.\n### Scoring\n\nReal human feedback with manual labelling or LLM-as-a-judge.\n#### LLM-as-a-judge\n\n- Accuracy and reliability \n\t- Faithfulness to prompt \n\t- completeness \n- Output quality\n\t- Toxicity\n\t- Keyword coverage \n\t- bias\n##### Proactive Scoring & refinement\n\n1. LLMs to generate synthetic inputs\n2. Run synthetic inputs through pipeline\n3. Evaluate outputs\n4. Refine prompts and restart step 2\n\nLikely happens in CI when developing an agent.\n##### Reactive Scoring\n\n1. Receive real user input\n2. Run pipeline\n3. Run scoring and save for further action\n\n\n",
+  "metadata": {
+    "date": "2026-10-19",
+    "updated": "2026-10-19"
+  },
+  "images": [],
+  "links": []
+}

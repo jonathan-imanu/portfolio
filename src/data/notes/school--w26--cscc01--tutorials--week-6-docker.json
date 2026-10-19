@@ -1,0 +1,12 @@
+{
+  "id": "school--w26--cscc01--tutorials--week-6-docker",
+  "path": "school/w26/cscc01/tutorials/week-6-docker",
+  "title": "Week 6 - Docker",
+  "content": "Docker is a PAAS that enables users to deliver software in isolated packages called containers.\n## Container\n\nA standard unit of software that packages up code and all of its dependencies so the application can run quickly and reliably from one computing environment to another\n## Image\n\nThe blueprint used to create an image.\n## Networks\n\nFor container to container communication.\n",
+  "metadata": {
+    "date": "2026-10-19",
+    "updated": "2026-10-19"
+  },
+  "images": [],
+  "links": []
+}

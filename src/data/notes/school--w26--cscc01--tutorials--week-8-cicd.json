@@ -1,0 +1,12 @@
+{
+  "id": "school--w26--cscc01--tutorials--week-8-cicd",
+  "path": "school/w26/cscc01/tutorials/week-8-cicd",
+  "title": "Week 8 - CICD",
+  "content": "**CI:** Continuous Integration - Build, package and test applications automatically.\n**CD:** Continuous Delivery - Automated deployment of software with little to no downtime for users.\n\n**Pipelines**: The automated processes involved in building and deploying code. We can identify build issues by monitoring pipelines.\n## Why CI/CD?\n\n- Automation of the test build and deployment process\n- Continuous feedback\n- Early fault detection\n- Improves team collaboration and system integration\n# Deployment Patterns\n\n## Blue / Green Deployment\n\nA deployment scheme that allows for changes to be pushed while having no downtime for users. \n\nTraffic is routed to a container with the old code, while a new container is spun up with the new code. \n\nAfter building, the traffic rerouted and the old container can go down.\n## Canary Deployment\n\nRoll out changes to a small batch of users, receive and address feedback. Then roll out changes to the entire user base gradually.\n## Ramped Deployment\n\nGradually changes the older version to the new version one instance at a time",
+  "metadata": {
+    "date": "2026-10-19",
+    "updated": "2026-10-19"
+  },
+  "images": [],
+  "links": []
+}
