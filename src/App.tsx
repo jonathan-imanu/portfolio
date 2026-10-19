@@ -3,7 +3,7 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { CiGlobe } from "react-icons/ci";
 
 import { lazy, Suspense } from "react";
-import { useSearchParams } from "react-router-dom";
+import { useMatch, useSearchParams } from "react-router-dom";
 import { NoteSkeleton } from "./components/NoteSkeleton";
 import SocialLink from "./SocialLink";
 import About from "./About";
@@ -47,9 +47,11 @@ function Home() {
 }
 
 function AppContent() {
+  const isNotePage = useMatch("/notes/:noteId");
+
   return (
     <div className="flex flex-col items-center min-h-screen p-6">
-      <div className="content-container">
+      <div className={`content-container${isNotePage ? " note-page" : ""}`}>
         <div className="flex flex-col gap-[0.5] mt-6">
           <div className="flex items-center justify-between">
             <div className="flex flex-col gap-[0.5]">

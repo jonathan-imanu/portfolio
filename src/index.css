@@ -16,6 +16,10 @@ body {
   }
 }
 
+.content-container.note-page {
+  max-width: 74rem;
+}
+
 .body-text {
   color: rgb(55 65 81);
   line-height: 1.625;
@@ -27,6 +31,108 @@ body {
 
 .note-content > :first-child {
   margin-top: 0;
+}
+
+.note-layout {
+  position: relative;
+}
+
+.note-toc {
+  margin-bottom: 1.5rem;
+}
+
+.note-toc-nav {
+  max-height: 16rem;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  scrollbar-color: rgb(209 213 219) transparent;
+}
+
+.note-toc-list {
+  border-left: 1px solid rgb(229 231 235);
+}
+
+.note-toc-link {
+  display: block;
+  border-left: 1px solid transparent;
+  margin-left: -1px;
+  padding-block: 0.375rem;
+  padding-right: 0.5rem;
+  color: rgb(107 114 128);
+  font-size: 0.8125rem;
+  line-height: 1.5;
+}
+
+.note-toc-link:hover,
+.note-toc-link:focus-visible {
+  color: rgb(17 24 39);
+}
+
+.note-toc-link:focus-visible {
+  outline: 2px solid rgb(107 114 128);
+  outline-offset: -2px;
+}
+
+.note-toc-link[aria-current="location"] {
+  border-left-color: rgb(156 163 175);
+  color: rgb(55 65 81);
+  font-weight: 500;
+}
+
+.note-toc-label {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  overflow-wrap: anywhere;
+}
+
+.note-toc-link:hover .note-toc-label,
+.note-toc-link:focus-visible .note-toc-label {
+  display: block;
+}
+
+.note-toc-label .katex {
+  font-size: 1em;
+}
+
+.note-toc-label .katex-display {
+  display: inline;
+  margin: 0;
+}
+
+.note-toc-label code {
+  font-size: 0.9em;
+  padding: 0.1em 0.25em;
+}
+
+.note-content :is(h1, h2, h3, h4, h5, h6) {
+  scroll-margin-top: 1.5rem;
+}
+
+@media (min-width: 1024px) {
+  .content-container.note-page {
+    padding-left: 14rem;
+  }
+
+  .note-toc {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: calc(100% + 2rem);
+    width: 12rem;
+    margin-bottom: 0;
+  }
+
+  .note-toc-panel {
+    position: sticky;
+    top: 1.5rem;
+  }
+
+  .note-toc-nav {
+    max-height: calc(100vh - 5rem);
+  }
 }
 
 .note-content :is(p, ul, ol, pre, blockquote, .katex-display) {
