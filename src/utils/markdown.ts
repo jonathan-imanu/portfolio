@@ -1,130 +1,73 @@
 const DISPLAY_MATH_DELIMITER = "$$";
 
-function isHorizontalWhitespace(char: string): boolean {
-  return char === " " || char === "\t";
-}
-
-function leadingWhitespace(line: string): string {
-  let index = 0;
-  while (index < line.length && isHorizontalWhitespace(line[index])) {
-    index += 1;
-  }
-  return line.slice(0, index);
-}
-
-function trimTrailingWhitespace(line: string): string {
-  let end = line.length;
-  while (end > 0 && isHorizontalWhitespace(line[end - 1])) {
-    end -= 1;
-  }
-  return line.slice(0, end);
-}
-
-function fenceOpener(line: string): "```" | "~~~" | null {
-  const trimmed = line.trimStart();
-  if (trimmed.startsWith("```")) {
-    return "```";
-  }
-  if (trimmed.startsWith("~~~")) {
-    return "~~~";
-  }
-  return null;
-}
+// Obsidian permits top-level line breaks in display math, as MathJax does.
+export const katexOptions = {
+  strict: (errorCode: string): "ignore" | "warn" =>
+    errorCode === "newLineInDisplayMode" ? "ignore" : "warn",
+};
 
 /**
- * If `$$` starts the line but is stuck to equation text, put the delimiter
- * on its own line. Already-correct delimiter-only lines are left alone.
- */
-function splitOpeningDisplayMath(line: string): string[] | null {
-  const indent = leadingWhitespace(line);
-  const afterIndent = line.slice(indent.length);
-  if (!afterIndent.startsWith(DISPLAY_MATH_DELIMITER)) {
-    return null;
-  }
-
-  const rest = afterIndent.slice(DISPLAY_MATH_DELIMITER.length);
-  if (rest.trim() === "") {
-    return null;
-  }
-
-  return [indent + DISPLAY_MATH_DELIMITER, rest.trimStart()];
-}
-
-/**
- * If `$$` ends the line but is stuck to equation text, put the delimiter
- * on its own line. A line that is only `$$` is already a delimiter.
- */
-function splitClosingDisplayMath(line: string): string[] | null {
-  const withoutTrailingSpace = trimTrailingWhitespace(line);
-  if (!withoutTrailingSpace.endsWith(DISPLAY_MATH_DELIMITER)) {
-    return null;
-  }
-
-  const beforeDelimiter = withoutTrailingSpace.slice(
-    0,
-    -DISPLAY_MATH_DELIMITER.length
-  );
-  if (beforeDelimiter.trim() === "") {
-    return null;
-  }
-
-  return [
-    trimTrailingWhitespace(beforeDelimiter),
-    DISPLAY_MATH_DELIMITER,
-  ];
-}
-
-function splitStuckDisplayMathDelimiters(line: string): string[] {
-  const opened = splitOpeningDisplayMath(line);
-  const remainder = opened ? opened[1] : line;
-  const closed = splitClosingDisplayMath(remainder);
-
-  if (opened && closed) {
-    return [opened[0], ...closed];
-  }
-  if (opened) {
-    return opened;
-  }
-  if (closed) {
-    return closed;
-  }
-  return [line];
-}
-
-/**
- * remark-math requires display-math `$$` delimiters on their own lines.
- * Obsidian often exports them stuck to the equation, e.g.
- *
- *     $$\begin{align*}
- *     ...
- *     \end{align*}$$
- *
- * or a single-line `$$equation$$`. This peels those delimiters onto
- * neighboring lines without touching fenced code blocks.
+ * Put Obsidian display-math delimiters on their own lines for remark-math,
+ * including blocks introduced by prose such as `So $$...$$`. Track whether
+ * we're inside math so opening and closing delimiters stay in sync.
  */
 export function normalizeDisplayMathDelimiters(markdown: string): string {
-  const lines = markdown.split("\n");
   const output: string[] = [];
-  let fence: "```" | "~~~" | null = null;
+  let fence: string | null = null;
+  let inlineCode: string | null = null;
+  let inMath = false;
 
-  for (const line of lines) {
-    const opener = fenceOpener(line);
-    if (opener) {
-      if (fence === null) {
-        fence = opener;
-      } else if (opener === fence) {
+  for (const line of markdown.split("\n")) {
+    if (fence) {
+      const closing = line.trim().match(/^(`{3,}|~{3,})$/)?.[1];
+      if (closing?.[0] === fence[0] && closing.length >= fence.length) {
         fence = null;
       }
       output.push(line);
       continue;
     }
 
-    if (fence) {
-      output.push(line);
-      continue;
+    if (!inMath && !inlineCode) {
+      const opening = line.trimStart().match(/^(`{3,}|~{3,})/)?.[1];
+      if (opening) {
+        fence = opening;
+        output.push(line);
+        continue;
+      }
     }
 
-    output.push(...splitStuckDisplayMathDelimiters(line));
+    let normalized = "";
+    let start = 0;
+    for (const match of line.matchAll(/`+|\$\$/g)) {
+      const token = match[0];
+      const index = match.index;
+      let backslashes = 0;
+      for (let before = index - 1; before >= 0 && line[before] === "\\"; before--) {
+        backslashes++;
+      }
+      if (!inlineCode && backslashes % 2 === 1) continue;
+
+      if (token.startsWith("`")) {
+        if (!inMath) {
+          if (!inlineCode) inlineCode = token;
+          else if (inlineCode === token) inlineCode = null;
+        }
+        continue;
+      }
+      if (inlineCode) continue;
+
+      normalized += line.slice(start, index);
+      if (line.slice(0, index).trim()) {
+        normalized += inMath ? "\n" : "\n\n";
+      }
+      normalized += DISPLAY_MATH_DELIMITER;
+      if (line.slice(index + token.length).trim()) {
+        normalized += inMath ? "\n\n" : "\n";
+      }
+      inMath = !inMath;
+      start = index + token.length;
+    }
+    output.push(normalized + line.slice(start));
   }
 
   return output.join("\n");
