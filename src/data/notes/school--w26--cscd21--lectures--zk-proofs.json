@@ -1,0 +1,12 @@
+{
+  "id": "school--w26--cscd21--lectures--zk-proofs",
+  "path": "school/w26/cscd21/lectures/zk-proofs",
+  "title": "ZK Proofs",
+  "content": "## Nutshell from Lecture\n\nZK Proofs let a **prover** prove to a verifier that it knows a secret without revealing it.\n- Proof Generation\n\t- The prover generates a ZK proof with some secret input\n- Proof Verification\n\t- The verifier verifies the proof without the secret input\n\n*The verifier does not know the secret* but is convinced that the prover knows the secret since it can prove it using a ZK-proof.\n\nThere are two types of ZK proofs:\n1. Interactive proofs\n\t1. A back-and-forth conversation to prove something\n2. Non-interactive proofs\n\t1. A single message to prove something\n\n# ",
+  "metadata": {
+    "date": "2026-10-19",
+    "updated": "2026-10-19"
+  },
+  "images": [],
+  "links": []
+}

@@ -1,0 +1,12 @@
+{
+  "id": "school--w26--cscd21--lectures--week-9-security",
+  "path": "school/w26/cscd21/lectures/week-9-security",
+  "title": "Week 9 - Security",
+  "content": "## Recap\n### Access Control\n\nIncorrectly configured permissions allow unauthorized users to access privileged functions.\n### Frontrunning\n\nThe attacker can observe transactions in the mempool and can use their payloads and/or race to exploit them.\n## Fallback DOS\n\nA vulnerability where a SMART contract becomes  unusable or 'stuck' because its `fallback()` or `receive()` functions fail, revert, or consume too much gas.\n\nThe immutability of SMART contracts means that a poorly designed fallback function can halt all interactions with it.\n## Reentrancy\n\nA reentrancy attack exploits the vulnerability in smart contracts when a function makes an external call to another contract before updating its own state. \n\nThis allows the external contract, possibly malicious, to reenter the original function and repeat certain actions, like withdrawals, using the same state. Through such attacks, an attacker can possibly drain all the funds from a contract.\n### The Fix\n\n- Update contract state before, not after, calling external contracts.\n- Use OpenZepplin's reentrancy guards\n## Bad Delegate Call \n\n`delegatecall` function is often used with libraries. \n\nIt allows one contract to call another contract and run its code within the context of the calling contract.\n- \"Run contract A's code within this current execution context\"\n\n*Important Details*:\n1. Storage layout (the order of variables in a SMART contract) must be the same for the contract calling `delegatecall` and the contract getting called.\n### The Fix\n\n- Don't use libraries that update caller context\n- Only use \"pure\" libraries with `staticcall`\n## `origin` vs `sender`\n\n- `tx.origin`: The EOA address that initiated the transaction\n- `msg.sender`: The address of the function caller\n\n*Not always equal since smart contracts can call other smart contracts*\n\nCheck `msg.sender` NOT `tx.origin`\n## Timestamp-based Randomness\n\nThere is no function `random` in solidity.\n\n**BAD**: Using `block.timestamp` or `block.blockhash` as sources of randomness are bad because they can be manipulated by the validator.\n\n**Better**: Using a random oracle\n\n\n\n",
+  "metadata": {
+    "date": "2026-10-19",
+    "updated": "2026-10-19"
+  },
+  "images": [],
+  "links": []
+}

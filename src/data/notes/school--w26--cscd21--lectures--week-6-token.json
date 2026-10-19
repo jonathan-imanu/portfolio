@@ -1,0 +1,12 @@
+{
+  "id": "school--w26--cscd21--lectures--week-6-token",
+  "path": "school/w26/cscd21/lectures/week-6-token",
+  "title": "Week 6 - Token",
+  "content": "# Token\n\nA token represents a transferable unit of value.\n- It is a digital asset implemented as a smart contract on the Ethereum blockchain\n\nWe have a standard interface for tokens to create predictable APIs for wallets, dApps, and protocols.\n\n## ERC-20 Fungible Tokens\n\nTokens are fungible meaning that they are interchangable.\n- They represent the ownership of a quantity relative to a total supply\n\n**Features:**\n1. Allow token holder owner to transfer to a address\n2. Or allow the holder to delegate spending to another address via allowances\n\nThese are used in Stablecoins.\n## ERC-721 Non-Fungible Token (NFT)\n\nTokens are non-fungible meaning they are all unique and identified by an id.\n- This represents the ownership of a unique asset with a collection\n\n**Features**:\n- Allow a token holder to transfer ownership of the asset\n- Or allow the owner to delegate transfer to another address with an approval\n\n\n",
+  "metadata": {
+    "date": "2026-10-19",
+    "updated": "2026-10-19"
+  },
+  "images": [],
+  "links": []
+}

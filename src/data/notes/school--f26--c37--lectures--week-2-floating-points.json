@@ -1,0 +1,12 @@
+{
+  "id": "school--f26--c37--lectures--week-2-floating-points",
+  "path": "school/f26/c37/lectures/week-2-floating-points",
+  "title": "Week 2 - Floating Points",
+  "content": "Binary representation of floating point numbers:\n- We have a finite number of digits to the left of the base point\n\nIf $x \\in \\mathbb{R}$ then, $x = \\pm (x_I + x_F)$ where\n- :$x_I$ is the integral part is finite and is a non-negative integer\n- $x_f$ is the fractional point and can have an infinite number of digits\n\nThe sign in a real number can be stored in a singular bit.\n\nFor a base $b$ system, \n$$\n\\begin{align}\nx_f &= (d_{-1}d_{-2}d_{-3} \\ldots)_{b} \\\\\n&= d_{-1} \\cdot b^{-1} + d_{-2} \\cdot b^{-2} + d_{-3} \\cdot b^{-3} \\\\\n&= \\sum_{\\infty}{i = 1} d_{i}b^{-i} \\\\\n\\end{align}\n$$\n\n## Note\n\nA terminating binary fraction with $n$ digits has a terminating decimal fraction representation. The reverse may not be true. \n# Converting Decimal Fractions Binary\n\nFor the integral part, we can repeatedly divide by 2 and keep track of the remainder and resulting quotient until we reach zero.\n\nFor the decimal part, we repeatedly multiply by 2. \n\n### Worked Example\n\n#### How to represent $(0.625)_{10}$ in Binary\n\nMultiplier Base Product Integer | Fractional\n0.625 2 1.25 1 | 0.25\n0.25 2 0.5 0 | 0.50\n0.5 2 1.0 1 | 0\n\nso the representation is $(.101)_2$\n\n**If we used this technique to represent $(0.1)_{10}$, we would have a non-terminating binary equivalent!**\n\n# Machine Representation of Reals\n\nCalled floating point numbers when represented on a computer.\n\nA floating point number in base $b$ has the form:\n\n$$x = (f)_b \\cdot b$$\n\n## Definitions \n\nA floating point number in base $b$ has the form: $x = (F)_b \\cdot b^{e_b}$\n\nThe mantissa $F = \\pm(.d_{1}d_{2} \\ldots d_t)_b$ - $t$ digits\nThe exponent $e = \\pm(c_s c_{s - 1} \\ldots c_1)_b$ - $s$ digits\n\nA floating point number is **normalized** if $d_1 \\neq 0$ unless $d_1 = d_2 = \\ldots = d_k = 0$\n\n**Significant digits** of a non zero floating number are the digits following and including the first non-zero digit.\n- A normalized FP has all digits in the mantissa being significant\n\n",
+  "metadata": {
+    "date": "2026-10-19",
+    "updated": "2026-10-19"
+  },
+  "images": [],
+  "links": []
+}

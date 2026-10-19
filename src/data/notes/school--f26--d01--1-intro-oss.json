@@ -1,0 +1,12 @@
+{
+  "id": "school--f26--d01--1-intro-oss",
+  "path": "school/f26/d01/1-intro-oss",
+  "title": "1. Intro & OSS",
+  "content": "**Emergent Requirements**: Requirements that will surface when building a product.\n\n## Licensing\n\nGPL is a license that requires you to open-source all modifications. This is known as a viral licensing (or Copyleft) model. \n- Viral because `License A + Copyleft = Copyleft`\n- Other examples include `License A`\n\nThe other type of licenses within OSS are permissive licenses that allow us to use project contents with no obligation to OSS modifications. These licenses are highly compatible with other software bases.\n- `License A + Permissive = License A`\n- Examples include MIT, BSD, Apache",
+  "metadata": {
+    "date": "2026-10-19",
+    "updated": "2026-10-19"
+  },
+  "images": [],
+  "links": []
+}

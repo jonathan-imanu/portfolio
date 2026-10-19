@@ -1,0 +1,12 @@
+{
+  "id": "school--f26--c37--tutorial--tutorial-1",
+  "path": "school/f26/c37/tutorial/tutorial-1",
+  "title": "Tutorial 1",
+  "content": "## Conditioning\n\nHow significant output changes when inputs change: $cond(f)$\n- Error in output = $\\_\\_\\_ \\text{ } \\text{error in input}$ \n\nConsider $x \\text{ (desired input)}$, $\\hat{x} \\neq x$, $\\hat{x} \\rightarrow x$ so $x - \\hat{x}$ is small\n\n$$\\begin{align} \nf(x) &= f(\\hat{x} + (x - \\hat{x})) \\\\\n&= f(\\hat{x}) + \\frac{x - \\hat{x}}{1!} \\cdot f'(x) + \\frac{(x - \\hat{x})^2}{2!} \\cdot f''(x) + \\frac{(x - \\hat{x})^3}{3!} \\cdot f'''(x) + \\ldots\n\n\\end{align}$$\n\nSince $x - \\hat{x}$ is small, we can say that, the above is roughly equal to:\n\n$$\\begin{align} \nf(x) &= f(\\hat{x}) + (x - \\hat{x})f(\\hat{x}) \\\\\n&\\iff f(x) - f(\\hat{x}) = (x - \\hat{x}) f'(\\hat{x}) \\\\\n&\\iff \\frac{|f(x) - f(\\hat{x})|}{|f(x)|} = \\frac{|f(\\hat{x})|}{|f(x)|} |x - \\hat{x}|\\\\\n&\\iff \\frac{|f(x) - f(\\hat{x})|}{|f(x)|} = \\frac{|f(\\hat{x})|}{|f(x)|} |x - \\hat{x}| \\cdot \\frac{|x|}{|x|}\n&= \\frac{|xf(\\hat{x})|}{|f(x)|} \\cdot \\frac{|x - \\hat{x}|}{|x|}\n\\end{align}$$\n\nNotice that $\\frac{|x - \\hat{x}|}{|x|}$ is the error in input!\n\nSo therefore $cond(f) = \\frac{|xf(\\hat{x})|}{|f(x)|}$ \n\n### Worked Examples\n\nSuppose $f(x) = \\sqrt{x}$\n\n$f'(x) = \\frac{1}{2\\sqrt{x}}$\n\nSo \n\n$$\n\\begin{align}\n\tcond(f) = \\frac{x \\cdot \\frac{1}{2\\sqrt{x}}}{\\sqrt{x}} \n\\end{align}\n$$\n## Vector Norm\n\nSuppose $\\vec{x}$ is an $n$ dimensional vector and $P > 0$: \n\n$\\lVert \\vec{x} \\rVert_{p} = \\left( \\sum_{i=1}^{n} |x_i|^p \\right)^{\\frac{1}{p}}$\n\nThe most important norms are $P=1,2,\\infty$.\n\n$\\lVert \\vec{x} \\rVert_{\\infty} = max(|x_i|)$  \n\n### Properties of Vector Norm\n\n1. Norm is always positive and $\\lVert \\vec{x} \\rVert_{P} = 0 \\iff \\vec{x} = \\vec{0}$ \n2. $\\lVert a \\cdot \\vec{x} \\rVert_{P} = |a| \\cdot \\lVert \\vec{x} \\rVert_{P}$ Homogeneity\n3. $\\lVert x + y \\rVert_{P} \\leq \\lVert \\vec{x} \\rVert_{P} + \\lVert \\vec{y} \\rVert_{P}$ \n\n## Matrix Norm\n\nSuppose $A$ is a $m \\times n$ matrix\n\n$\\lVert A \\rVert_{1} = \\max(\\text{column sum})$\n$\\lVert A \\rVert_{2} = \\sqrt{\\lambda_{\\max}(A^TA)}$\n- The maximum eigenvalue\n$\\lVert A \\rVert_{\\infty} = \\max(\\text{row sum})$\n\n- **TODO BEFORE MIDTERM -WTF IS MATRIX NORM**",
+  "metadata": {
+    "date": "2026-10-19",
+    "updated": "2026-10-19"
+  },
+  "images": [],
+  "links": []
+}

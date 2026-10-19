@@ -1,0 +1,16 @@
+{
+  "id": "school--f26--d60--lectures--1-introduction-to-hpc",
+  "path": "school/f26/d60/lectures/1-introduction-to-hpc",
+  "title": "1. Introduction to HPC",
+  "content": "A combination of techniques employed to optimize and take advantage of modern computer hardware.\n\nWe use **FLOPS** (Floating-point Operations per Second).\n## Supercomputer Architectures\n\n**Clusters**: A bunch of desktops linked together by a network.\n**Multi-core machines**: A collection of processors that can see and use the same memory. Limited number of cores and much more expensive when the machine is large. \n- *Accelerator machines*, are machines that contain an \"off-host\" accelerator that is used for computation.\n\nMost supercomputers are a hybrid of these kinds of architectures.\n### Clusters\n\nEach processor is independent when data some other processor is needed, the other processor must send it. \n- Communication is hand-coded from program to program.\n\n<img src=\"/images/ClusterDistributedMemory.png\" alt=\"ClusterDistributedMemory\" />\n\n### Shared Memory\n\nDifferent processors acting on one large bank of memory were all processors see the same data.\n- All coordination and communication is done through this shared memory.\n- Each core is assigned a thread of execution of a single program that acts on the data.\n\n<img src=\"/images/SharedMemory.png\" alt=\"SharedMemory\" />\n\n### Hybrid Architectures\n\nMulticore nodes linked together with a high-speed interconnect.\n- The cores have vector capabilities\n\n<img src=\"/images/HybridArch.png\" alt=\"HybridArch\" />\n\n#### Hybrid Accelerator Architecture\n\nNodes also contain one or more accelerators. These are specialized, super-threaded (500 - 2000+) processors.\n- CUDA is used to program these devices\n",
+  "metadata": {
+    "date": "2026-10-19",
+    "updated": "2026-10-19"
+  },
+  "images": [
+    "/images/ClusterDistributedMemory.png",
+    "/images/SharedMemory.png",
+    "/images/HybridArch.png"
+  ],
+  "links": []
+}

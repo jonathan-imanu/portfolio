@@ -1,0 +1,14 @@
+{
+  "id": "school--w26--cscd21--lectures--week-7-privacy",
+  "path": "school/w26/cscd21/lectures/week-7-privacy",
+  "title": "Week 7 - Privacy",
+  "content": "# Privacy in Blockchains\n### Privacy in BTC & ETH\n\n#### ETH\n\nEveryone can see:\n- Addresses and their balances\n- Contract state\n- Call data\n- Events / logs\n\nPrivacy is a priority for ETH:\n- Stealth Address was done in ERC-5564\n- Creation of the Privacy Stewards of Ethereum (PSE) & Ethereum Foundation Privacy Roadmap\n\t- To incentivize developers to build features with selective disclosure in Ethereum. \n#### BTC\n\nYou can be pseudonymous. The privacy is partial and fragile.\n- Address reuse enables traceability\n- Graphs & other heuristics can be used to link inputs and outputs\n### Know Your Customer (KYC)\n\nIn many jurisdictions, some services are required to collect customer identification.\n- Centralized Exchanges\n- On-Ramp and Off-Ramp Services\n## Major Privacy Approaches\n\n### Bitcoin CoinJoin - Concept of Mixer\n\nMultiple users combine inputs in one transaction. \n- This is still vulnerable to graph and heuristics but it blurs things\n\n<img src=\"/images/CoinJoinCSCD71.png\" alt=\"CoinJoinCSCD71\" />\n\n#### ETH Mixer\n\nImplemented as a smart contract and uses ZK proofs with a commitment and nullifier scheme. \n### SGX-Based Privacy\n\nEncrypt information on the blockchain and use special hardware to decrypt and compute data.\n- Validators use hardware-based security technology to isolate sensitive code and data in protected, encrypted memory regions called enclaves.\n\n**Pro**: Prevents validators from dumping the memory and looking at the data\n**Cons**: Requires complex key distribution and is prone to hardware vulnerabilities.\n### Fully Homomorphic Encryption (FHE)\n\nA cryptographic technique allowing computations to be performed on encrypted data without decrypting it.\n- No need for specialized hardware\n- Only allows for a limited set of operations\n### Monero\n\nThe coin of choice for illegal activity. It has the following features:\n1. Ring Signatures\n\t1. Hide sender among N decoys\n2. Stealth Addresses\n\t1. One-time receiver addresses\n3. Confidential Transactions \n\t1. Uses a ZK proof with a commitment\n\n\n\n",
+  "metadata": {
+    "date": "2026-10-19",
+    "updated": "2026-10-19"
+  },
+  "images": [
+    "/images/CoinJoinCSCD71.png"
+  ],
+  "links": []
+}

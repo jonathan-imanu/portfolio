@@ -1,0 +1,12 @@
+{
+  "id": "school--w26--cscc69--lectures--week-4-process-vs-threads",
+  "path": "school/w26/cscc69/lectures/week-4-process-vs-threads",
+  "title": "Week 4 - Process vs. Threads",
+  "content": "### TLDR\n\nA process is an abstraction for a running program whereas a thread is an abstraction for a single running instance of said program. A process can have multiple threads. \n\nIt is more expensive to create processes, do inter-process communication, and context switch between processes.\n\nThe primary use case for processes are when we want to run a different program or want memory and failure isolation.\n## Data Structures\n\nEach process has a **process control block**. The PCB has:\n- Pid (process id) and PPid (Parent process)\n- Address space\n- Open files\n- Other stuff\n\nEach thread has a **thread control block**. The TCB has:\n- Tid\n- State\n- Registers\n- Pointer to PCB\n## Creation\n\nTo create a processes, the OS must:\n- Create and initialize a PCB\n- Create a new address space\n- Init. the address space with a copy of parent address space\n- Init. kernel resources to point to parent resources\n- Create kernel thread and place that thread onto the ready queue\n\nTo create a thread, the OS must:\n- Allocate and init a TCB\n- Allocate stack\n- Put func, args on stack\n- Put thread on ready list",
+  "metadata": {
+    "date": "2026-10-19",
+    "updated": "2026-10-19"
+  },
+  "images": [],
+  "links": []
+}

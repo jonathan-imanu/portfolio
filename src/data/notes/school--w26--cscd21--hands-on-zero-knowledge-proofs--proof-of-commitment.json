@@ -1,0 +1,12 @@
+{
+  "id": "school--w26--cscd21--hands-on-zero-knowledge-proofs--proof-of-commitment",
+  "path": "school/w26/cscd21/hands-on-zero-knowledge-proofs/proof-of-commitment",
+  "title": "Proof of Commitment",
+  "content": "Recall that SNARKs have two defining properties:\n1. **Non‑interactivity:** the proof is a static object that can be posted or transmitted.\n2. **Public verifiability:** anyone who sees the proof and the public inputs can verify it.\n## Context Binding\n\nWe want:\n\n> “I know this secret **right now**, for this specific request, action, or session.”\n\nIE: Each proof is be _fresh_ and _context‑dependent_, while still being tied to the same long‑term secret.\n\nSo instead of proving:\n\n> **Statement (static):** I know a `secret` such that `C(secret) = true`\n\nwe now prove:\n\n> **Statement (dynamic):** I know a `secret` such that `C(secret, nonce) = true`\n\nwhere:\n- `secret` is the same long‑term private witness as before\n- `nonce` is a fresh public value chosen by the verifier or the surrounding protocol\n\nThe crucial idea is that the circuit must _cryptographically bind_ the secret to the nonce. This ensures that:\n- a proof generated for one nonce cannot be reused for another nonce\n- replaying an old proof automatically fails if the nonce has changed\n\nThis turns a static proof into a **non‑interactive challenge–response protocol**.\n# Proof of Commitment\n\nWith **Proof of Commitment**, the prover demonstrates knowledge of a secret preimage corresponding to a public hash value, without revealing the secret itself, _and_ with context binding to prevent replay attacks.\n\nMore precisely, the prover:\n\n- keeps `secret` as a **private input**\n- takes a fresh `nonce` as a **public input**\n- produces two **public outputs**:\n    - `secretHash = Poseidon(secret)`\n    - `authHash = Poseidon(secret, nonce)`\n\nIntuitively:\n\n- `secretHash` plays the same role as in the first tutorial: it is a public commitment to the secret\n- `authHash` is the context binding value that binds the secret to the nonce, making the proof instance‑specific\n",
+  "metadata": {
+    "date": "2026-10-19",
+    "updated": "2026-10-19"
+  },
+  "images": [],
+  "links": []
+}

@@ -1,0 +1,12 @@
+{
+  "id": "leetcode--concepts--z-algo-finding-occurrences-of-string-b-within-string-a",
+  "path": "leetcode/concepts/z-algo-finding-occurrences-of-string-b-within-string-a",
+  "title": "Z-Algo - Finding Occurrences of string b within string a",
+  "content": "Let $n = len(s_1), m = len(s_2)$\n\n**Naive**\n\n```C++\nvector<int> findOccurences(string& s1, string& s2) {\n\tint n = s1.size(), m = s2.size();\n\tvector<int> occurences;\n\tif (n < m) {\n\t\treturn occurences;\n\t}\n\t\n\tfor (auto i = 0; i <= n - m; i++) {\n\t\tbool matched = true;\n\t\tfor (auto j = i; j < i + m; j++) {\n\t\t\tif (s1[j] != s2[j - i]) {\n\t\t\t\tmatched = false;\n\t\t\t\tbreak;\n\t\t\t}\n\t\t}\n\t\t\n\t\tif (matched) {\n\t\t\toccurences.push_back(i);\n\t\t}\n\t}\n\t\n\treturn occurences;\n}\n```\n\n**TC**: $O(N \\cdot M)$\n\n## The Z Algorithm \n\n```C++\nvector<int> getZ(const string& s) {\n    int n = s.size();\n    std::vector<int> z(n, 0);\n    int l = 0, r = 0;\n\n    for (int i = 1; i < n; ++i) {\n        // If i is inside the current box [l, r], reuse precomputed value\n        if (i <= r) {\n            z[i] = std::min(r - i + 1, z[i - l]);\n        }\n\n        // Try to extend the match beyond the current box\n        while (i + z[i] < n && s[z[i]] == s[i + z[i]]) {\n            z[i]++;\n        }\n\n        // If the new match extends past r, update the box [l, r]\n        if (i + z[i] - 1 > r) {\n            l = i;\n            r = i + z[i] - 1;\n        }\n    }\n\n    return z;\n}\n```",
+  "metadata": {
+    "date": "2026-10-19",
+    "updated": "2026-10-19"
+  },
+  "images": [],
+  "links": []
+}

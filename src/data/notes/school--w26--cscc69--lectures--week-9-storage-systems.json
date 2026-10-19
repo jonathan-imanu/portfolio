@@ -1,0 +1,12 @@
+{
+  "id": "school--w26--cscc69--lectures--week-9-storage-systems",
+  "path": "school/w26/cscc69/lectures/week-9-storage-systems",
+  "title": "Week 9 - Storage Systems",
+  "content": "Threats include device failures, crashes, and bugs causing corruption or inconsistency. \n# RAID Variations\n\nRAID stands for **Redundant array of inexpensive disks**. \n## Striping (RAID-0)  \n\n**Idea:** Split data across disks for parallel access  \n**Pros:** High throughput, full capacity utilization  \n**Cons:** No redundancy, any disk failure causes data loss  \n## Disk mirroring (RAID-1)  \n\n**Idea:** Keep identical copies of data on two disks  \n**Pros:** High reliability, simple design, faster reads  \n**Cons:** 2× space overhead, slower writes (must update both)  \n## Striping + Parity disks (RAID-4)\n\n**Idea:** Use parity to reconstruct data on failure  \n**Pros:** Lower space overhead than mirroring, tolerates one disk failure  \n**Cons:** Slower writes (parity updates), RAID-4 has parity disk bottleneck    \n## Striping the parity (RAID-5)  \n\n**Idea:** Distribute parity across disks  \n**Pros:** Removes single parity disk bottleneck  \n**Cons:** Writes still expensive because we need to read and update parity\n# Latent Sector Failures  \n\nThe disk stores with each sector some error correcting code. \n\n**Sector Failure**: If too many bits are corrupted, ECC isn't enough to correct. \n- We need RAID to recover\n\nTo recover we remap the bad sector to somewhere else on disk.\n\n*Sector failures are latent*. We only discover them while reading / accessing the sector. We use a scrubber to detect bad sectors.\n- **Scrubber:** Background process that reads all data, detects bad sectors and uses RAID to correct\n\n**Why is latent failure bad?**\n\nSuppose sector X on disk A has failed. We could recover using disk B but before we access sector X disk B fails. This means that we ",
+  "metadata": {
+    "date": "2026-10-19",
+    "updated": "2026-10-19"
+  },
+  "images": [],
+  "links": []
+}

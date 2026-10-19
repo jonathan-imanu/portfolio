@@ -1,0 +1,12 @@
+{
+  "id": "school--w26--cscc69--lectures--week-1-intro",
+  "path": "school/w26/cscc69/lectures/week-1-intro",
+  "title": "Week 1 - Intro",
+  "content": "## Virtualization\n\nThe OS takes a physical resource and presents a virtual form of it to the user. \n- A physical resource can be a processor, memory or disk\nThe virtual form is more general, easy-to-use and has a standard interface.\n\nIt is this virtualization that's leads to the OS being sometimes referred to as a virtual machine.\n### Virtualizing Memory\n\nThe physical memory is an array of bytes and physical memory addresses are indexes into this array BUT each process sees their own virtual address space.\n- It is the OS who maps the address space presented to processes to physical memory.",
+  "metadata": {
+    "date": "2026-10-19",
+    "updated": "2026-10-19"
+  },
+  "images": [],
+  "links": []
+}

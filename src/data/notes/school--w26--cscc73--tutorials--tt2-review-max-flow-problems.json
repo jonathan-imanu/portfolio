@@ -1,0 +1,12 @@
+{
+  "id": "school--w26--cscc73--tutorials--tt2-review-max-flow-problems",
+  "path": "school/w26/cscc73/tutorials/tt2-review-max-flow-problems",
+  "title": "TT2 Review - Max Flow Problems",
+  "content": "## Q1.\n\nThere are $n$ students and $m$ parties. Each party has k students. For each student $i \\in [n]$ let $p_i$ be the # of parties they attend. Show an efficient algo. that assigns ONE designated driver to each party, such that each student is DD at most ceil($\\frac{p_i}{k}$ )\n### Sol.\n\n*Similar to bipartite matching*\n\nWe want to transform this into a max flow problem. Let's start by figuring out how to transform this Q. into a graph.\n\nWe can have 1 node for each student $s_i$ and 1 node for each party $t_i$:\n- For each student, they have $p_i$ out-edges.\n- For each party, it has $k$ in-edges.\n\nAn edge exists between $s_i$ and $t_i$ if the $i^{th}$ student attends the $i^{th}$ party. This edge $(s_i, t_i)$ has capacity 1.\n\nWe create two dummy nodes, $a$ & $b$ representing the source and sink respectively.\n\n- Create edges $(a, s_i)$ with capacity $c(a, s_i) = ceil(\\frac{p_i}{k})$ \n\t- Dummy source to students\n- Create edges $(t_i, b)$ with capacity $c(t_i, b) = 1$\n#### Proof of Correctness\n\nThere is a non-integer flow of at most $m$.\n- Send $\\frac{p_i}{k}$ flow to each $i$ (non-integer potentially)\n- each $s_i$ sends $\\frac{1}{k}$ flow to each $t_i$\n- each $t_j$ receives 1 flow\n- t receives $m$ flow\n## Q2.\n\nWe have a flow network where all edges have capacity exactly 1 and a $k \\in \\mathbb{N}$ that is at most the flow of the network. Design an efficient algo. that deletes $k$ edges to obtain a new network with a flow smaller by exactly $k$. Runs in $O(|V||E|)$\n\nInput $(G, c, s, t)$\n\n1. Run FF\n2. Compute residual graph $G_f$\n3. Take $A$ to be all vertices reachable from $S$, and $B$ to be all vertices $V \\backslash B$ \n4. Remove $k$ outgoing edges from $A$ to $B$\n5. Return Graph\n",
+  "metadata": {
+    "date": "2026-10-19",
+    "updated": "2026-10-19"
+  },
+  "images": [],
+  "links": []
+}

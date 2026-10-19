@@ -1,0 +1,12 @@
+{
+  "id": "school--f26--d58--tutorials--2-sockets",
+  "path": "school/f26/d58/tutorials/2-sockets",
+  "title": "2. Sockets",
+  "content": "Socket is like doorway to house.\n\n**Little endian**: byte 0, byte 1, ..., byte n - 1\n**Big endian**: byte n - 1, byte n - 2, ..., byte 0\n\nSocket programming is big endian (network byte order).",
+  "metadata": {
+    "date": "2026-10-19",
+    "updated": "2026-10-19"
+  },
+  "images": [],
+  "links": []
+}

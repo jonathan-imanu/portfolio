@@ -1,0 +1,14 @@
+{
+  "id": "school--f26--d01--2-analyzing-large-codebases",
+  "path": "school/f26/d01/2-analyzing-large-codebases",
+  "title": "2. Analyzing Large Codebases",
+  "content": "## What is Apache Superset?\n\nA OSS modern data exploration and visualization platform. It is a BI platform that:\n- Connects to data sources\n- Enables data engineers to create dashboards from these sources\n- Make those dashboards available to technical and non-technical users\n\nSuperset is a **monorepo** (all related modules are stored here). The backend is a Flask server designed as a *Layered Architecture Style*.\n### Layered Architecture Style\n\nThe idea is that we can separate the code by its overall theme. Model View Controller (**MVC**) is an example.\n### Microkernel Architecture Style\n\nSuperset uses this architecture to connect to arbitrary data sources. This also called **plug-in architecture.**\n\nA small, stable core provides the fundamental execution/coordination mechanism, while most functionality lives in independently developed plug-ins/extensions.\n- The core system is **NOT** dependent on a specific plugin to work\n- Plugins communicate to the core system using a defined contract\n\n<img src=\"/images/MicrokernelArch.png\" alt=\"MicrokernelArch\" />\n\n\n \n",
+  "metadata": {
+    "date": "2026-10-19",
+    "updated": "2026-10-19"
+  },
+  "images": [
+    "/images/MicrokernelArch.png"
+  ],
+  "links": []
+}

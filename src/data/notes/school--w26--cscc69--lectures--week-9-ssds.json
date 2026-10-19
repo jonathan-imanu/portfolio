@@ -1,0 +1,14 @@
+{
+  "id": "school--w26--cscc69--lectures--week-9-ssds",
+  "path": "school/w26/cscc69/lectures/week-9-ssds",
+  "title": "Week 9 - SSDs",
+  "content": "## What?\n\nNAND flash memory-based drives. They are based on NAND flash cells.\n- Each flash cell can hold 1-5 bites.\n- Cells on a chip are organized into pages.\n- Multiple pages are organized into erase blocks\n\nThey support:\n- Reading a page.\n\t- Fast. Happen at the granularity of pages.\n- Writing to an erased page\n\t- 10x slower than reads. Happen at the granularity of pages.\n- Erasing a block\n\t- 10x slower than writes. Happen at the granularity of erase blocks.\n## Pros vs. Cons\n\n### Pros\n\nSSDs have the following advantages over disks:\n- much faster than hard drives\n- support random access\n- more resilient against physical damage\n- reduced power consumption\n### Cons\n\n- Flash memory is written in pages, but erased in blocks. **It can become fragmented and needs GC!**\n- *Flash memory can only be erased / written a fixed number of times*\n\t- Wear leveling trying to balance writes over blocks\n## Architecture\n\nSSD maintains a map of LBNs to pages.\n### Writes\n\nBlock storage devices expose storage as linear array of logical blocks\n- These blocks are unrelated to flash erase blocks\n\nOS issues a write with data D to LBN A:\n1. If the page corresponding to LBN A is non-empty, it does NOT overwrite but rather finds an erased page to write D and the LBN A page is GC later.\n### Wear Levelling\n\n- Dynamic wear leveling\n\t- Controller spreads new writes across blocks that have the lowest erase counts\n- Static wear levelling\n\t- The controller occasionally relocates long-lived (“static”) data out of low-wear blocks into higher-wear blocks. Frees the low-wear blocks so they can take future writes.\n\n*Dynamic wear leveling only affects frequently written data. Static data can remain in low-wear blocks forever, so static wear leveling moves it to ensure all blocks age evenly.*\n#### Write Amplification\n\n- **The number of actual writes to the device is larger than the number of writes the OS issues to the device.** \n- Caused by GC and wear levelling.\n\nWAF = # bytes written to flash chips / # bytes issued to device by OS\n\nMinimize WAF:\n- sequential\n- large writes\n- no overwrites\n### Garbage Collection\n\n Unless there is a write in the same spot, controller doesn't know which LBA's it can GC. \n\nThere is a special SATA command TRIM that allows the OS to tell the SSD that specific LBAs are invalid and may be GCed. \n\n<img src=\"/images/MLC vs. SLC.png\" alt=\"MLC vs. SLC\" />",
+  "metadata": {
+    "date": "2026-10-19",
+    "updated": "2026-10-19"
+  },
+  "images": [
+    "/images/MLC vs. SLC.png"
+  ],
+  "links": []
+}

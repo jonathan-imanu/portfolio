@@ -1,0 +1,16 @@
+{
+  "id": "school--f26--d58--lectures--2-foundation",
+  "path": "school/f26/d58/lectures/2-foundation",
+  "title": "2. Foundation",
+  "content": "## Application Protocol\n\n**URL**: Uniform Resource Locater\n**HTTP**: Hyper Text Transfer Protocol\n**TCP**: Transmission Control Protocol\n\nFor a single URL request there are 17 total messages!\n\nA protocol defines the interfaces between the layers in the same system and with the layers of the peer system.\n- They are building blocks of a network architecture\n## OSI 7-layers Model\n\nOSI stands for Open Systems Interconnection\n\n**Physical Layer**: Handles the transmission of raw bits over a communication link.\n\n**Data Link Layer**: \n- Collects a stream of bits into a larger aggregate called a frame\n- Network adaptor along with device driver in OS implement the protocol in this layer\n- Frames are actually delivered to hosts\n\n**Network Layer**: \n- Handles routing among nodes within a network that has packet switching\n- Unit of data exchanged between nodes in this layer is called a *packet*\n- The lower three layers are implemented on network nodes\n\n**Transport Layer**:\n- Process-to-process channel\n- Unit of data is *message*\n\n**Session Layer**\n- Provides a name space that is used to tie together the potentially different transport streams that are part of a single application.\n\n**Presentation Layer**\n- Concerned about the format of data exchanged between peers\n\n**Application Layer**\n- Standardize common type of exchanges\n- The transport layer and the higher layers typically run only on end hosts and not on the intermediate switches and routers\n\n<img src=\"/images/NetworkLayer.png\" alt=\"NetworkLayer\" />\n**Internet Architecture**\n\n<img src=\"/images/NetworkLayerHourglass.png\" alt=\"NetworkLayerHourglass\" />\n**Internet Hourglass**\n## Performance\n\n### Bandwidth\n\nThe width of the frequency band. \n\nMeasured by the bits per second (**Mbps**) that can be transmitted over a communication link.\n- $10^6 \\text{bits / second} = 2^{20} \\text{bits / second}$\n\nLatency = propagation + transmit + queue\nPropagation = distance / speed of light\nTransmit = size / bandwidth\n\nUsing this we can infer:\n\n- One bit transmission $\\rightarrow$ propagation is important\n- Large bytes transmission $\\rightarrow$ bandwidth is important\n\nWe view the channel between a pair of processes like a hollow pipe:\n\n<img src=\"/images/NetworkPipe.png\" alt=\"NetworkPipe\" />\n\nLink Capacity can be determined by the **Bandwidth Delay Product:** Bandwidth $\\times$ Delay.\n### Delay Bandwidth\n\nThe relative importance of bandwidth and latency depends on the application.\n- For large file transfer, bandwidth is critical\n- For smaller messages, latency is critical\n",
+  "metadata": {
+    "date": "2026-10-19",
+    "updated": "2026-10-19"
+  },
+  "images": [
+    "/images/NetworkLayer.png",
+    "/images/NetworkLayerHourglass.png",
+    "/images/NetworkPipe.png"
+  ],
+  "links": []
+}

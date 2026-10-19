@@ -1,0 +1,12 @@
+{
+  "id": "school--w26--cscd21--lectures--week-8-bridging-scaling",
+  "path": "school/w26/cscd21/lectures/week-8-bridging-scaling",
+  "title": "Week 8 - Bridging & Scaling",
+  "content": "# Scaling\n\n**Blockchain mainets are slow and expensive** due to design choices that prioritize decentralization and security.\n## Rollups\n\nProcess transactions outside of the main chain using either:\n- off-chain\n- or onto another L2-chain (bridging) with a faster / cheaper validation\n\n*Comes with a trade of security and decentralization*\n\n### 3 Types of Rollup\n\n#### Naive Rollup\n\nThe rollup is entirely verified on-chain. \n- Too expensive for any real use case\n\nThe rollup contract keeps track of all users balances. The rollup is the list of transactions verified on-chain by:\n- verifying each transaction signature\n- checking and updating each user balance accordingly\n#### Optimistic Rollup\n\nThe rollup is verified off-chain.\n\nThe contract only stores the root of a Merkle tree where the leaves are different users balances. \n\nThe rollup is:\n1. The list of transactions verified off-chained\n2. and the new tree root computed off-chain\n\nThe rollup coordinator is trusted to compute the right balances and build the right tree.\n\n*If the rollup is proved fraudulent, it is rolled back and the stake deposited by the rollup coordinator is slashed.*\n#### Zk-Rollup\n\nThe rollup comes with a ZK-proof that is verified on-chain.\n\nThe rollup contract stores a Merkle root that is:\n1. the list of transaction verified off-chain\n2. the new tree root computed off-chain\n3. a ZK proof proving that given the old tree and the list of transactions, the new tree is correct\n## EIP-4844 Proto-Danksharding\n\nEthereum blob \n\n- ~128 KB binary data chunk \n- Attached to a special transaction type\n- Not accessible to the EVM\n- Stored temporarily (~18 days) and pruned afterward \n- Has separate (and cheaper) blob gas fees",
+  "metadata": {
+    "date": "2026-10-19",
+    "updated": "2026-10-19"
+  },
+  "images": [],
+  "links": []
+}

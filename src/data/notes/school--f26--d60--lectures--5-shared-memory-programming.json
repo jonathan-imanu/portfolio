@@ -1,0 +1,12 @@
+{
+  "id": "school--f26--d60--lectures--5-shared-memory-programming",
+  "path": "school/f26/d60/lectures/5-shared-memory-programming",
+  "title": "5. Shared Memory Programming",
+  "content": "**Idea**: A singular blob of memory with multiple cores acting on it. Coordination is done through memory rather than by messages.\n\n**Shared Memory Languages**:\n- **pthreads**: POSIX threads, heavyweight, lower level and more clumsy\n- **PGAS languages**: Partition Global Address Space UPC, Titanium, Co-Array Fortran\n- **OPenMP**: An API shared memory parallel programming\n# OpenMP\n\nA set of compiler directives inserted in the source program.\n- Pragmas in C/C++\n\nThread based parallelism with a fork-join model.",
+  "metadata": {
+    "date": "2026-10-19",
+    "updated": "2026-10-19"
+  },
+  "images": [],
+  "links": []
+}

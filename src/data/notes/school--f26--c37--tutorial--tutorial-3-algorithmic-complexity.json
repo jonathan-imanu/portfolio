@@ -1,0 +1,12 @@
+{
+  "id": "school--f26--c37--tutorial--tutorial-3-algorithmic-complexity",
+  "path": "school/f26/c37/tutorial/tutorial-3-algorithmic-complexity",
+  "title": "Tutorial 3 - Algorithmic Complexity",
+  "content": "### Big O\n\n$$ f(n)=O(g(n)) \\iff \\exists c>0,\\exists n_0>0,\\ \\forall n\\ge n_0: \\quad 0\\le f(n)\\le c\\,g(n)$$\n\n### Big Omega\n\n$$f(n) = \\Omega(g(n)) \\iff \\exists c > 0, \\exists n_0 > 0, \\forall n > n_0: 0 \\leq cg(n) \\leq f(n)$$\n\n### Big Theta\n\n$$f(n) = \\Theta(g(n)) \\iff \\exists c_1, c_2 > 0, \\exists n_0 > 0, \\forall n > n_0: 0 \\leq c_1 g(n) \\leq f(n) \\leq c_2(g(n))$$\n\n## Applications \n\nFinding a pair for $c$ and $n_0$\n\n$$f(n) = n^3 - n^2 + 5 \\in O(n^3)$$\n\nSo \n\n$$\n\\begin{align*}\n    f(n) &\\leq n^3 + 5 && \\text{since } n > 0\\\\\n         &\\leq n^3 + 5n^3\\\\\n         &= 6n^3\n\\end{align*}\n$$\n\nSo $n_0 = 1$ and $c = 6$\n\n",
+  "metadata": {
+    "date": "2026-10-19",
+    "updated": "2026-10-19"
+  },
+  "images": [],
+  "links": []
+}

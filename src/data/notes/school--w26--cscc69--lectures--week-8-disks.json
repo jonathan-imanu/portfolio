@@ -1,0 +1,15 @@
+{
+  "id": "school--w26--cscc69--lectures--week-8-disks",
+  "path": "school/w26/cscc69/lectures/week-8-disks",
+  "title": "Week 8 - Disks",
+  "content": "- Data stored as **magnetic orientation** on a spinning platter\n- A **mechanical arm** moves to the right location\n\n<img src=\"/images/Hard Disk.png\" alt=\"Hard Disk\" />\n\n- Each side of a platter is called a surface\n- Each surface is organized into tracks\n- Tracks organized into sectors\n\nDisk service time is broken down into:\n- Seek\n- Rotational latency\n- Data transfer\n\n<img src=\"/images/Disk Service Time.png\" alt=\"Disk Service Time\" />\n\nHDD friendly workloads have: \n- High locality \n- Large request sizes \n\nWe try to design file systems so workloads they generate have those properties.\n# Disk Storage \n\n Disks expose storage as linear array of blocks.\n - Each block is 512 bytes or 4 KB\n - Number of blocks is disk capacity / block size\n\nDisk tries to map blocks close in LBN space to physical disk locations that are close to each other.\n## Complications\n\n### Zones\n\nIn an HDD, the disk surface is divided into concentric tracks, and those tracks are grouped into zones.\n\nZones are a complication because they introduce non-uniform physical layout and performance, even though the disk presents a simple linear block interface.\n### Defect Management\n\nDisks keep spare sectors that are used in case portions of the media become unusable.\n### Skew\n\nA request spans 2 tracks. The track skew can prevent unnecessary rotation.\n## Scheduling\n\n**Seeks are expensive**, unless there are request queues disk scheduling has minimal impact. Modern disks do the scheduling themselves. \n\n- FCFS (do nothing) \n\t- Reasonable when load is low\n\t- Long waiting times for long request queues \n- SSTF (shortest seek time first) \n\t- Minimize arm movement (seek time), maximize request rate \n\t- Favors middle blocks/tracks \n- SCAN (elevator) \n\t- Service requests in one direction until done, then reverse \n- C-SCAN\n\t- Like SCAN, but only go in one direction (typewriter) \n- LOOK / C-LOOK \n\t- Like SCAN/C-SCAN but only go as far as last request in each direction (not full width of the disk)\n\n",
+  "metadata": {
+    "date": "2026-10-19",
+    "updated": "2026-10-19"
+  },
+  "images": [
+    "/images/Hard Disk.png",
+    "/images/Disk Service Time.png"
+  ],
+  "links": []
+}

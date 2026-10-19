@@ -1,0 +1,12 @@
+{
+  "id": "school--w26--cscc69--ostep--part-3-persistence--41-locality-and-the-fast-file-system",
+  "path": "school/w26/cscc69/ostep/part-3-persistence/41-locality-and-the-fast-file-system",
+  "title": "41. Locality and the Fast File System",
+  "content": "## The Cylinder Group\n\nFFS divides the disk into a number of **cylinder groups**. A single **cylinder** is a set of tracks on different surfaces of a hard drive that are the same distance from the center of the drive.\n\n",
+  "metadata": {
+    "date": "2026-10-19",
+    "updated": "2026-10-19"
+  },
+  "images": [],
+  "links": []
+}

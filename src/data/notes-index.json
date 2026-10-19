@@ -1,14 +1,14 @@
 {
   "version": "1.0.0",
-  "lastSync": "2026-04-15T15:40:16.901Z",
+  "lastSync": "2026-10-19T20:32:47.504Z",
   "notes": {
     "dev/concepts/floating-point-numbers": {
       "id": "dev--concepts--floating-point-numbers",
       "path": "dev/concepts/floating-point-numbers",
       "title": "Floating Point Numbers",
       "metadata": {
-        "date": "2026-01-16",
-        "updated": "2026-01-16"
+        "date": "2026-10-19",
+        "updated": "2026-10-19"
       }
     },
     "dev/concepts/kubernetes/cheatsheet": {
@@ -250,8 +250,8 @@
       "path": "leetcode/concepts/graphs/union-find-disjoint-set-union",
       "title": "Union Find & Disjoint Set Union",
       "metadata": {
-        "date": "2026-01-27",
-        "updated": "2026-01-27"
+        "date": "2026-10-19",
+        "updated": "2026-10-19"
       }
     },
     "leetcode/concepts/heap": {
@@ -668,15 +668,6 @@
         "updated": "2026-02-05"
       }
     },
-    "school/cscc73/lectures/week-4-dynamic-programming": {
-      "id": "school--cscc73--lectures--week-4-dynamic-programming",
-      "path": "school/cscc73/lectures/week-4-dynamic-programming",
-      "title": "Week 4 - Dynamic Programming",
-      "metadata": {
-        "date": "2026-02-11",
-        "updated": "2026-02-11"
-      }
-    },
     "school/cscc73/tutorials/week-4-ffts-and-multiplying-polynomials": {
       "id": "school--cscc73--tutorials--week-4-ffts-and-multiplying-polynomials",
       "path": "school/cscc73/tutorials/week-4-ffts-and-multiplying-polynomials",
@@ -783,6 +774,627 @@
       "metadata": {
         "date": "2026-04-15",
         "updated": "2026-04-15"
+      }
+    },
+    "leetcode/concepts/z-algo-finding-occurrences-of-string-b-within-string-a": {
+      "id": "leetcode--concepts--z-algo-finding-occurrences-of-string-b-within-string-a",
+      "path": "leetcode/concepts/z-algo-finding-occurrences-of-string-b-within-string-a",
+      "title": "Z-Algo - Finding Occurrences of string b within string a",
+      "metadata": {
+        "date": "2026-10-19",
+        "updated": "2026-10-19"
+      }
+    },
+    "school/f26/c37/lectures/week-1": {
+      "id": "school--f26--c37--lectures--week-1",
+      "path": "school/f26/c37/lectures/week-1",
+      "title": "Week 1",
+      "metadata": {
+        "date": "2026-10-19",
+        "updated": "2026-10-19"
+      }
+    },
+    "school/f26/c37/lectures/week-2-floating-points": {
+      "id": "school--f26--c37--lectures--week-2-floating-points",
+      "path": "school/f26/c37/lectures/week-2-floating-points",
+      "title": "Week 2 - Floating Points",
+      "metadata": {
+        "date": "2026-10-19",
+        "updated": "2026-10-19"
+      }
+    },
+    "school/f26/c37/lectures/week-3-machine-representation-of-reals": {
+      "id": "school--f26--c37--lectures--week-3-machine-representation-of-reals",
+      "path": "school/f26/c37/lectures/week-3-machine-representation-of-reals",
+      "title": "Week 3 - Machine Representation of Reals",
+      "metadata": {
+        "date": "2026-10-19",
+        "updated": "2026-10-19"
+      }
+    },
+    "school/f26/c37/lectures/week-4-linear-systems-of-equations": {
+      "id": "school--f26--c37--lectures--week-4-linear-systems-of-equations",
+      "path": "school/f26/c37/lectures/week-4-linear-systems-of-equations",
+      "title": "Week 4 - Linear Systems of Equations",
+      "metadata": {
+        "date": "2026-10-19",
+        "updated": "2026-10-19"
+      }
+    },
+    "school/f26/c37/lectures/week-5-ge-with-row-pivoting": {
+      "id": "school--f26--c37--lectures--week-5-ge-with-row-pivoting",
+      "path": "school/f26/c37/lectures/week-5-ge-with-row-pivoting",
+      "title": "Week 5 - GE with Row Pivoting",
+      "metadata": {
+        "date": "2026-10-19",
+        "updated": "2026-10-19"
+      }
+    },
+    "school/f26/c37/tutorial/tutorial-1": {
+      "id": "school--f26--c37--tutorial--tutorial-1",
+      "path": "school/f26/c37/tutorial/tutorial-1",
+      "title": "Tutorial 1",
+      "metadata": {
+        "date": "2026-10-19",
+        "updated": "2026-10-19"
+      }
+    },
+    "school/f26/c37/tutorial/tutorial-3-algorithmic-complexity": {
+      "id": "school--f26--c37--tutorial--tutorial-3-algorithmic-complexity",
+      "path": "school/f26/c37/tutorial/tutorial-3-algorithmic-complexity",
+      "title": "Tutorial 3 - Algorithmic Complexity",
+      "metadata": {
+        "date": "2026-10-19",
+        "updated": "2026-10-19"
+      }
+    },
+    "school/f26/d01/1-intro-oss": {
+      "id": "school--f26--d01--1-intro-oss",
+      "path": "school/f26/d01/1-intro-oss",
+      "title": "1. Intro & OSS",
+      "metadata": {
+        "date": "2026-10-19",
+        "updated": "2026-10-19"
+      }
+    },
+    "school/f26/d01/2-analyzing-large-codebases": {
+      "id": "school--f26--d01--2-analyzing-large-codebases",
+      "path": "school/f26/d01/2-analyzing-large-codebases",
+      "title": "2. Analyzing Large Codebases",
+      "metadata": {
+        "date": "2026-10-19",
+        "updated": "2026-10-19"
+      }
+    },
+    "school/f26/d01/3-nfrs": {
+      "id": "school--f26--d01--3-nfrs",
+      "path": "school/f26/d01/3-nfrs",
+      "title": "3. NFRs",
+      "metadata": {
+        "date": "2026-10-19",
+        "updated": "2026-10-19"
+      }
+    },
+    "school/f26/d58/lectures/1-topics-overview": {
+      "id": "school--f26--d58--lectures--1-topics-overview",
+      "path": "school/f26/d58/lectures/1-topics-overview",
+      "title": "1. Topics Overview",
+      "metadata": {
+        "date": "2026-10-19",
+        "updated": "2026-10-19"
+      }
+    },
+    "school/f26/d58/lectures/2-foundation": {
+      "id": "school--f26--d58--lectures--2-foundation",
+      "path": "school/f26/d58/lectures/2-foundation",
+      "title": "2. Foundation",
+      "metadata": {
+        "date": "2026-10-19",
+        "updated": "2026-10-19"
+      }
+    },
+    "school/f26/d58/lectures/3-direct-links": {
+      "id": "school--f26--d58--lectures--3-direct-links",
+      "path": "school/f26/d58/lectures/3-direct-links",
+      "title": "3. Direct Links",
+      "metadata": {
+        "date": "2026-10-19",
+        "updated": "2026-10-19"
+      }
+    },
+    "school/f26/d58/lectures/4-ethernet": {
+      "id": "school--f26--d58--lectures--4-ethernet",
+      "path": "school/f26/d58/lectures/4-ethernet",
+      "title": "4. Ethernet",
+      "metadata": {
+        "date": "2026-10-19",
+        "updated": "2026-10-19"
+      }
+    },
+    "school/f26/d58/lectures/5-ip-routing-and-forwarding": {
+      "id": "school--f26--d58--lectures--5-ip-routing-and-forwarding",
+      "path": "school/f26/d58/lectures/5-ip-routing-and-forwarding",
+      "title": "5. IP Routing and Forwarding",
+      "metadata": {
+        "date": "2026-10-19",
+        "updated": "2026-10-19"
+      }
+    },
+    "school/f26/d58/lectures/5-ip": {
+      "id": "school--f26--d58--lectures--5-ip",
+      "path": "school/f26/d58/lectures/5-ip",
+      "title": "5. IP",
+      "metadata": {
+        "date": "2026-10-19",
+        "updated": "2026-10-19"
+      }
+    },
+    "school/f26/d58/lectures/6-internet-topology": {
+      "id": "school--f26--d58--lectures--6-internet-topology",
+      "path": "school/f26/d58/lectures/6-internet-topology",
+      "title": "6. Internet Topology",
+      "metadata": {
+        "date": "2026-10-19",
+        "updated": "2026-10-19"
+      }
+    },
+    "school/f26/d58/tutorials/1-wireshark-intro": {
+      "id": "school--f26--d58--tutorials--1-wireshark-intro",
+      "path": "school/f26/d58/tutorials/1-wireshark-intro",
+      "title": "1. Wireshark Intro",
+      "metadata": {
+        "date": "2026-10-19",
+        "updated": "2026-10-19"
+      }
+    },
+    "school/f26/d58/tutorials/2-sockets": {
+      "id": "school--f26--d58--tutorials--2-sockets",
+      "path": "school/f26/d58/tutorials/2-sockets",
+      "title": "2. Sockets",
+      "metadata": {
+        "date": "2026-10-19",
+        "updated": "2026-10-19"
+      }
+    },
+    "school/f26/d58/tutorials/2-units": {
+      "id": "school--f26--d58--tutorials--2-units",
+      "path": "school/f26/d58/tutorials/2-units",
+      "title": "2. Units",
+      "metadata": {
+        "date": "2026-10-19",
+        "updated": "2026-10-19"
+      }
+    },
+    "school/f26/d60/lectures/1-introduction-to-hpc": {
+      "id": "school--f26--d60--lectures--1-introduction-to-hpc",
+      "path": "school/f26/d60/lectures/1-introduction-to-hpc",
+      "title": "1. Introduction to HPC",
+      "metadata": {
+        "date": "2026-10-19",
+        "updated": "2026-10-19"
+      }
+    },
+    "school/f26/d60/lectures/2-scaling-analysis-profiling-and-metrics": {
+      "id": "school--f26--d60--lectures--2-scaling-analysis-profiling-and-metrics",
+      "path": "school/f26/d60/lectures/2-scaling-analysis-profiling-and-metrics",
+      "title": "2. Scaling Analysis, Profiling and Metrics",
+      "metadata": {
+        "date": "2026-10-19",
+        "updated": "2026-10-19"
+      }
+    },
+    "school/f26/d60/lectures/3-serial-performance": {
+      "id": "school--f26--d60--lectures--3-serial-performance",
+      "path": "school/f26/d60/lectures/3-serial-performance",
+      "title": "3. Serial Performance",
+      "metadata": {
+        "date": "2026-10-19",
+        "updated": "2026-10-19"
+      }
+    },
+    "school/f26/d60/lectures/4-serial-jobs-embarrassing-parallelism": {
+      "id": "school--f26--d60--lectures--4-serial-jobs-embarrassing-parallelism",
+      "path": "school/f26/d60/lectures/4-serial-jobs-embarrassing-parallelism",
+      "title": "4. Serial Jobs & Embarrassing Parallelism",
+      "metadata": {
+        "date": "2026-10-19",
+        "updated": "2026-10-19"
+      }
+    },
+    "school/f26/d60/lectures/5-shared-memory-programming": {
+      "id": "school--f26--d60--lectures--5-shared-memory-programming",
+      "path": "school/f26/d60/lectures/5-shared-memory-programming",
+      "title": "5. Shared Memory Programming",
+      "metadata": {
+        "date": "2026-10-19",
+        "updated": "2026-10-19"
+      }
+    },
+    "school/w26/cscc69/cheatsheet-12343": {
+      "id": "school--w26--cscc69--cheatsheet-12343",
+      "path": "school/w26/cscc69/cheatsheet-12343",
+      "title": "Cheatsheet 12343",
+      "metadata": {
+        "date": "2026-10-19",
+        "updated": "2026-10-19"
+      }
+    },
+    "school/w26/cscc69/lectures/week-1-intro": {
+      "id": "school--w26--cscc69--lectures--week-1-intro",
+      "path": "school/w26/cscc69/lectures/week-1-intro",
+      "title": "Week 1 - Intro",
+      "metadata": {
+        "date": "2026-10-19",
+        "updated": "2026-10-19"
+      }
+    },
+    "school/w26/cscc69/lectures/week-10-file-systems-intro": {
+      "id": "school--w26--cscc69--lectures--week-10-file-systems-intro",
+      "path": "school/w26/cscc69/lectures/week-10-file-systems-intro",
+      "title": "Week 10 - File Systems Intro.",
+      "metadata": {
+        "date": "2026-10-19",
+        "updated": "2026-10-19"
+      }
+    },
+    "school/w26/cscc69/lectures/week-11-file-system-consistency": {
+      "id": "school--w26--cscc69--lectures--week-11-file-system-consistency",
+      "path": "school/w26/cscc69/lectures/week-11-file-system-consistency",
+      "title": "Week 11 - File System Consistency",
+      "metadata": {
+        "date": "2026-10-19",
+        "updated": "2026-10-19"
+      }
+    },
+    "school/w26/cscc69/lectures/week-2-3-concurrency": {
+      "id": "school--w26--cscc69--lectures--week-2-3-concurrency",
+      "path": "school/w26/cscc69/lectures/week-2-3-concurrency",
+      "title": "Week 2 & 3 - Concurrency",
+      "metadata": {
+        "date": "2026-10-19",
+        "updated": "2026-10-19"
+      }
+    },
+    "school/w26/cscc69/lectures/week-4-process-vs-threads": {
+      "id": "school--w26--cscc69--lectures--week-4-process-vs-threads",
+      "path": "school/w26/cscc69/lectures/week-4-process-vs-threads",
+      "title": "Week 4 - Process vs. Threads",
+      "metadata": {
+        "date": "2026-10-19",
+        "updated": "2026-10-19"
+      }
+    },
+    "school/w26/cscc69/lectures/week-5-virtual-memory-intro": {
+      "id": "school--w26--cscc69--lectures--week-5-virtual-memory-intro",
+      "path": "school/w26/cscc69/lectures/week-5-virtual-memory-intro",
+      "title": "Week 5 - Virtual Memory Intro.",
+      "metadata": {
+        "date": "2026-10-19",
+        "updated": "2026-10-19"
+      }
+    },
+    "school/w26/cscc69/lectures/week-6-memory-management-cont": {
+      "id": "school--w26--cscc69--lectures--week-6-memory-management-cont",
+      "path": "school/w26/cscc69/lectures/week-6-memory-management-cont",
+      "title": "Week 6 - Memory Management Cont.",
+      "metadata": {
+        "date": "2026-10-19",
+        "updated": "2026-10-19"
+      }
+    },
+    "school/w26/cscc69/lectures/week-7-managing-dynamic-allocation-in-programs": {
+      "id": "school--w26--cscc69--lectures--week-7-managing-dynamic-allocation-in-programs",
+      "path": "school/w26/cscc69/lectures/week-7-managing-dynamic-allocation-in-programs",
+      "title": "Week 7 - Managing Dynamic Allocation in Programs",
+      "metadata": {
+        "date": "2026-10-19",
+        "updated": "2026-10-19"
+      }
+    },
+    "school/w26/cscc69/lectures/week-8-disks": {
+      "id": "school--w26--cscc69--lectures--week-8-disks",
+      "path": "school/w26/cscc69/lectures/week-8-disks",
+      "title": "Week 8 - Disks",
+      "metadata": {
+        "date": "2026-10-19",
+        "updated": "2026-10-19"
+      }
+    },
+    "school/w26/cscc69/lectures/week-9-ssds": {
+      "id": "school--w26--cscc69--lectures--week-9-ssds",
+      "path": "school/w26/cscc69/lectures/week-9-ssds",
+      "title": "Week 9 - SSDs",
+      "metadata": {
+        "date": "2026-10-19",
+        "updated": "2026-10-19"
+      }
+    },
+    "school/w26/cscc69/lectures/week-9-storage-systems": {
+      "id": "school--w26--cscc69--lectures--week-9-storage-systems",
+      "path": "school/w26/cscc69/lectures/week-9-storage-systems",
+      "title": "Week 9 - Storage Systems",
+      "metadata": {
+        "date": "2026-10-19",
+        "updated": "2026-10-19"
+      }
+    },
+    "school/w26/cscc69/multi-level-paging": {
+      "id": "school--w26--cscc69--multi-level-paging",
+      "path": "school/w26/cscc69/multi-level-paging",
+      "title": "Multi-Level Paging",
+      "metadata": {
+        "date": "2026-10-19",
+        "updated": "2026-10-19"
+      }
+    },
+    "school/w26/cscc69/ostep/part-1-virtualization/10-multiprocessor-scheduling-todo": {
+      "id": "school--w26--cscc69--ostep--part-1-virtualization--10-multiprocessor-scheduling-todo",
+      "path": "school/w26/cscc69/ostep/part-1-virtualization/10-multiprocessor-scheduling-todo",
+      "title": "10. Multiprocessor Scheduling (TODO!)",
+      "metadata": {
+        "date": "2026-10-19",
+        "updated": "2026-10-19"
+      }
+    },
+    "school/w26/cscc69/ostep/part-1-virtualization/21-swapping-mechanisms": {
+      "id": "school--w26--cscc69--ostep--part-1-virtualization--21-swapping-mechanisms",
+      "path": "school/w26/cscc69/ostep/part-1-virtualization/21-swapping-mechanisms",
+      "title": "21. Swapping - Mechanisms",
+      "metadata": {
+        "date": "2026-10-19",
+        "updated": "2026-10-19"
+      }
+    },
+    "school/w26/cscc69/ostep/part-1-virtualization/22-swapping-policies": {
+      "id": "school--w26--cscc69--ostep--part-1-virtualization--22-swapping-policies",
+      "path": "school/w26/cscc69/ostep/part-1-virtualization/22-swapping-policies",
+      "title": "22. Swapping - Policies",
+      "metadata": {
+        "date": "2026-10-19",
+        "updated": "2026-10-19"
+      }
+    },
+    "school/w26/cscc69/ostep/part-1-virtualization/23-swapping-complete-vm-systems": {
+      "id": "school--w26--cscc69--ostep--part-1-virtualization--23-swapping-complete-vm-systems",
+      "path": "school/w26/cscc69/ostep/part-1-virtualization/23-swapping-complete-vm-systems",
+      "title": "23. Swapping - Complete VM Systems",
+      "metadata": {
+        "date": "2026-10-19",
+        "updated": "2026-10-19"
+      }
+    },
+    "school/w26/cscc69/ostep/part-3-persistence/37-hard-disk-drives": {
+      "id": "school--w26--cscc69--ostep--part-3-persistence--37-hard-disk-drives",
+      "path": "school/w26/cscc69/ostep/part-3-persistence/37-hard-disk-drives",
+      "title": "37. Hard Disk Drives",
+      "metadata": {
+        "date": "2026-10-19",
+        "updated": "2026-10-19"
+      }
+    },
+    "school/w26/cscc69/ostep/part-3-persistence/40-file-system-implementation": {
+      "id": "school--w26--cscc69--ostep--part-3-persistence--40-file-system-implementation",
+      "path": "school/w26/cscc69/ostep/part-3-persistence/40-file-system-implementation",
+      "title": "40. File System Implementation",
+      "metadata": {
+        "date": "2026-10-19",
+        "updated": "2026-10-19"
+      }
+    },
+    "school/w26/cscc69/ostep/part-3-persistence/41-locality-and-the-fast-file-system": {
+      "id": "school--w26--cscc69--ostep--part-3-persistence--41-locality-and-the-fast-file-system",
+      "path": "school/w26/cscc69/ostep/part-3-persistence/41-locality-and-the-fast-file-system",
+      "title": "41. Locality and the Fast File System",
+      "metadata": {
+        "date": "2026-10-19",
+        "updated": "2026-10-19"
+      }
+    },
+    "school/w26/cscc69/ostep/part-3-persistence/42-crash-consistency-fsck-and-journaling": {
+      "id": "school--w26--cscc69--ostep--part-3-persistence--42-crash-consistency-fsck-and-journaling",
+      "path": "school/w26/cscc69/ostep/part-3-persistence/42-crash-consistency-fsck-and-journaling",
+      "title": "42. Crash Consistency - FSCK and Journaling",
+      "metadata": {
+        "date": "2026-10-19",
+        "updated": "2026-10-19"
+      }
+    },
+    "school/w26/cscc69/ostep/part-3-persistence/44-flash-based-ssds": {
+      "id": "school--w26--cscc69--ostep--part-3-persistence--44-flash-based-ssds",
+      "path": "school/w26/cscc69/ostep/part-3-persistence/44-flash-based-ssds",
+      "title": "44. Flash-based SSDs",
+      "metadata": {
+        "date": "2026-10-19",
+        "updated": "2026-10-19"
+      }
+    },
+    "school/w26/cscc69/tutorials/tutorial-3": {
+      "id": "school--w26--cscc69--tutorials--tutorial-3",
+      "path": "school/w26/cscc69/tutorials/tutorial-3",
+      "title": "Tutorial 3",
+      "metadata": {
+        "date": "2026-10-19",
+        "updated": "2026-10-19"
+      }
+    },
+    "school/w26/cscc69/tutorials/tutorial-5": {
+      "id": "school--w26--cscc69--tutorials--tutorial-5",
+      "path": "school/w26/cscc69/tutorials/tutorial-5",
+      "title": "Tutorial 5",
+      "metadata": {
+        "date": "2026-10-19",
+        "updated": "2026-10-19"
+      }
+    },
+    "school/w26/cscc73/lectures/3-dynamic-programming": {
+      "id": "school--w26--cscc73--lectures--3-dynamic-programming",
+      "path": "school/w26/cscc73/lectures/3-dynamic-programming",
+      "title": "3. Dynamic Programming",
+      "metadata": {
+        "date": "2026-10-19",
+        "updated": "2026-10-19"
+      }
+    },
+    "school/w26/cscc73/lectures/4-shortest-paths": {
+      "id": "school--w26--cscc73--lectures--4-shortest-paths",
+      "path": "school/w26/cscc73/lectures/4-shortest-paths",
+      "title": "4. Shortest Paths",
+      "metadata": {
+        "date": "2026-10-19",
+        "updated": "2026-10-19"
+      }
+    },
+    "school/w26/cscc73/lectures/5-max-flow": {
+      "id": "school--w26--cscc73--lectures--5-max-flow",
+      "path": "school/w26/cscc73/lectures/5-max-flow",
+      "title": "5. Max Flow",
+      "metadata": {
+        "date": "2026-10-19",
+        "updated": "2026-10-19"
+      }
+    },
+    "school/w26/cscc73/lectures/6-linear-programming": {
+      "id": "school--w26--cscc73--lectures--6-linear-programming",
+      "path": "school/w26/cscc73/lectures/6-linear-programming",
+      "title": "6. Linear Programming",
+      "metadata": {
+        "date": "2026-10-19",
+        "updated": "2026-10-19"
+      }
+    },
+    "school/w26/cscc73/lectures/7-randomized-algorithms": {
+      "id": "school--w26--cscc73--lectures--7-randomized-algorithms",
+      "path": "school/w26/cscc73/lectures/7-randomized-algorithms",
+      "title": "7. Randomized Algorithms",
+      "metadata": {
+        "date": "2026-10-19",
+        "updated": "2026-10-19"
+      }
+    },
+    "school/w26/cscc73/lectures/essentials": {
+      "id": "school--w26--cscc73--lectures--essentials",
+      "path": "school/w26/cscc73/lectures/essentials",
+      "title": "Essentials",
+      "metadata": {
+        "date": "2026-10-19",
+        "updated": "2026-10-19"
+      }
+    },
+    "school/w26/cscc73/tutorials/tt2-review-max-flow-problems": {
+      "id": "school--w26--cscc73--tutorials--tt2-review-max-flow-problems",
+      "path": "school/w26/cscc73/tutorials/tt2-review-max-flow-problems",
+      "title": "TT2 Review - Max Flow Problems",
+      "metadata": {
+        "date": "2026-10-19",
+        "updated": "2026-10-19"
+      }
+    },
+    "school/w26/cscd21/hands-on-zero-knowledge-proofs/getting-started-with-zk-snarks": {
+      "id": "school--w26--cscd21--hands-on-zero-knowledge-proofs--getting-started-with-zk-snarks",
+      "path": "school/w26/cscd21/hands-on-zero-knowledge-proofs/getting-started-with-zk-snarks",
+      "title": "Getting Started with zk-SNARKS",
+      "metadata": {
+        "date": "2026-10-19",
+        "updated": "2026-10-19"
+      }
+    },
+    "school/w26/cscd21/hands-on-zero-knowledge-proofs/introduction": {
+      "id": "school--w26--cscd21--hands-on-zero-knowledge-proofs--introduction",
+      "path": "school/w26/cscd21/hands-on-zero-knowledge-proofs/introduction",
+      "title": "Introduction",
+      "metadata": {
+        "date": "2026-10-19",
+        "updated": "2026-10-19"
+      }
+    },
+    "school/w26/cscd21/hands-on-zero-knowledge-proofs/proof-of-commitment": {
+      "id": "school--w26--cscd21--hands-on-zero-knowledge-proofs--proof-of-commitment",
+      "path": "school/w26/cscd21/hands-on-zero-knowledge-proofs/proof-of-commitment",
+      "title": "Proof of Commitment",
+      "metadata": {
+        "date": "2026-10-19",
+        "updated": "2026-10-19"
+      }
+    },
+    "school/w26/cscd21/hands-on-zero-knowledge-proofs/proof-of-membership": {
+      "id": "school--w26--cscd21--hands-on-zero-knowledge-proofs--proof-of-membership",
+      "path": "school/w26/cscd21/hands-on-zero-knowledge-proofs/proof-of-membership",
+      "title": "Proof of Membership",
+      "metadata": {
+        "date": "2026-10-19",
+        "updated": "2026-10-19"
+      }
+    },
+    "school/w26/cscd21/project-notes/starks": {
+      "id": "school--w26--cscd21--project-notes--starks",
+      "path": "school/w26/cscd21/project-notes/starks",
+      "title": "STARKS",
+      "metadata": {
+        "date": "2026-10-19",
+        "updated": "2026-10-19"
+      }
+    },
+    "school/w26/cscd21/lectures/week-10-defi": {
+      "id": "school--w26--cscd21--lectures--week-10-defi",
+      "path": "school/w26/cscd21/lectures/week-10-defi",
+      "title": "Week 10 - DeFi",
+      "metadata": {
+        "date": "2026-10-19",
+        "updated": "2026-10-19"
+      }
+    },
+    "school/w26/cscd21/lectures/week-4-bitcoin": {
+      "id": "school--w26--cscd21--lectures--week-4-bitcoin",
+      "path": "school/w26/cscd21/lectures/week-4-bitcoin",
+      "title": "Week 4 - Bitcoin",
+      "metadata": {
+        "date": "2026-10-19",
+        "updated": "2026-10-19"
+      }
+    },
+    "school/w26/cscd21/lectures/week-6-token": {
+      "id": "school--w26--cscd21--lectures--week-6-token",
+      "path": "school/w26/cscd21/lectures/week-6-token",
+      "title": "Week 6 - Token",
+      "metadata": {
+        "date": "2026-10-19",
+        "updated": "2026-10-19"
+      }
+    },
+    "school/w26/cscd21/lectures/week-7-privacy": {
+      "id": "school--w26--cscd21--lectures--week-7-privacy",
+      "path": "school/w26/cscd21/lectures/week-7-privacy",
+      "title": "Week 7 - Privacy",
+      "metadata": {
+        "date": "2026-10-19",
+        "updated": "2026-10-19"
+      }
+    },
+    "school/w26/cscd21/lectures/week-8-bridging-scaling": {
+      "id": "school--w26--cscd21--lectures--week-8-bridging-scaling",
+      "path": "school/w26/cscd21/lectures/week-8-bridging-scaling",
+      "title": "Week 8 - Bridging & Scaling",
+      "metadata": {
+        "date": "2026-10-19",
+        "updated": "2026-10-19"
+      }
+    },
+    "school/w26/cscd21/lectures/week-9-security": {
+      "id": "school--w26--cscd21--lectures--week-9-security",
+      "path": "school/w26/cscd21/lectures/week-9-security",
+      "title": "Week 9 - Security",
+      "metadata": {
+        "date": "2026-10-19",
+        "updated": "2026-10-19"
+      }
+    },
+    "school/w26/cscd21/lectures/zk-proofs": {
+      "id": "school--w26--cscd21--lectures--zk-proofs",
+      "path": "school/w26/cscd21/lectures/zk-proofs",
+      "title": "ZK Proofs",
+      "metadata": {
+        "date": "2026-10-19",
+        "updated": "2026-10-19"
       }
     }
   }

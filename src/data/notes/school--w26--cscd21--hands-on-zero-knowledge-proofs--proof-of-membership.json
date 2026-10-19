@@ -1,0 +1,12 @@
+{
+  "id": "school--w26--cscd21--hands-on-zero-knowledge-proofs--proof-of-membership",
+  "path": "school/w26/cscd21/hands-on-zero-knowledge-proofs/proof-of-membership",
+  "title": "Proof of Membership",
+  "content": "A prover demonstrates that they know a secret corresponding to one element of a public set of commitments, without revealing which specific commitment matches their secret.",
+  "metadata": {
+    "date": "2026-10-19",
+    "updated": "2026-10-19"
+  },
+  "images": [],
+  "links": []
+}

@@ -1,0 +1,12 @@
+{
+  "id": "school--f26--d58--tutorials--2-units",
+  "path": "school/f26/d58/tutorials/2-units",
+  "title": "2. Units",
+  "content": "1. File size is binary unit conversion\n2. Transmission rates are in SI\n\nThis has the implication that dividing a file size by a transmission rate will give us a weird number\n",
+  "metadata": {
+    "date": "2026-10-19",
+    "updated": "2026-10-19"
+  },
+  "images": [],
+  "links": []
+}

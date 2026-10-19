@@ -1,0 +1,12 @@
+{
+  "id": "school--f26--c37--lectures--week-4-linear-systems-of-equations",
+  "path": "school/f26/c37/lectures/week-4-linear-systems-of-equations",
+  "title": "Week 4 - Linear Systems of Equations",
+  "content": "**Problem**: Solve $Ax = b$ for $x$ where $A \\in \\mathbb{R^{n \\times n}}$, $x, b \\in \\mathbb{R^n}$ and $A,b$ are given.\n\nTo solve problems of this form, we will:\n1. Reduce the problem to an equivalent one that is easier to solve\n2. Solve the reduced problem\n\nGeneralizing to $n$ equations and $n$ unknowns:\n\n**Step $n - 1$**\n\nAssuming $a_{n - 1 - n - 1} \\neq 0$ \n\nMultiply row $n - 1$ by $\\hat{a_{n - 1 - n - 1} \\neq 0}$ and subtract from $\\hat{n}$ \n\nThe result is an equivalent upper triangular system\n\n**Everything above this is Gaussian Elimination then followed by Back Substitution. Just look this up. He just yapped.**\n\nAnother way of looking at this process:\n\n**Step 1**: Clear the first column of $A$ below $a_{11}$ \n- This is done using the Gauss Transform Matrix\n\n**Step 2**: Eliminate the second column of $L_1A$ below $\\hat{a}_{22}$where $L_1$ was the first Gauss Transform matrix. We use $L_2$ another Gauss Transform matrix to do this.\n\n...\n\n## LU Factorization ($A = LU$)\n\nWe have \n\n$$\n\\begin{align*}\n\tA &= U \\\\\n\t&\\iff A = L_{n - 1}^{-1}L_{n - 2}^{-1} \\ldots L_2^{-1} L_1^{-1} U\\\\\n\t&= LU \\text{ where L is lower triangular and U is upper triangular}\n\\end{align*}\n$$\n\n### Lemma 1\n\nIf $L_i$ is a Gauss Transform matrix, then $L^{-1}_{i}$ exists and is also a Gauss Transform. Furthermore, computing $L_{i}^{-1}$ is essentially free. \n- Proof of this will be on assignment 2.\n- Answer is in the textbook. He let's you copy in from the suggested textbook lol.\n\n### Lemma 2\n\nIf $L_i$ and $L_j$ are Gauss Transforms and $j > i$, then:\n$$L_iL_j = L_i + L_j - I$$\nMultiplication of Gauss Transforms is essentially is free.\n\n\nWe can then use $A = LU$ to solve $Ax = b$\n\n$$Ax = b \\iff LUx = b$$\n1. Solve $Ld = b$ for $d$\n2. Solve $Ux = d$ for $x$\n\nWe use LU factorization because if we are multiplying the same matrix $A$ with different RHS, we can reuse the work done to get $LU$\n\n",
+  "metadata": {
+    "date": "2026-10-19",
+    "updated": "2026-10-19"
+  },
+  "images": [],
+  "links": []
+}

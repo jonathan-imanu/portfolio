@@ -1,0 +1,12 @@
+{
+  "id": "school--w26--cscd21--hands-on-zero-knowledge-proofs--getting-started-with-zk-snarks",
+  "path": "school/w26/cscd21/hands-on-zero-knowledge-proofs/getting-started-with-zk-snarks",
+  "title": "Getting Started with zk-SNARKS",
+  "content": "Suppose we are a prover and we know value `secret` such that `H(secret) = hash`, where `H` is a hash function. Where:\n- `secret` is private\n- `hash` is public\n\nTo construct a ZK proof, we do the following:\n1. Create an arithmetic circuit in Circom that checks whether a private input matches a public hash.\n2. Generate the trusted setup (Powers of Tau Ceremony)\n3. Generate two key artifacts:\n\t1. A prover that outputs a ZK proof\n\t2. A verifier that checks the proof using only public information\n4. Generate and verify a proof in JS\n5. Verify the proof on-chain via a smart contract\n\n",
+  "metadata": {
+    "date": "2026-10-19",
+    "updated": "2026-10-19"
+  },
+  "images": [],
+  "links": []
+}
